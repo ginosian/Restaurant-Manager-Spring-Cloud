@@ -2,100 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba40e288-df88-47c4-a75d-20c62b829cbd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Admin/build/classes/main/com/restaurant/admin/Application.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Admin/build/classes/main/com/restaurant/admin/configuration/Configurations.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Admin/build/classes/main/com/restaurant/admin/controller/Controller.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Admin/build/classes/main/com/restaurant/admin/service/Service.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Admin/build/classes/main/com/restaurant/admin/service/ServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DiscoveryServer/build/classes/main/com/restaurant/discovery/Application.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Guest/build/classes/main/com/restaurant/guest/Application.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Guest/build/classes/main/com/restaurant/guest/config/Configurations.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Guest/build/classes/main/com/restaurant/guest/controller/Controller.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Guest/build/classes/main/com/restaurant/guest/service/Service.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Guest/build/classes/main/com/restaurant/guest/service/ServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Restaurant/build/classes/main/com/restaurant/restaurant/Application.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Restaurant/build/classes/main/com/restaurant/restaurant/config/Configurations.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Restaurant/build/classes/main/com/restaurant/restaurant/controller/Controller.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Restaurant/build/classes/main/com/restaurant/restaurant/service/Service.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Restaurant/build/classes/main/com/restaurant/restaurant/service/ServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_javassist_javassist_3_16_1_GA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/DiscoveryServer/DiscoveryServer.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/DiscoveryServer/DiscoveryServer_main.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/DiscoveryServer/DiscoveryServer_test.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Admin/build/resources/main/application.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Admin/build/resources/main/application.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/configuration/Configurations.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Admin/src/main/resources/application.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Admin/src/main/resources/application.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DiscoveryServer/build.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DiscoveryServer/build/resources/main/application.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DiscoveryServer/src/main/java/com/restaurant/discovery/Application.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DiscoveryServer/src/main/resources/application.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Guest/build/resources/main/application.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Guest/build/resources/main/application.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Guest/src/main/java/com/restaurant/guest/config/Configurations.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Guest/src/main/resources/application.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Guest/src/main/resources/application.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PersistenceLayer/build/resources/main/application.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/resources/application.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Restaurant/build/resources/main/application.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Restaurant/build/resources/main/application.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Restaurant/src/main/java/com/restaurant/restaurant/config/Configurations.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Restaurant/src/main/resources/application.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Restaurant/src/main/resources/application.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/Application.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/Application.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/config/DBConfig.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/config/DBConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/controller/Controller.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/controller/Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/HibernateQueries.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/HibernateQueries.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/OrderDAO.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/OrderDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/OrderDAOImpl.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/OrderDAOImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/ProductDAO.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/ProductDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/ProductDAOImpl.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/ProductDAOImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/UserDAO.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/UserDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/UserDAOImpl.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/UserDAOImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dto/Order.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dto/Order.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dto/Product.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dto/Product.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dto/ProductInOrder.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dto/ProductInOrder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dto/Role.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dto/Role.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dto/User.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dto/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/OrderService.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/OrderService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/OrderServiceImpl.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/OrderServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/ProductService.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/ProductService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/ProductServiceImpl.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/ProductServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/UserService.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/UserServiceImpl.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/UserServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/Admin/Admin_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/Admin/Admin_main.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/Admin/Admin_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/Admin/Admin_test.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/Guest/Guest_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/Guest/Guest_main.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/Guest/Guest_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/Guest/Guest_test.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/PersistenceLayer/PersistenceLayer_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/PersistenceLayer/PersistenceLayer_main.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/PersistenceLayer/PersistenceLayer_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/PersistenceLayer/PersistenceLayer_test.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/Restaurant/Restaurant_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/Restaurant/Restaurant_main.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/Restaurant/Restaurant_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/Restaurant/Restaurant_test.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/Admin/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/build.gradle" afterPath="$PROJECT_DIR$/Admin/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Guest/build.gradle" afterPath="$PROJECT_DIR$/Guest/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build.gradle" afterPath="$PROJECT_DIR$/PersistenceLayer/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/Application.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/controller/Controller.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/controller/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Restaurant/build.gradle" afterPath="$PROJECT_DIR$/Restaurant/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Admin/src/main/java/config/Application.java" afterPath="$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/Application.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Admin/src/main/java/controller/Controller.java" afterPath="$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/controller/Controller.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Admin/src/main/java/service/Service.java" afterPath="$PROJECT_DIR$/Restaurant/src/main/java/com/restaurant/restaurant/service/Service.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Admin/src/main/java/service/ServiceImpl.java" afterPath="$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/service/ServiceImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Guest/src/main/java/config/Application.java" afterPath="$PROJECT_DIR$/Guest/src/main/java/com/restaurant/guest/Application.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Guest/src/main/java/controller/Controller.java" afterPath="$PROJECT_DIR$/Guest/src/main/java/com/restaurant/guest/controller/Controller.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Guest/src/main/java/service/Service.java" afterPath="$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/service/Service.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Guest/src/main/java/service/ServiceImpl.java" afterPath="$PROJECT_DIR$/Guest/src/main/java/com/restaurant/guest/service/ServiceImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Restaurant/src/main/java/config/Application.java" afterPath="$PROJECT_DIR$/Restaurant/src/main/java/com/restaurant/restaurant/Application.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Restaurant/src/main/java/controller/Controller.java" afterPath="$PROJECT_DIR$/Restaurant/src/main/java/com/restaurant/restaurant/controller/Controller.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Restaurant/src/main/java/service/Service.java" afterPath="$PROJECT_DIR$/Guest/src/main/java/com/restaurant/guest/service/Service.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Restaurant/src/main/java/service/ServiceImpl.java" afterPath="$PROJECT_DIR$/Restaurant/src/main/java/com/restaurant/restaurant/service/ServiceImpl.java" />
     </list>
     <ignored path="RestaurantManager.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -191,8 +98,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Restaurant/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+            <state relative-caret-position="444">
+              <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -2506,7 +2413,7 @@
       <workItem from="1487938191771" duration="563000" />
       <workItem from="1487939190381" duration="23898000" />
       <workItem from="1488004311702" duration="18214000" />
-      <workItem from="1488027713117" duration="22200000" />
+      <workItem from="1488027713117" duration="22419000" />
     </task>
     <task id="LOCAL-00001" summary="Creates project structure.&#10;Sets up persistance layer datasource  and ORM configurations, defines the beans. &#10;Implements persistance layer Entities, further can be a subject of chages.&#10;Defines DAO-s.">
       <created>1488025512392</created>
@@ -2522,11 +2429,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488046843979</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="There we go ))) Distributed application with microservices and eureka discovery server hearth beats. Great !">
+      <created>1488055676190</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1488055676190</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65512000" />
+    <option name="totallyTimeSpent" value="65731000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -2552,7 +2466,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5244866" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2980333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -2604,6 +2518,24 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
       <collection />
@@ -2619,7 +2551,8 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="false" />
     <MESSAGE value="Creates project structure.&#10;Sets up persistance layer datasource  and ORM configurations, defines the beans. &#10;Implements persistance layer Entities, further can be a subject of chages.&#10;Defines DAO-s." />
     <MESSAGE value="Repairs transaction management.&#10;Adds temporary controllers and services in each microservce so to implement distributed system.&#10;Some minor changes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Repairs transaction management.&#10;Adds temporary controllers and services in each microservce so to implement distributed system.&#10;Some minor changes." />
+    <MESSAGE value="There we go ))) Distributed application with microservices and eureka discovery server hearth beats. Great !" />
+    <option name="LAST_COMMIT_MESSAGE" value="There we go ))) Distributed application with microservices and eureka discovery server hearth beats. Great !" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3155,8 +3088,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Restaurant/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        <state relative-caret-position="444">
+          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
           <folding />
         </state>
       </provider>
