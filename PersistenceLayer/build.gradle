@@ -2,6 +2,7 @@ group 'RestaurantManager'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'spring-boot'
 
 sourceCompatibility = 1.5
 

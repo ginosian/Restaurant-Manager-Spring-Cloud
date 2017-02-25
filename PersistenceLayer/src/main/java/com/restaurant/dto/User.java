@@ -2,7 +2,6 @@ package com.restaurant.dto;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
-import org.hibernate.annotations.ColumnTransformer;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -49,8 +48,8 @@ public class User implements Serializable {
     }
 
     @Column( name = "password" )
-    @ColumnTransformer( write = "EncryptByPassPhrase('12',?)",
-                        read = "DECRYPTBYPASSPHRASE ('12',password)")
+//    @ColumnTransformer( write = "EncryptByPassPhrase('12',?)",
+//                        read = "DECRYPTBYPASSPHRASE ('12',password)")
     public String getPassword() {
         return password;
     }

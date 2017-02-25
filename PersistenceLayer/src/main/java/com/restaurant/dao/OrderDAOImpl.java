@@ -3,6 +3,11 @@ package com.restaurant.dao;
 import com.restaurant.dto.Order;
 import com.restaurant.dto.ProductInOrder;
 import com.restaurant.dto.User;
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,7 +20,24 @@ import java.util.List;
 @Transactional
 public class OrderDAOImpl implements OrderDAO{
 
+    @Autowired
+    SessionFactory sessionFactory;
+
+    private Session getSession() {
+        return sessionFactory.openSession();
+    }
+
     public Order writeOrUpdateOrder(Order order) {
+        Session session = null;
+        Transaction transaction = null;
+        try{
+            session = getSession();
+            transaction = session.beginTransaction();
+            return  (Order) session.merge(order);
+        }catch (HibernateException e) {
+            e.printStackTrace();
+            if(transaction != null) transaction.rollback();
+        }
         return null;
     }
 

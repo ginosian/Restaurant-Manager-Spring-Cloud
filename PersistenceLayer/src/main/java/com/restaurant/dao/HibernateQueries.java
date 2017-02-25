@@ -5,13 +5,13 @@ package com.restaurant.dao;
  */
 public class HibernateQueries {
 
-    public static String remTableQuery = "" +
-            "CREATE TABLE IF NOT EXISTS persistent_logins ( " +
-            "username VARCHAR(64) NOT NULL, " +
-            "series VARCHAR(64) NOT NULL, " +
-            "token VARCHAR(64) NOT NULL, " +
-            "last_used TIMESTAMP NOT NULL, " +
-            "PRIMARY KEY (series))";
+//    public static String createRememberMeTable = "" +
+//            "CREATE TABLE IF NOT EXISTS persistent_logins ( " +
+//            "username VARCHAR(64) NOT NULL, " +
+//            "series VARCHAR(64) NOT NULL, " +
+//            "token VARCHAR(64) NOT NULL, " +
+//            "last_used TIMESTAMP NOT NULL, " +
+//            "PRIMARY KEY (series))";
 
 
 }
