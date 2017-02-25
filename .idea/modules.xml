@@ -5,6 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Admin/Admin.iml" filepath="$PROJECT_DIR$/.idea/modules/Admin/Admin.iml" group="Admin" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Admin/Admin_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Admin/Admin_main.iml" group="Admin" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Admin/Admin_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Admin/Admin_test.iml" group="Admin" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DiscoveryServer/DiscoveryServer.iml" filepath="$PROJECT_DIR$/.idea/modules/DiscoveryServer/DiscoveryServer.iml" group="DiscoveryServer" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DiscoveryServer/DiscoveryServer_main.iml" filepath="$PROJECT_DIR$/.idea/modules/DiscoveryServer/DiscoveryServer_main.iml" group="DiscoveryServer" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DiscoveryServer/DiscoveryServer_test.iml" filepath="$PROJECT_DIR$/.idea/modules/DiscoveryServer/DiscoveryServer_test.iml" group="DiscoveryServer" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Guest/Guest.iml" filepath="$PROJECT_DIR$/.idea/modules/Guest/Guest.iml" group="Guest" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Guest/Guest_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Guest/Guest_main.iml" group="Guest" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Guest/Guest_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Guest/Guest_test.iml" group="Guest" />

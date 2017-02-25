@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: guest-microservice
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1115/eureka/
+server:
+  port: 1118

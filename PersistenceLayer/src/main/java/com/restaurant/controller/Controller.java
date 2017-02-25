@@ -47,7 +47,7 @@ public class Controller {
     }
 
     private User createRandomUser(){
-        Role role = userService.createRole(new Role("ADMIN", Integer.toString(counter++)));
+        Role role = userService.createRole(new Role(Integer.toString(counter++), Integer.toString(counter++)));
         List<Role> roles = new ArrayList<Role>(1);
         roles.add(role);
         return userService.createOrUpdate(new User("user" + (++counter), "aa", new ArrayList<Role>(roles)));

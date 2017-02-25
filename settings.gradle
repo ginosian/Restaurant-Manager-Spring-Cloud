@@ -3,4 +3,5 @@ include 'PersistenceLayer'
 include 'Admin'
 include 'Restaurant'
 include 'Guest'
+include 'DiscoveryServer'
 
