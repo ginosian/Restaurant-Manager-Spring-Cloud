@@ -2,9 +2,21 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Admin/Admin.iml" filepath="$PROJECT_DIR$/.idea/modules/Admin/Admin.iml" group="Admin" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Admin/Admin_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Admin/Admin_main.iml" group="Admin" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Admin/Admin_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Admin/Admin_test.iml" group="Admin" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Guest/Guest.iml" filepath="$PROJECT_DIR$/.idea/modules/Guest/Guest.iml" group="Guest" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Guest/Guest_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Guest/Guest_main.iml" group="Guest" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Guest/Guest_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Guest/Guest_test.iml" group="Guest" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PersistenceLayer/PersistenceLayer.iml" filepath="$PROJECT_DIR$/.idea/modules/PersistenceLayer/PersistenceLayer.iml" group="PersistenceLayer" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PersistenceLayer/PersistenceLayer_main.iml" filepath="$PROJECT_DIR$/.idea/modules/PersistenceLayer/PersistenceLayer_main.iml" group="PersistenceLayer" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PersistenceLayer/PersistenceLayer_test.iml" filepath="$PROJECT_DIR$/.idea/modules/PersistenceLayer/PersistenceLayer_test.iml" group="PersistenceLayer" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Restaurant/Restaurant.iml" filepath="$PROJECT_DIR$/.idea/modules/Restaurant/Restaurant.iml" group="Restaurant" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/RestaurantManager.iml" filepath="$PROJECT_DIR$/.idea/modules/RestaurantManager.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/RestaurantManager_main.iml" filepath="$PROJECT_DIR$/.idea/modules/RestaurantManager_main.iml" group="RestaurantManager" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/RestaurantManager_test.iml" filepath="$PROJECT_DIR$/.idea/modules/RestaurantManager_test.iml" group="RestaurantManager" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Restaurant/Restaurant_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Restaurant/Restaurant_main.iml" group="Restaurant" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Restaurant/Restaurant_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Restaurant/Restaurant_test.iml" group="Restaurant" />
     </modules>
   </component>
 </project>

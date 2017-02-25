@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.netflix.ribbon:ribbon:2.2.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.netflix.ribbon/ribbon/2.2.0/5c906c20896e72c60231b7367249e8d329d7565f/ribbon-2.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.netflix.ribbon/ribbon/2.2.0/d5a18fc1d09afb2210fe92444bbef5be03ebef6a/ribbon-2.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -9,6 +9,10 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Admin" />
+            <option value="$PROJECT_DIR$/Guest" />
+            <option value="$PROJECT_DIR$/PersistenceLayer" />
+            <option value="$PROJECT_DIR$/Restaurant" />
           </set>
         </option>
         <option name="useAutoImport" value="true" />

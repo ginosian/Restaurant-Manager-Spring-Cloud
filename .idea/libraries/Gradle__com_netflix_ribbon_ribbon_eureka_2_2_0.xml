@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.netflix.ribbon:ribbon-eureka:2.2.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.netflix.ribbon/ribbon-eureka/2.2.0/1c630f487c11725fa4a674126238621a11a991c/ribbon-eureka-2.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.netflix.ribbon/ribbon-eureka/2.2.0/eec4b714a15d75eb9bf9f1249a44ff3c3ffe720d/ribbon-eureka-2.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

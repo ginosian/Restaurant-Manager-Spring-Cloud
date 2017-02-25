@@ -1,2 +1,6 @@
 rootProject.name = 'RestaurantManager'
+include 'PersistenceLayer'
+include 'Admin'
+include 'Restaurant'
+include 'Guest'
 
