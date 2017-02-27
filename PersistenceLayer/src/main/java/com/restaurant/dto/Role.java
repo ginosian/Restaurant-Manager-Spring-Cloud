@@ -12,8 +12,18 @@ import java.io.Serializable;
  */
 @Immutable
 @Entity
+@NamedQueries({
+        @NamedQuery(
+                name = "Role.getAllRoles",
+                query = "FROM Role",
+                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
+        @NamedQuery(
+                name = "Role.getRoleByRole",
+                query = "SELECT r FROM Role r WHERE r.role  = :" + "role",
+                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
+})
 @Table(name = "role")
-@Cache(usage = CacheConcurrencyStrategy.TRANSACTIONAL, region = "role")
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class Role implements Serializable {
 
     // region Fields

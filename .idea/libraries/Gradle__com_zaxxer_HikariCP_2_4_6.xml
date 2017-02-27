@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.zaxxer:HikariCP:2.4.6">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.zaxxer/HikariCP/2.4.6/4e1ef69eea4549192c6af4a369cfb0a6b8bd6eeb/HikariCP-2.4.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.zaxxer/HikariCP/2.4.6/7de13b9ee93b27b782a17d29b088efe6bc15cb71/HikariCP-2.4.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

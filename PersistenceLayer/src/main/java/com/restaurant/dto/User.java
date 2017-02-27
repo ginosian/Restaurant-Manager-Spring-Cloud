@@ -2,20 +2,36 @@ package com.restaurant.dto;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
+import org.hibernate.annotations.Fetch;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * Created by Martha on 2/24/2017.
  */
 @Entity
+@NamedQueries({
+        @NamedQuery(
+                name = "User.getUserByUsername",
+                query = "SELECT u FROM User u WHERE u.username  = :" + "username"),
+        @NamedQuery(
+                name = "User.deleteUserByUsername",
+                query = "DELETE FROM User u WHERE u.username  = :" + "username"),
+        @NamedQuery(
+                name = "User.getAllUsers",
+                query = "FROM User"),
+        @NamedQuery(
+                name = "User.getUsersByRole",
+                query = "SELECT u FROM User u JOIN u.roles u_r WHERE u_r.role = :" + "role")
+
+})
 @Table(name = "user")
-@Cache(usage = CacheConcurrencyStrategy.TRANSACTIONAL, region = "user")
-//@NamedEntityGraph(name = "graph.Order.orders",
-//        attributeNodes = @NamedAttributeNode(value = "orders", subgraph = "orders"),
-//        subgraphs = @NamedSubgraph(name = "orders", attributeNodes = @NamedAttributeNode("order")))
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class User implements Serializable {
 
     // region Fields
@@ -23,7 +39,7 @@ public class User implements Serializable {
     private String username;
     private String password;
     private List<Role> roles;
-    private List<Order> orders;
+    private List<Reservation> reservations;
     // endregion
 
     // region Constructors
@@ -62,17 +78,14 @@ public class User implements Serializable {
         return username;
     }
 
-    @OneToMany(cascade = {CascadeType.ALL},
-               orphanRemoval = false)
+    @ManyToMany(fetch = FetchType.EAGER)
     public List<Role> getRoles() {
         return roles;
     }
 
-    @OneToMany(targetEntity = Order.class,
-               cascade = {CascadeType.ALL},
-               orphanRemoval = true)
-    public List<Order> getOrders() {
-        return orders;
+    @ManyToMany(cascade = {CascadeType.ALL})
+    public List<Reservation> getReservations() {
+        return reservations;
     }
     // endregion
 
@@ -81,11 +94,16 @@ public class User implements Serializable {
         this.roles = roles;
     }
 
-    public void setOrders(List<Order> orders) {
-        this.orders = orders;
+    private void setReservations(List<Reservation> reservations) {
+        this.reservations = reservations;
     }
 
-    private void setId(Integer id) {
+    public void setReservations(Reservation reservation) {
+        if(reservations == null) reservations = new LinkedList<>();
+        reservations.add(reservation);
+    }
+
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -97,5 +115,26 @@ public class User implements Serializable {
         this.password = password;
     }
 
+    // endregion
+
+    // region Hashcode/equals overrides
+    @Override
+    public boolean equals(Object other) {
+        if (this == other) return true;
+        if ( !(other instanceof User) ) return false;
+
+        final User user = (User) other;
+
+        if (!user.getUsername().equals(getUsername())) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getId() != null ? getId().hashCode() : 0;
+        result = 31 * result + (getUsername() != null ? getUsername().hashCode() : 0);
+        return result;
+    }
     // endregion
 }

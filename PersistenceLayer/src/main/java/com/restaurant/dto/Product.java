@@ -12,12 +12,27 @@ import java.io.Serializable;
  */
 @Immutable
 @Entity
+@NamedQueries({
+
+        @NamedQuery(
+                name = "Product.getByNumber",
+                query = "SELECT p FROM Product p WHERE p.number  = :" + "number",
+                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
+        @NamedQuery(
+                name = "Product.deleteById",
+                query = "DELETE FROM Product p WHERE p.id  = :" + "id",
+                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
+        @NamedQuery(
+                name = "Product.getAll",
+                query = "FROM Product",
+                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
+})
 @Table(name = "product")
-@Cache(usage = CacheConcurrencyStrategy.TRANSACTIONAL, region = "product")
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class Product implements Serializable {
 
     // region Fields
-    private Long id;
+    private Integer id;
     private String name;
     private String number;
     // endregion
@@ -37,7 +52,7 @@ public class Product implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_product")
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -59,7 +74,7 @@ public class Product implements Serializable {
 
     // region Setters
 
-    private void setId(Long id) {
+    private void setId(Integer id) {
         this.id = id;
     }
 

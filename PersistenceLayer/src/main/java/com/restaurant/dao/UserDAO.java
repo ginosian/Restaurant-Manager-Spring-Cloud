@@ -55,6 +55,10 @@ public interface UserDAO {
      * @return list of {@link Role} objects from db or if non, exist return a list with size of 0.*/
     List<Role> readRoles();
 
+    /** Get role by role.
+     * @return  {@link Role} object from db  with specified role.*/
+    Role readRole(String role);
+
     /** Creates a table to store token for rememberMe functionality*/
     void addRememberMeTable();
 }

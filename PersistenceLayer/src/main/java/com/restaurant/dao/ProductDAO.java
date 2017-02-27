@@ -1,7 +1,7 @@
 package com.restaurant.dao;
 
 import com.restaurant.dto.Product;
-import com.restaurant.dto.User;
+import com.restaurant.dto.ProductInReservation;
 
 import java.util.List;
 
@@ -20,22 +20,30 @@ public interface ProductDAO {
      * @return {@link Product} object from db or null if doesn't exist.*/
     Product readProduct(Integer productId);
 
-    /** Gets all products with specified user.
-     * @param user producted user
-     * @return list of {@link Product} objects from db or if non exist return a list with size of 0.*/
-    List<Product> getAllProducts(User user);
+    /** Finds specified product.
+     * @param number business key of product.
+     * @return {@link Product} object from db or null if doesn't exist.*/
+    Product readProduct(String number);
 
     /** Deletes specified product.
      * @param productId generated id of product.
      * @return true if product was successfully deleted or did not exist.*/
     boolean deleteProduct(Integer productId);
 
-    /** Deletes all products with specified user.
-     * @param user producted user
-     * @return true if product were successfully deleted or did not exist.*/
-    boolean deletAllProducts(User user);
-
     /** Gets all products.
      * @return list of {@link Product} objects from db or if non exist return a list with size of 0.*/
     List<Product> getAllProducts();
+
+    /** Gets all Products list within reservation.
+     * @return list of {@link ProductInReservation} objects from db or if non exist return a list with size of 0.*/
+    List<ProductInReservation> getAllProducts(int reservationId);
+
+    ProductInReservation changeAmount(int productInReservationId, int amount);
+
+    ProductInReservation writeOrUpdateProductInReservation(ProductInReservation productInReservation);
+    ProductInReservation readProductInReservation(Integer productInReservationId);
+    ProductInReservation readProductInReservation(String number);
+    boolean deleteProductInReservation(Integer productInResrevationId);
+    List<Product> getAllProductsInReservation();
+
 }
