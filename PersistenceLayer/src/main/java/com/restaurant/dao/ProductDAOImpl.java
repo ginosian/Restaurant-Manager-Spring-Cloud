@@ -56,7 +56,22 @@ public class ProductDAOImpl implements ProductDAO{
         return false;
     }
 
+<<<<<<< Updated upstream
     public List<Product> getAllProducts() {
+=======
+    @ReadRowsTransactional
+    @Override
+    public List<ProductInReservation> getAllProductsInReservation() {
+        Session session = null;
+        try{
+            session = getSession();
+            System.out.println("*****Transaction is active ********" + TransactionSynchronizationManager.isActualTransactionActive() + "**getAllProductsInReservation**");
+            Query query = session.createNamedQuery("ProductInReservation.getAll");
+            return query.getResultList();
+        }catch (HibernateException e) {
+            e.printStackTrace();
+        }
+>>>>>>> Stashed changes
         return null;
     }
 }

@@ -23,8 +23,12 @@
       <module name="Accounts_test" target="1.5" />
       <module name="Admin_main" target="1.5" />
       <module name="Admin_test" target="1.5" />
+      <module name="AuthorizationServer_main" target="1.5" />
+      <module name="AuthorizationServer_test" target="1.5" />
       <module name="DiscoveryServer_main" target="1.5" />
       <module name="DiscoveryServer_test" target="1.5" />
+      <module name="GatwayServer_main" target="1.5" />
+      <module name="GatwayServer_test" target="1.5" />
       <module name="Guest_main" target="1.5" />
       <module name="Guest_test" target="1.5" />
       <module name="PersistenceLayer_main" target="1.8" />

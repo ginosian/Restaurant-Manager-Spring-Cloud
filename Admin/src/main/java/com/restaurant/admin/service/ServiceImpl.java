@@ -14,7 +14,7 @@ public class ServiceImpl implements Service{
     @Autowired
     RestTemplate restTemplate;
 
-    public Object getEntity(){
-        return restTemplate.getForObject(SERVICE_URL + "/user", Object.class);
+    public Object getData(){
+        return restTemplate.getForObject(SERVICE_URL + "/stats", Object.class);
     }
 }

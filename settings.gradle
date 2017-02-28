@@ -4,4 +4,6 @@ include 'Admin'
 include 'Restaurant'
 include 'Guest'
 include 'DiscoveryServer'
+include 'AuthorizationServer'
+include 'GatwayServer'
 

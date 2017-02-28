@@ -5,5 +5,5 @@ package com.restaurant.admin.service;
  */
 public interface Service {
 
-    public Object getEntity();
+    public Object getData();
 }

@@ -10,5 +10,13 @@ public interface UserService {
 
     public User createOrUpdate(User user);
 
+<<<<<<< Updated upstream
     public Role createRole(Role role);
+=======
+    /** Creates a table to store token for rememberMe functionality*/
+    void addRememberMeTable();
+
+
+    List<Role> roles();
+>>>>>>> Stashed changes
 }

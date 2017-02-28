@@ -38,4 +38,20 @@ public interface ProductDAO {
     /** Gets all products.
      * @return list of {@link Product} objects from db or if non exist return a list with size of 0.*/
     List<Product> getAllProducts();
+<<<<<<< Updated upstream
+=======
+
+    /** Gets all Products list within reservation.
+     * @return list of {@link ProductInReservation} objects from db or if non exist return a list with size of 0.*/
+    List<ProductInReservation> getAllProducts(int reservationId);
+
+    ProductInReservation changeAmount(int productInReservationId, int amount);
+
+    ProductInReservation writeOrUpdateProductInReservation(ProductInReservation productInReservation);
+    ProductInReservation readProductInReservation(Integer productInReservationId);
+    ProductInReservation readProductInReservation(String number);
+    boolean deleteProductInReservation(Integer productInResrevationId);
+    List<ProductInReservation> getAllProductsInReservation();
+
+>>>>>>> Stashed changes
 }

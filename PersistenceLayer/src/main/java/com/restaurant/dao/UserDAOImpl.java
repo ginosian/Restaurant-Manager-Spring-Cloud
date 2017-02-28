@@ -64,6 +64,26 @@ public class UserDAOImpl implements UserDAO{
         return null;
     }
 
+<<<<<<< Updated upstream
+=======
+    @ReadRowsTransactional
+    @Override
+    public List<Role> getAllRoles() {
+        Session session = null;
+        try{
+            session = getSession();
+            System.out.println("*****Transaction is active ********" + TransactionSynchronizationManager.isActualTransactionActive() + "**getAllRoles**");
+            Query query = session.createNamedQuery("Role.getAllRoles");
+            return query.getResultList();
+        }catch (HibernateException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @WriteUpdateTransactional
+    @Override
+>>>>>>> Stashed changes
     public Role writeRole(Role role) {
         Session session = null;
         Transaction transaction = null;

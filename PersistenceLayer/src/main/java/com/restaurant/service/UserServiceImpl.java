@@ -22,4 +22,22 @@ public class UserServiceImpl implements UserService{
     public Role createRole(Role role) {
         return userDAO.writeRole(role);
     }
+<<<<<<< Updated upstream
+=======
+
+    @Override
+    public List<Role> readRoles() {
+        return userDAO.readRoles();
+    }
+
+    @Override
+    public void addRememberMeTable() {
+
+    }
+
+    @Override
+    public List<Role> roles() {
+        return userDAO.getAllRoles();
+    }
+>>>>>>> Stashed changes
 }

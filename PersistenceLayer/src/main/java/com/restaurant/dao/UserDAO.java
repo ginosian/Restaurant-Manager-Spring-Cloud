@@ -57,4 +57,6 @@ public interface UserDAO {
 
     /** Creates a table to store token for rememberMe functionality*/
     void addRememberMeTable();
+
+    List<Role> getAllRoles();
 }

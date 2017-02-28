@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: gateway-server
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1115/eureka/
+server:
+  port: 1121
+
+
+zuul:
+  sensitive-headers: Cookie, Set-Cookie
+

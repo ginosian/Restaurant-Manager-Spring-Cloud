@@ -14,8 +14,8 @@ public class Controller {
     @Autowired
     Service service;
 
-    @GetMapping(value = "/admin")
-    public Object addOrUpdateUser(){
-        return service.getEntity();
+    @GetMapping(value = "/all")
+    public Object getData(){
+        return service.getData();
     }
 }
