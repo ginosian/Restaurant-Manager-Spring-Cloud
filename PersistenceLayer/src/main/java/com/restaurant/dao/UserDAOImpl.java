@@ -8,6 +8,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.TransactionSynchronizationManager;
 
@@ -17,7 +18,7 @@ import java.util.List;
  * Created by Martha on 2/25/2017.
  */
 @Repository
-@Transactional
+@Transactional(propagation = Propagation.MANDATORY)
 public class UserDAOImpl implements UserDAO {
 
     @Autowired
@@ -27,26 +28,63 @@ public class UserDAOImpl implements UserDAO {
         return sessionFactory.getCurrentSession();
     }
 
-    @WriteUpdateTransactional
     @Override
-    public User writeOrUpdateUser(User user) {
-        Session session = null;
+    public User updateUser(User user) {
+        Session session;
         try{
-             session = getSession();
-            session.saveOrUpdate(user);
-            Query query = session.createNamedQuery("User.getUserByUsername");
-            query.setParameter("username", user.getUsername());  //TODO optimize this through keeping create or update approach
-            return (User) query.getSingleResult();
+            session = getSession();
+            session.persist(user);
+            Integer id = (Integer) session.getIdentifier(user);
+            return session.find(User.class, id);
         }catch (HibernateException e) {
             e.printStackTrace();
         }
         return null;
     }
 
-    @ReadTransactional
+    @Override
+    public User writeUser(User user) {
+        Session session;
+        try{
+            session = getSession();
+            session.persist(user);
+            Integer id = (Integer) session.getIdentifier(user);
+            return session.find(User.class, id);
+        }catch (HibernateException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
+    public boolean containsUserByUsername(String username) {
+        Session session;
+        try{
+            session = getSession();
+            Query query = session.createNamedQuery("User.getUserByUsername");
+            query.setParameter("username", username);
+            return query.getResultList().size() != 0;
+        }catch (HibernateException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    @Override
+    public boolean containsUserById(int userId) {
+        Session session;
+        try{
+            session = getSession();
+            return session.find(User.class, userId) != null;
+        }catch (HibernateException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
     @Override
     public User readUser(Integer userId) {
-        Session session = null;
+        Session session;
         try{
             session = getSession();
             return  session.find(User.class, userId);
@@ -56,10 +94,9 @@ public class UserDAOImpl implements UserDAO {
         return null;
     }
 
-    @ReadRowsTransactional
     @Override
     public User readUser(String username) {
-        Session session = null;
+        Session session;
         try{
             session = getSession();
             Query query = session.createNamedQuery("User.getUserByUsername");
@@ -71,26 +108,24 @@ public class UserDAOImpl implements UserDAO {
         return null;
     }
 
-    @DeleteTransactional
     @Override
     public boolean deleteUser(Integer userId) {
-        Session session = null;
+        Session session;
         try{
             session = getSession();
             System.out.println("*****Transaction is active ********" + TransactionSynchronizationManager.isActualTransactionActive() + "**deleteUser**");
             User user  = session.find(User.class, userId);
             session.delete(user);
-            return session.contains(user);
+            return !session.contains(user);
         }catch (HibernateException e) {
             e.printStackTrace();
         }
         return false;
     }
 
-    @DeleteTransactional
     @Override
     public boolean deleteUser(String username) {
-        Session session = null;
+        Session session;
         try{
             session = getSession();
             System.out.println("*****Transaction is active ********" + TransactionSynchronizationManager.isActualTransactionActive() + "**deleteUser**");
@@ -104,10 +139,9 @@ public class UserDAOImpl implements UserDAO {
         return false;
     }
 
-    @ReadRowsTransactional
     @Override
     public List<User> getAllUsers(String role) {
-        Session session = null;
+        Session session;
         try{
             session = getSession();
             System.out.println("*****Transaction is active ********" + TransactionSynchronizationManager.isActualTransactionActive() + "**getAllUsers**");
@@ -120,10 +154,9 @@ public class UserDAOImpl implements UserDAO {
         return null;
     }
 
-    @ReadRowsTransactional
     @Override
     public List<User> getAllUsers() {
-        Session session = null;
+        Session session;
         try{
             session = getSession();
             System.out.println("*****Transaction is active ********" + TransactionSynchronizationManager.isActualTransactionActive() + "**getAllUsers**");
@@ -135,26 +168,24 @@ public class UserDAOImpl implements UserDAO {
         return null;
     }
 
-    @WriteUpdateTransactional
     @Override
     public Role writeRole(Role role) {
-        Session session = null;
+
+        Session session;
         try{
             session = getSession();
-            session.saveOrUpdate(role);
-            Query query = session.createNamedQuery("Role.getRoleByRole");
-            query.setParameter("role", role.getRole());  //TODO optimize this through keeping create or update approach
-            return (Role) query.getSingleResult();
+            session.persist(role);
+            Integer id = (Integer) session.getIdentifier(role);
+            return session.find(Role.class, id);
         }catch (HibernateException e) {
             e.printStackTrace();
         }
         return null;
     }
 
-    @WriteUpdateTransactional
     @Override
     public List<Role> readRoles() {
-        Session session = null;
+        Session session;
         try{
             session = getSession();
             System.out.println("*****Transaction is active ********" + TransactionSynchronizationManager.isActualTransactionActive() + "**readRoles**");
@@ -166,10 +197,9 @@ public class UserDAOImpl implements UserDAO {
         return null;
     }
 
-    @ReadRowsTransactional
     @Override
     public Role readRole(String role) {
-        Session session = null;
+        Session session;
         try{
             session = getSession();
             Query query = session.createNamedQuery("Role.getRoleByRole");
@@ -181,7 +211,18 @@ public class UserDAOImpl implements UserDAO {
         return null;
     }
 
-    @WriteUpdateTransactional
+    @Override
+    public Role readRole(int roleId) {
+        Session session;
+        try{
+            session = getSession();
+            return  session.find(Role.class, roleId);
+        }catch (HibernateException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     public void addRememberMeTable() {
 //        Session session = null;
 //        try {

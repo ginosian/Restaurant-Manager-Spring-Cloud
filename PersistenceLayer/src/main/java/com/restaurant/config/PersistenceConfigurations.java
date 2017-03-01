@@ -4,6 +4,7 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 
@@ -15,27 +16,28 @@ import java.util.Properties;
  * Created by Martha on 2/27/2017.
  */
 @Configuration
+@PropertySource("classpath:application.properties")
 public class PersistenceConfigurations {
 
     // region Hikari Datasource properties
-    @Value("${spring.datasource.hikari.jdbc-url}")
-    String jdbc_url;
-    @Value("${spring.datasource.hikari.username}")
-    String username;
-    @Value("${spring.datasource.hikari.password}")
-    String password;
-    @Value("${spring.datasource.hikari.data-source-class-name}")
-    String data_source_class_name;
-    @Value("${spring.datasource.hikari.pool-name}")
-    String pool_name;
-    @Value("${spring.datasource.hikari.maximum-pool-size}")
-    int maximum_pool_size;
-    @Value("${spring.datasource.hikari.minimum-idle}")
-    int minimum_idle;
-    @Value("${spring.datasource.hikari.connection-timeout}")
-    int connection_timeout;
-    @Value("${spring.datasource.hikari.idle-timeout}")
-    int idle_timeout;
+//    @Value("${spring.datasource.hikari.jdbc-url}")
+//    String jdbc_url;
+//    @Value("${spring.datasource.hikari.username}")
+//    String username;
+//    @Value("${spring.datasource.hikari.password}")
+//    String password;
+//    @Value("${spring.datasource.hikari.data-source-class-name}")
+//    String data_source_class_name;
+//    @Value("${spring.datasource.hikari.pool-name}")
+//    String pool_name;
+//    @Value("${spring.datasource.hikari.maximum-pool-size}")
+//    int maximum_pool_size;
+//    @Value("${spring.datasource.hikari.minimum-idle}")
+//    int minimum_idle;
+//    @Value("${spring.datasource.hikari.connection-timeout}")
+//    int connection_timeout;
+//    @Value("${spring.datasource.hikari.idle-timeout}")
+//    int idle_timeout;
     // endregion
 
     // region C3P0 Datasource Hibernate properties
@@ -151,24 +153,24 @@ public class PersistenceConfigurations {
         return properties;
     }
 
-    private Properties datasourceConfigs(){
-        Properties configProperties = new Properties();
-        configProperties.put("dataSourceClassName", data_source_class_name);
-        configProperties.put("poolName", pool_name);
-        configProperties.put("maximumPoolSize", maximum_pool_size);
-        configProperties.put("minimumIdle", minimum_idle);
-        configProperties.put("connectionTimeout", connection_timeout);
-        configProperties.put("idleTimeout", idle_timeout);
-        configProperties.put("dataSourceProperties", dataSourceProperties());
-        return configProperties;
-    }
+//    private Properties datasourceConfigs(){
+//        Properties configProperties = new Properties();
+//        configProperties.put("dataSourceClassName", data_source_class_name);
+//        configProperties.put("poolName", pool_name);
+//        configProperties.put("maximumPoolSize", maximum_pool_size);
+//        configProperties.put("minimumIdle", minimum_idle);
+//        configProperties.put("connectionTimeout", connection_timeout);
+//        configProperties.put("idleTimeout", idle_timeout);
+//        configProperties.put("dataSourceProperties", dataSourceProperties());
+//        return configProperties;
+//    }
 
-    private Properties dataSourceProperties(){
-        Properties dataSourceProperties = new Properties();
-        dataSourceProperties.put("url", jdbc_url);
-        dataSourceProperties.put("user", username);
-        dataSourceProperties.put("password", password);
-        return dataSourceProperties;
-    }
+//    private Properties dataSourceProperties(){
+//        Properties dataSourceProperties = new Properties();
+//        dataSourceProperties.put("url", jdbc_url);
+//        dataSourceProperties.put("user", username);
+//        dataSourceProperties.put("password", password);
+//        return dataSourceProperties;
+//    }
 
 }

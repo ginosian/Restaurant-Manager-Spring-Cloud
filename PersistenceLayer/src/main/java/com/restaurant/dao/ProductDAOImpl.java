@@ -1,13 +1,13 @@
 package com.restaurant.dao;
 
 import com.restaurant.dto.Product;
-import com.restaurant.dto.ProductInReservation;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.TransactionSynchronizationManager;
 
@@ -17,7 +17,7 @@ import java.util.List;
  * Created by Martha on 2/25/2017.
  */
 @Repository
-@Transactional
+@Transactional(propagation = Propagation.MANDATORY)
 public class ProductDAOImpl implements ProductDAO{
 
     @Autowired
@@ -27,23 +27,59 @@ public class ProductDAOImpl implements ProductDAO{
         return sessionFactory.getCurrentSession();
     }
 
-    @WriteUpdateTransactional
     @Override
-    public Product writeOrUpdateProduct(Product product) {
-        Session session = null;
+    public Product updateProduct(Product product) {
+        Session session;
         try{
             session = getSession();
-            session.saveOrUpdate(product);
-            Query query = session.createNamedQuery("Product.getByNumber");
-            query.setParameter("number", product.getNumber());  //TODO optimize this through keeping create or update approach
-            return (Product) query.getSingleResult();
+            session.update(product);
+            return product;
         }catch (HibernateException e) {
             e.printStackTrace();
         }
         return null;
     }
 
-    @ReadTransactional
+    @Override
+    public Product writeProduct(Product product) {
+        Session session;
+        try{
+            session = getSession();
+            session.persist(product);
+            Integer id = (Integer) session.getIdentifier(product);
+            return session.find(Product.class, id);
+        }catch (HibernateException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
+    public boolean containsProductByName(String productName) {
+        Session session;
+        try{
+            session = getSession();
+            Query query = session.createNamedQuery("Product.getByName");
+            query.setParameter("name", productName);
+            return query.getResultList().size() != 0;
+        }catch (HibernateException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    @Override
+    public boolean containsProductById(int productId) {
+        Session session;
+        try{
+            session = getSession();
+            return session.find(Product.class, productId) != null;
+        }catch (HibernateException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
     @Override
     public Product readProduct(Integer productId) {
         Session session = null;
@@ -56,7 +92,6 @@ public class ProductDAOImpl implements ProductDAO{
         return null;
     }
 
-    @ReadTransactional
     @Override
     public Product readProduct(String number) {
         Session session = null;
@@ -71,7 +106,6 @@ public class ProductDAOImpl implements ProductDAO{
         return null;
     }
 
-    @DeleteTransactional
     @Override
     public boolean deleteProduct(Integer productId) {
         Session session = null;
@@ -80,14 +114,13 @@ public class ProductDAOImpl implements ProductDAO{
             System.out.println("*****Transaction is active ********" + TransactionSynchronizationManager.isActualTransactionActive() + "**deleteProduct**");
             Product product  = session.find(Product.class, productId);
             session.delete(product);
-            return session.contains(product);
+            return !session.contains(product);
         }catch (HibernateException e) {
             e.printStackTrace();
         }
         return false;
     }
 
-    @ReadRowsTransactional
     @Override
     public List<Product> getAllProducts() {
         Session session = null;
@@ -102,110 +135,4 @@ public class ProductDAOImpl implements ProductDAO{
         return null;
     }
 
-    @ReadRowsTransactional
-    @Override
-    public List<ProductInReservation> getAllProducts(int reservationId) {
-        Session session = null;
-        try{
-            session = getSession();
-            System.out.println("*****Transaction is active ********" + TransactionSynchronizationManager.isActualTransactionActive() + "**getAllProducts**");
-            Query query = session.createNamedQuery("ProductInReservation.getByReservation");
-            query.setParameter("id", reservationId);
-            return query.getResultList();
-        }catch (HibernateException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    @WriteUpdateTransactional
-    @Override
-    public ProductInReservation changeAmount(int productInReservationId, int amount) {
-        Session session = null;
-        try{
-            session = getSession();
-            Query query = session.createNamedQuery("ProductInReservation.changeAmount");
-            query.setParameter("amount", amount);
-            query.setParameter("id_order_product", productInReservationId);
-            return (ProductInReservation) query.getSingleResult();
-        }catch (HibernateException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    @WriteUpdateTransactional
-    @Override
-    public ProductInReservation writeOrUpdateProductInReservation(ProductInReservation productInReservation) {
-        Session session = null;
-        try{
-            session = getSession();
-            session.saveOrUpdate(productInReservation);
-            Query query = session.createNamedQuery("ProductInReservation.getByNumber");
-            query.setParameter("number", productInReservation.getNumber());  //TODO optimize this through keeping create or update approach
-            return (ProductInReservation) query.getSingleResult();
-        }catch (HibernateException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    @ReadTransactional
-    @Override
-    public ProductInReservation readProductInReservation(Integer productInReservationId) {
-        Session session = null;
-        try{
-            session = getSession();
-            return  session.find(ProductInReservation.class, productInReservationId);
-        }catch (HibernateException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    @ReadTransactional
-    @Override
-    public ProductInReservation readProductInReservation(String number) {
-        Session session = null;
-        try{
-            session = getSession();
-            Query query = session.createNamedQuery("ProductInReservation.getByNumber");
-            query.setParameter("number", number);
-            return (ProductInReservation) query.getSingleResult();
-        }catch (HibernateException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    @ReadTransactional
-    @Override
-    public boolean deleteProductInReservation(Integer productInReserevationId) {
-        Session session = null;
-        try{
-            session = getSession();
-            System.out.println("*****Transaction is active ********" + TransactionSynchronizationManager.isActualTransactionActive() + "**deleteProductInReservation**");
-            ProductInReservation productInReservation  = session.find(ProductInReservation.class, productInReserevationId);
-            session.delete(productInReservation);
-            return session.contains(productInReservation);
-        }catch (HibernateException e) {
-            e.printStackTrace();
-        }
-        return false;
-    }
-
-    @ReadRowsTransactional
-    @Override
-    public List<Product> getAllProductsInReservation() {
-        Session session = null;
-        try{
-            session = getSession();
-            System.out.println("*****Transaction is active ********" + TransactionSynchronizationManager.isActualTransactionActive() + "**getAllProductsInReservation**");
-            Query query = session.createNamedQuery("ProductInReservation.getAll");
-            return query.getResultList();
-        }catch (HibernateException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
 }

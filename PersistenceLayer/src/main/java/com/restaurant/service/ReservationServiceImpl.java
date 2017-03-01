@@ -1,19 +1,22 @@
 package com.restaurant.service;
 
 import com.restaurant.dao.ReservationDAO;
-import com.restaurant.dto.ProductInReservation;
 import com.restaurant.dto.Reservation;
-import com.restaurant.dto.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
+
+import static org.terracotta.modules.ehcache.ToolkitInstanceFactoryImpl.LOGGER;
 
 /**
  * Created by Martha on 2/25/2017.
  */
 @Service
+@Transactional
 public class ReservationServiceImpl implements ReservationService {
 
     @Autowired
@@ -28,50 +31,92 @@ public class ReservationServiceImpl implements ReservationService {
     ReentrantLock lock = new ReentrantLock();
 
     @Override
-    public Reservation writeOrUpdateReservation(Reservation reservation) {
-        lock.lock();
-        Reservation persistedReservation = reservationDAO.writeOrUpdateReservation(reservation);
-        User reservingUser = userService.readUser(reservation.getUser().getId());
-        reservingUser.setReservations(persistedReservation);
-        userService.writeOrUpdateUser(reservingUser);
-        lock.unlock();
-        return persistedReservation;
+    public Reservation createReservation(int userId) {
+        long startNanos = System.nanoTime();
+        LOGGER.info("CREATE RESERVATION start / Current thread " + Thread.currentThread().getName() + "*******************************************");
+
+        LOGGER.info("CREATE RESERVATION end " + (TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - startNanos)) + "/ Current thread " + Thread.currentThread().getName() + "***********************************************************");
+        return null;
     }
 
     @Override
-    public Reservation readReservation(int reservationId) {
-        return reservationDAO.readReservation(reservationId);
+    public Reservation addProductInReservation(int productId, int amount) {
+        long startNanos = System.nanoTime();
+        LOGGER.info("ADD PRODUCT IN RESERVATION start / Current thread " + Thread.currentThread().getName() + "*******************************************");
+
+        LOGGER.info("ADD PRODUCT IN RESERVATION end " + (TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - startNanos)) + "/ Current thread " + Thread.currentThread().getName() + "***********************************************************");
+        return null;
     }
 
     @Override
-    public Reservation readReservation(String number) {
-        return reservationDAO.readReservation(number);
-    }
+    public Reservation changeProductAmountInReservation(int reservationId, int productId, int amount) {
+        long startNanos = System.nanoTime();
+        LOGGER.info("CHANGE PRODUCT AMOUNT start / Current thread " + Thread.currentThread().getName() + "*******************************************");
 
-    @Override //TODO Later add functionality to load only id-s.
-    public boolean deleteReservation(int reservationId) {
-        lock.lock();
-        List<ProductInReservation> products = productService.getAllProducts(reservationId);
-        for(ProductInReservation product : products){
-            productService.deleteProductInReservation(product.getId());
-        }
-        boolean deleted = reservationDAO.deleteReservation(reservationId);
-        lock.unlock();
-        return deleted;
+        LOGGER.info("CHANGE PRODUCT AMOUNT end " + (TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - startNanos)) + "/ Current thread " + Thread.currentThread().getName() + "***********************************************************");
+        return null;
     }
 
     @Override
-    public List<Reservation> getAllReservations() {
-        return reservationDAO.getAllReservations();
-    }
+    public Reservation deleteProductFromReservation(int reservationId, int productId) {
+        long startNanos = System.nanoTime();
+        LOGGER.info("DELETE PRODUCT FROM RESERVATION start / Current thread " + Thread.currentThread().getName() + "*******************************************");
 
-    @Override
-    public List<Reservation> getAllReservationsByUser(int userId) {
-        return reservationDAO.getAllReservationsByUser(userId);
+        LOGGER.info("DELETE PRODUCT FROM RESERVATION end " + (TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - startNanos)) + "/ Current thread " + Thread.currentThread().getName() + "***********************************************************");
+        return null;
     }
 
     @Override
     public Reservation changeReservationState(int reservationId, boolean isActive) {
-        return reservationDAO.changeReservationState(reservationId, isActive);
+        long startNanos = System.nanoTime();
+        LOGGER.info("CHANGE RESERVATION STATE start / Current thread " + Thread.currentThread().getName() + "*******************************************");
+
+        LOGGER.info("CHANGE RESERVATION STATE end " + (TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - startNanos)) + "/ Current thread " + Thread.currentThread().getName() + "***********************************************************");
+        return null;
+    }
+
+    @Override
+    public Reservation findReservationById(int reservationId) {
+        long startNanos = System.nanoTime();
+        LOGGER.info("FIND RESERVATION BY ID start / Current thread " + Thread.currentThread().getName() + "*******************************************");
+
+        LOGGER.info("FIND RESERVATION BY ID end " + (TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - startNanos)) + "/ Current thread " + Thread.currentThread().getName() + "***********************************************************");
+        return null;
+    }
+
+    @Override
+    public List<Reservation> findAllReservations() {
+        long startNanos = System.nanoTime();
+        LOGGER.info("FIND ALL RESERVATIONS start / Current thread " + Thread.currentThread().getName() + "*******************************************");
+
+        LOGGER.info("FIND ALL RESERVATIONS end " + (TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - startNanos)) + "/ Current thread " + Thread.currentThread().getName() + "***********************************************************");
+        return null;
+    }
+
+    @Override
+    public List<Reservation> findAllReservationsByUserId(int userId) {
+        long startNanos = System.nanoTime();
+        LOGGER.info("FIND ALL RESERVATIONS BY USER start / Current thread " + Thread.currentThread().getName() + "*******************************************");
+
+        LOGGER.info("FIND ALL RESERVATIONS BY USER end " + (TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - startNanos)) + "/ Current thread " + Thread.currentThread().getName() + "***********************************************************");
+        return null;
+    }
+
+    @Override
+    public boolean deleteReservation(int reservationId) {
+        long startNanos = System.nanoTime();
+        LOGGER.info("DELETE RESERVATION start / Current thread " + Thread.currentThread().getName() + "*******************************************");
+
+        LOGGER.info("DELETE RESERVATION end " + (TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - startNanos)) + "/ Current thread " + Thread.currentThread().getName() + "***********************************************************");
+        return false;
+    }
+
+    @Override
+    public boolean deleteAllReservationsByUser(int userId) {
+        long startNanos = System.nanoTime();
+        LOGGER.info("DELETE RESERVATION BY USER start / Current thread " + Thread.currentThread().getName() + "*******************************************");
+
+        LOGGER.info("DELETE RESERVATION BY USER end " + (TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - startNanos)) + "/ Current thread " + Thread.currentThread().getName() + "***********************************************************");
+        return false;
     }
 }

@@ -1,9 +1,9 @@
-package com.restaurant.util;
+package util;
 
 import com.restaurant.dto.*;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by Martha on 2/26/2017.
@@ -11,24 +11,24 @@ import java.util.List;
 public class MockedData {
     public static int counter;
     private static User user;
-    private static List<User> users = new ArrayList<>();
+    private static Set<User> users = new HashSet<>();
 
     private static Role role;
-    private static List<Role> roles = new ArrayList<>();
+    private static Set<Role> roles = new HashSet<>();
 
     private static Product product;
-    private static List<Product> products = new ArrayList<>();
+    private static Set<Product> products = new HashSet<>();
 
     private static ProductInReservation productInReservation;
-    private static List<ProductInReservation> productsInOrder = new ArrayList<>();
+    private static Set<ProductInReservation> productsInOrder = new HashSet<>();
 
     private static Reservation reservation;
-    private static List<Reservation> orders = new ArrayList<>();
+    private static Set<Reservation> orders = new HashSet<>();
 
 
 
-    public static ArrayList<Role> generateRoleList(int quantity){
-        ArrayList<Role> result = new ArrayList<>();
+    public static Set<Role> generateRoleSet(int quantity){
+        Set<Role> result = new HashSet<>();
         for (int i = 0; i < quantity; i++) {
             Role role = new Role("TEST_ROLE_" + Integer.toString(++counter), "TEST_B_K_" + Integer.toString(++counter));
             result.add(role);
@@ -40,7 +40,7 @@ public class MockedData {
         return new Role("TEST_ROLE_" + Integer.toString(++counter), "TEST_B_K_" + Integer.toString(++counter));
     }
 
-    public static User generateUser(List<Role> roles){
+    public static User generateUser(Set<Role> roles){
         return new User("TEST_USER_" + Integer.toString(++counter), "TESTPASSWORD" + Integer.toString(++counter), roles);
     }
 
@@ -56,11 +56,11 @@ public class MockedData {
 //        return new Reservation("TEST_B_K_" + Integer.toString(++counter), ggenerateProductInOrder(generateProduct(),)  user, true);
 //    }
 //
-//    public static Reservation generateOrder(User user, List<ProductInReservation> productInReservations){
+//    public static Reservation generateOrder(User user, Set<ProductInReservation> productInReservations){
 //        return new Reservation("TEST_B_K_" + Integer.toString(++counter), user, true);
 //    }
 
-    public static List<User> usersFromDB(User user){
+    public static Set<User> usersFromDB(User user){
         if(user != null) users.add(user);
         return users;
     }
@@ -70,7 +70,7 @@ public class MockedData {
         return user;
     }
 
-    public static List<Role> rolesFromDB(Role role){
+    public static Set<Role> rolesFromDB(Role role){
         if(role != null) roles.add(role);
         return roles;
     }
@@ -80,7 +80,7 @@ public class MockedData {
         return role;
     }
 
-    public static List<Product> productsFromDB(Product product){
+    public static Set<Product> productsFromDB(Product product){
         if(product != null) products.add(product);
         return products;
     }
@@ -90,7 +90,7 @@ public class MockedData {
         return product;
     }
 
-    public static List<ProductInReservation> productsInOrderFromDB(ProductInReservation productInReservation){
+    public static Set<ProductInReservation> productsInOrderFromDB(ProductInReservation productInReservation){
         if(productInReservation != null) productsInOrder.add(productInReservation);
         return productsInOrder;
     }
@@ -100,7 +100,7 @@ public class MockedData {
         return productInReservation;
     }
 
-    public static List<Reservation> ordersFromDB(Reservation reservation){
+    public static Set<Reservation> ordersFromDB(Reservation reservation){
         if(reservation != null) orders.add(reservation);
         return orders;
     }
@@ -108,6 +108,26 @@ public class MockedData {
     public static Reservation orderFromDB(Reservation reservation){
         if(reservation != null) MockedData.reservation = reservation;
         return reservation;
+    }
+
+    public static String roleName(){
+        return "Test_ROLE_" + Integer.toString(++counter);
+    }
+
+    public static String userName(){
+        return "Test_User_" + Integer.toString(++counter);
+    }
+
+    public static String productName(){
+        return "Test_Product_" + Integer.toString(++counter);
+    }
+
+    public static String password(){
+        return "Test_Password_" + Integer.toString(++counter);
+    }
+
+    public static String uuid(){
+        return "Test_UUID_" + Integer.toString(++counter);
     }
 
 

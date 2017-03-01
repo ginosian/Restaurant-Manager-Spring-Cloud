@@ -2,14 +2,13 @@ package com.restaurant.dto;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
-import org.hibernate.annotations.Fetch;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Set;
 
 /**
  * Created by Martha on 2/24/2017.
@@ -28,7 +27,6 @@ import java.util.concurrent.CopyOnWriteArrayList;
         @NamedQuery(
                 name = "User.getUsersByRole",
                 query = "SELECT u FROM User u JOIN u.roles u_r WHERE u_r.role = :" + "role")
-
 })
 @Table(name = "user")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
@@ -38,8 +36,8 @@ public class User implements Serializable {
     private Integer id;
     private String username;
     private String password;
-    private List<Role> roles;
-    private List<Reservation> reservations;
+    private Set<Role> roles;
+    private Set<Reservation> reservations;
     // endregion
 
     // region Constructors
@@ -48,7 +46,7 @@ public class User implements Serializable {
 
     public User(String username,
                 String password,
-                List<Role> roles) {
+                Set<Role> roles) {
         this.username = username;
         this.password = password;
         this.roles = roles;
@@ -79,28 +77,33 @@ public class User implements Serializable {
     }
 
     @ManyToMany(fetch = FetchType.EAGER)
-    public List<Role> getRoles() {
+    public Set<Role> getRoles() {
         return roles;
     }
 
     @ManyToMany(cascade = {CascadeType.ALL})
-    public List<Reservation> getReservations() {
+    public Set<Reservation> getReservations() {
         return reservations;
     }
     // endregion
 
     // region Setters
-    public void setRoles(List<Role> roles) {
+    public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
 
-    private void setReservations(List<Reservation> reservations) {
+    private void setReservations(Set<Reservation> reservations) {
         this.reservations = reservations;
     }
 
     public void setReservations(Reservation reservation) {
-        if(reservations == null) reservations = new LinkedList<>();
+        if(reservations == null) reservations = new HashSet<>();
         reservations.add(reservation);
+    }
+
+    public void setRole(Role role) {
+        if(roles == null) roles = new HashSet<>();
+        roles.add(role);
     }
 
     public void setId(Integer id) {

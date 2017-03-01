@@ -3,67 +3,119 @@ package com.restaurant.service;
 import com.restaurant.dao.UserDAO;
 import com.restaurant.dto.Role;
 import com.restaurant.dto.User;
+import com.restaurant.util.BusKeyGen;
+import com.restaurant.util.Validate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by Martha on 2/24/2017.
  */
 @Service
+@Transactional
 public class UserServiceImpl implements UserService{
 
     @Autowired
     UserDAO userDAO;
 
     @Override
-    public User writeOrUpdateUser(User user) {
-        return userDAO.writeOrUpdateUser(user);
+    public User createUser(String username, String password, Role ... roles) {
+        // Validate args
+        if(!Validate.valid(username, password))return null;
+        if(userDAO.containsUserByUsername(username)) return null;
+        int index = roles.length - 1;
+        Set<Role> actualRoles = new HashSet<>();
+        while(index >= 0){
+            Role temp = userDAO.readRole(roles[index].getId());
+            if( temp != null) actualRoles.add(temp);
+            index--;
+        }
+        if(actualRoles.size() == 0)return null;
+        // Form entity
+        User user = new User(username, password, actualRoles);
+        // Operate
+        User result = userDAO.writeUser(user);
+        return result;
     }
 
     @Override
-    public User readUser(Integer userId) {
-        return userDAO.readUser(userId);
+    public User findUser(int userId) {
+        // Validate args
+        if(!Validate.valid(userId))return null;
+        // Operate
+        User user = userDAO.readUser(userId);
+        return user;
     }
 
     @Override
-    public User readUser(String username) {
-        return userDAO.readUser(username);
+    public User findUser(String username) {
+        // Validate args
+        if(!Validate.valid(username)) return null;
+        // Operate
+        User user = userDAO.readUser(username);
+        return user;
     }
 
     @Override
-    public boolean deleteUser(Integer userId) {
-        return userDAO.deleteUser(userId);
+    public User updateUserWithARole(int userId, int roleId) {
+        // Validate
+        if(!Validate.valid(userId, roleId))return null;
+        Role role = userDAO.readRole(roleId);
+        if(!userDAO.containsUserById(userId) || role == null) return null;
+        // Form entity
+        User user = userDAO.readUser(userId);
+        user.setRole(role);
+        // Operate
+        User result = userDAO.updateUser(user);
+        return user;
     }
 
     @Override
-    public boolean deleteUser(String username) {
-        return userDAO.deleteUser(username);
-    }
-
-    @Override
-    public List<User> getAllUsers(String role) {
-        return userDAO.getAllUsers(role);
+    public boolean deleteUser(int userId) {
+        // Validate
+        if(!Validate.valid(userId)) return false;
+        // Operate
+       return userDAO.deleteUser(userId);
     }
 
     @Override
     public List<User> getAllUsers() {
-        return userDAO.getAllUsers();
+        // Operate
+        List<User> users = userDAO.getAllUsers();
+        return users;
     }
 
     @Override
-    public Role writeRole(Role role) {
-        return userDAO.writeRole(role);
+    public List<User> getAllUsersByRole(int roleId) {
+        // Validate
+        if(!Validate.valid(roleId)) return null;
+        Role role = userDAO.readRole(roleId);
+        if(!Validate.valid(role)) return null;
+        // Operate
+        List<User> users = userDAO.getAllUsers(role.getRole());
+        return users;
     }
 
     @Override
-    public List<Role> readRoles() {
-        return userDAO.readRoles();
+    public Role createRole(String role) {
+        // Validate args
+        if(!Validate.valid(role))return null;
+        // Operate
+        Role roleObject = new Role(role, BusKeyGen.nextKey());
+        Role result = userDAO.writeRole(roleObject);
+        return result;
     }
 
     @Override
-    public void addRememberMeTable() {
-
+    public List<Role> getAllRoles() {
+        // Operate
+        List<Role> roles = userDAO.readRoles();
+        return roles;
     }
+
 }

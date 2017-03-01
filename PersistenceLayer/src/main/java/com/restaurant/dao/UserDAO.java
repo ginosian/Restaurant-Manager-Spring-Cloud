@@ -10,12 +10,25 @@ import java.util.List;
  */
 public interface UserDAO {
 
-    /** Checks by username, if user exists updates it, if not creates new user.
-     * If user exists in db but the password of given user is null, updates
-     * whole info except the password.
+    /** Updates given entity, comparing identity is its generated id
      * @param user instance of {@link User}
-     * @return {@link User} object from db or null if doesn't exist.*/
-    User writeOrUpdateUser(User user);
+     * @return {@link User} entity updated.*/
+    User updateUser(User user);
+
+    /** Persists given entity
+     * @param user instance of {@link User}
+     * @return {@link User} entity with generated Id from db.*/
+    User writeUser(User user);
+
+    /** Checks by username
+     * @param username unique name of user
+     * @return false if doesn't exist.*/
+    boolean containsUserByUsername(String username);
+
+    /** Checks by username
+     * @param userId user id
+     * @return false if doesn't exist.*/
+    boolean containsUserById(int userId);
 
     /** Finds specified user.
      * @param userId generated id of user.
@@ -58,6 +71,10 @@ public interface UserDAO {
     /** Get role by role.
      * @return  {@link Role} object from db  with specified role.*/
     Role readRole(String role);
+
+    /** Get role by role.
+     * @return  {@link Role} object from db  with specified role.*/
+    Role readRole(int roleId);
 
     /** Creates a table to store token for rememberMe functionality*/
     void addRememberMeTable();

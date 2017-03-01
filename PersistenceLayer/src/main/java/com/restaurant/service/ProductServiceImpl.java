@@ -2,73 +2,66 @@ package com.restaurant.service;
 
 import com.restaurant.dao.ProductDAO;
 import com.restaurant.dto.Product;
-import com.restaurant.dto.ProductInReservation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import static org.terracotta.modules.ehcache.ToolkitInstanceFactoryImpl.LOGGER;
 
 /**
  * Created by Martha on 2/25/2017.
  */
 @Service
+@Transactional
 public class ProductServiceImpl implements ProductService{
 
     @Autowired
     ProductDAO productDAO;
 
     @Override
-    public Product writeOrUpdateProduct(Product product) {
-        return productDAO.writeOrUpdateProduct(product);
+    public Product createProduct(String productName) {
+        long startNanos = System.nanoTime();
+        LOGGER.info("CREATE PRODUCT start / Current thread " + Thread.currentThread().getName() + "*******************************************");
+
+        LOGGER.info("CREATE PRODUCT end " + (TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - startNanos)) + "/ Current thread " + Thread.currentThread().getName() + "***********************************************************");
+        return null;
     }
 
     @Override
-    public Product readProduct(Integer productId) {
-        return productDAO.readProduct(productId);
+    public Product findProduct(int productId) {
+        long startNanos = System.nanoTime();
+        LOGGER.info("FIND PRODUCT BY NAME start / Current thread " + Thread.currentThread().getName() + "*******************************************");
+
+        LOGGER.info("FIND PRODUCT BY NAME end " + (TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - startNanos)) + "/ Current thread " + Thread.currentThread().getName() + "***********************************************************");
+        return null;
     }
 
     @Override
-    public Product readProduct(String number) {
-        return productDAO.readProduct(number);
+    public Product findProduct(String productName) {
+        long startNanos = System.nanoTime();
+        LOGGER.info("FIND PRODUCT BY NAME start / Current thread " + Thread.currentThread().getName() + "*******************************************");
+
+        LOGGER.info("FIND PRODUCT BY NAME end " + (TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - startNanos)) + "/ Current thread " + Thread.currentThread().getName() + "***********************************************************");
+        return null;
     }
 
     @Override
-    public boolean deleteProduct(Integer productId) {
-        return productDAO.deleteProduct(productId);
+    public Product updateProductName(int productId, String productName) {
+        long startNanos = System.nanoTime();
+        LOGGER.info("UPDATE PRODUCT NAME start / Current thread " + Thread.currentThread().getName() + "*******************************************");
+
+        LOGGER.info("UPDATE PRODUCT NAME end " + (TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - startNanos)) + "/ Current thread " + Thread.currentThread().getName() + "***********************************************************");
+        return null;
     }
 
     @Override
-    public List<Product> getAllProducts() {
-        return productDAO.getAllProducts();
-    }
+    public boolean deleteProduct(int productId) {
+        long startNanos = System.nanoTime();
+        LOGGER.info("DELETE PRODUCT start / Current thread " + Thread.currentThread().getName() + "*******************************************");
 
-    @Override
-    public List<ProductInReservation> getAllProducts(int reservationId) {
-        return productDAO.getAllProducts(reservationId);
-    }
-
-    @Override
-    public ProductInReservation writeOrUpdateProductInReservation(ProductInReservation productInReservation) {
-        return productDAO.writeOrUpdateProductInReservation(productInReservation);
-    }
-
-    @Override
-    public ProductInReservation readProductInReservation(Integer productInReservationId) {
-        return productDAO.readProductInReservation(productInReservationId);
-    }
-
-    @Override
-    public ProductInReservation readProductInReservation(String number) {
-        return productDAO.readProductInReservation(number);
-    }
-
-    @Override
-    public boolean deleteProductInReservation(Integer productInResrevationId) {
-        return productDAO.deleteProductInReservation(productInResrevationId);
-    }
-
-    @Override
-    public List<Product> getAllProductsInReservation() {
-        return productDAO.getAllProductsInReservation();
+        LOGGER.info("DELETE PRODUCT end " + (TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - startNanos)) + "/ Current thread " + Thread.currentThread().getName() + "***********************************************************");
+        return false;
     }
 }

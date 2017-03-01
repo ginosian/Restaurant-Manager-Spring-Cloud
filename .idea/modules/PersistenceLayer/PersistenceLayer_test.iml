@@ -25,6 +25,8 @@
     <orderEntry type="library" name="Gradle: com.zaxxer:HikariCP:2.4.6" level="project" />
     <orderEntry type="library" name="Gradle: c3p0:c3p0:0.9.1.2" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-test:1.5.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: hsqldb:hsqldb:1.8.0.10" level="project" />
+    <orderEntry type="library" name="Gradle: com.h2database:h2:1.4.193" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot:1.5.1.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-autoconfigure:1.5.1.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-logging:1.5.1.RELEASE" level="project" />

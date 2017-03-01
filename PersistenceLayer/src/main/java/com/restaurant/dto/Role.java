@@ -53,7 +53,8 @@ public class Role implements Serializable {
 
     @Column(name = "role",
             unique = true,
-            nullable = false)
+            nullable = false,
+            updatable = false)
     public String getRole() {
         return role;
     }

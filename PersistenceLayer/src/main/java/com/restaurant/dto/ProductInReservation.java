@@ -35,7 +35,12 @@ import java.io.Serializable;
                 name = "ProductInReservation.getAll",
                 query = "FROM ProductInReservation",
                 hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
-})
+        @NamedQuery(
+                name = "ProductInReservation.containedInReservation",
+                query = "SELECT  p FROM ProductInReservation p " +
+                        "INNER JOIN p.reservation r ON r.id = :" + "reservationId" + " " +
+                        "INNER JOIN p.product op ON op.id =:" + "productId")
+        })
 @Table(name = "productinreservation")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class ProductInReservation implements Serializable {

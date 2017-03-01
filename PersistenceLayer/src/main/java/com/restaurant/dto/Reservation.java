@@ -5,7 +5,10 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by Martha on 2/24/2017.
@@ -38,6 +41,7 @@ public class Reservation implements Serializable {
     private String number;
     private User user;
     private boolean isOpen;
+    Set<ProductInReservation> products;
     // endregion
 
     // region Constructors
@@ -78,6 +82,13 @@ public class Reservation implements Serializable {
     public boolean isOpen() {
         return isOpen;
     }
+
+    @ManyToMany(fetch = FetchType.EAGER,
+                cascade = {CascadeType.ALL})
+    public Set<ProductInReservation> getProducts() {
+        return products;
+    }
+
     // endregion
 
     // region Setters
@@ -99,6 +110,15 @@ public class Reservation implements Serializable {
 
     private void setOpen(boolean open) {
         isOpen = open;
+    }
+
+    public void setProducts(Set<ProductInReservation> products) {
+        this.products = products;
+    }
+
+    public void setProductInReservation(ProductInReservation newProduct) {
+        if(products == null) products = new HashSet<>();
+        products.add(newProduct);
     }
     // endregion
 

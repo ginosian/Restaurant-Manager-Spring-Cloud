@@ -13,7 +13,6 @@ import java.io.Serializable;
 @Immutable
 @Entity
 @NamedQueries({
-
         @NamedQuery(
                 name = "Product.getByNumber",
                 query = "SELECT p FROM Product p WHERE p.number  = :" + "number",
@@ -25,6 +24,10 @@ import java.io.Serializable;
         @NamedQuery(
                 name = "Product.getAll",
                 query = "FROM Product",
+                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
+        @NamedQuery(
+                name = "Product.getByName",
+                query = "SELECT p FROM Product p WHERE p.name  = :" + "name",
                 hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
 })
 @Table(name = "product")
@@ -63,7 +66,7 @@ public class Product implements Serializable {
         return name;
     }
 
-    @Column(name = "business_key",
+    @Column(name = "business_key'",
             unique = true,
             nullable = false,
             updatable = false)
