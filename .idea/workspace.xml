@@ -1,26 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba40e288-df88-47c4-a75d-20c62b829cbd" name="Default" comment="Adds implementations for DAO-s. Tested.&#10;Adds Hibernate second level cache functionality.&#10;Changes data source from Hikari to C3P0 as connection leaks was detected.&#10;Adds some of services implementations.&#10;Adds individual transaction management on DAO-s.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/helperModels/ChooserProduct.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/helperModels/ChooserProduct.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/ProductDAOImpl.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/ProductDAOImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dto/Product.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dto/Product.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dto/ProductInReservation.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dto/ProductInReservation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/ProductServiceImpl.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/ProductServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/ReservationService.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/ReservationService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/ReservationServiceImpl.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/ReservationServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/test/TestDAO.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/test/TestDAO.class" />
+    <list default="true" id="ba40e288-df88-47c4-a75d-20c62b829cbd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/controller/TestController.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/controller/TestController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ProductDAOImpl.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ProductDAOImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/Product.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/Product.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/ProductInReservation.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/ProductInReservation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ProductServiceImpl.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ProductServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ReservationService.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ReservationService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ReservationServiceImpl.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ReservationServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/UserServiceImpl.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/test/java/TestDAO.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/test/java/TestDAO.java" />
     </list>
     <ignored path="RestaurantManager.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,8 +65,8 @@
       <file leaf-file-name="TestDAO.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/test/java/TestDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="105" column="75" selection-start-line="105" selection-start-column="75" selection-end-line="105" selection-end-column="75" />
+            <state relative-caret-position="435">
+              <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -2523,7 +2505,7 @@
       <workItem from="1488188468608" duration="41532000" />
       <workItem from="1488355311374" duration="28941000" />
       <workItem from="1488398304109" duration="6691000" />
-      <workItem from="1488405656195" duration="7816000" />
+      <workItem from="1488405656195" duration="7961000" />
     </task>
     <task id="LOCAL-00001" summary="Creates project structure.&#10;Sets up persistance layer datasource  and ORM configurations, defines the beans. &#10;Implements persistance layer Entities, further can be a subject of chages.&#10;Defines DAO-s.">
       <created>1488025512392</created>
@@ -2546,7 +2528,14 @@
       <option name="project" value="LOCAL" />
       <updated>1488055676190</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Creates tests for reservation and product creation, but fails on product creation test with a message &#10;&quot;Parameter index out of range (1 &gt; number of parameters, which is 0).&quot;">
+      <created>1488481961599</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1488481961599</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -2582,7 +2571,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241057000" />
+    <option name="totallyTimeSpent" value="241202000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2595,7 +2584,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1370" height="744" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2705,7 +2694,8 @@
     <MESSAGE value="Creates project structure.&#10;Sets up persistance layer datasource  and ORM configurations, defines the beans. &#10;Implements persistance layer Entities, further can be a subject of chages.&#10;Defines DAO-s." />
     <MESSAGE value="Repairs transaction management.&#10;Adds temporary controllers and services in each microservce so to implement distributed system.&#10;Some minor changes." />
     <MESSAGE value="There we go ))) Distributed application with microservices and eureka discovery server hearth beats. Great !" />
-    <option name="LAST_COMMIT_MESSAGE" value="There we go ))) Distributed application with microservices and eureka discovery server hearth beats. Great !" />
+    <MESSAGE value="Creates tests for reservation and product creation, but fails on product creation test with a message &#10;&quot;Parameter index out of range (1 &gt; number of parameters, which is 0).&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creates tests for reservation and product creation, but fails on product creation test with a message &#10;&quot;Parameter index out of range (1 &gt; number of parameters, which is 0).&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3120,8 +3110,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/test/java/TestDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="105" column="75" selection-start-line="105" selection-start-column="75" selection-end-line="105" selection-end-column="75" />
+        <state relative-caret-position="435">
+          <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
           <folding />
         </state>
       </provider>
