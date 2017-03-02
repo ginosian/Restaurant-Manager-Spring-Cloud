@@ -1,4 +1,5 @@
 import com.restaurant.Application;
+import com.restaurant.dto.Product;
 import com.restaurant.dto.Role;
 import com.restaurant.dto.User;
 import com.restaurant.service.ProductService;
@@ -69,7 +70,7 @@ public class TestDAO {
     }
 
     @Test
-    public void testCreateUserAndRole(){
+    public void testUserService(){
         // Create roles
         Role role1 = userService.createRole(MockedData.roleName());
         Assert.assertNotNull(role1.getId());
@@ -81,6 +82,8 @@ public class TestDAO {
         // Create user
         User user1 = userService.createUser(MockedData.userName(), MockedData.password(), role1, role2);
         Assert.assertNotNull(user1.getId());
+        Assert.assertNotNull(userService.findUser(user1.getId()));
+        Assert.assertNotNull(userService.findUser(user1.getUsername()));
         User user2 = userService.createUser(MockedData.userName(), MockedData.password(), role2, role3);
         Assert.assertNotNull(user2.getId());
         User user3 = userService.createUser(MockedData.userName(), MockedData.password(), role3, role1);
@@ -95,7 +98,14 @@ public class TestDAO {
         // Delete user
         Assert.assertTrue(userService.deleteUser(user2.getId()));
         Assert.assertNull(userService.findUser(user2.getId()));
+    }
 
+    @Test
+    public void testProductService(){
+        Product product1 = productService.createProduct(MockedData.productName());
+        Assert.assertNotNull(productService.findProduct(product1.getId()));
+        Assert.assertNotNull(productService.findProduct(product1.getProduct_name()));
+        Assert.assertNull(productService.createProduct(product1.getProduct_name()));
     }
 
 }

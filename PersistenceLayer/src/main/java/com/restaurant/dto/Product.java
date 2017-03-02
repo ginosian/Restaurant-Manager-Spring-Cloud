@@ -15,7 +15,7 @@ import java.io.Serializable;
 @NamedQueries({
         @NamedQuery(
                 name = "Product.getByNumber",
-                query = "SELECT p FROM Product p WHERE p.number  = :" + "number",
+                query = "SELECT p FROM Product p WHERE p.number  =:" + "number",
                 hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
         @NamedQuery(
                 name = "Product.deleteById",
@@ -27,7 +27,7 @@ import java.io.Serializable;
                 hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
         @NamedQuery(
                 name = "Product.getByName",
-                query = "SELECT p FROM Product p WHERE p.name  = :" + "name",
+                query = "SELECT p FROM Product p WHERE p.product_name = :" + "product_name",
                 hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
 })
 @Table(name = "product")
@@ -36,7 +36,7 @@ public class Product implements Serializable {
 
     // region Fields
     private Integer id;
-    private String name;
+    private String product_name;
     private String number;
     // endregion
 
@@ -44,9 +44,9 @@ public class Product implements Serializable {
     protected Product() {
     }
 
-    public Product(String name,
+    public Product(String product_name,
                    String number) {
-        this.name = name;
+        this.product_name = product_name;
         this.number = number;
     }
     // endregion
@@ -59,11 +59,11 @@ public class Product implements Serializable {
         return id;
     }
 
-    @Column(name = "name",
+    @Column(name = "product_name",
             unique = true,
             nullable = false)
-    public String getName() {
-        return name;
+    public String getProduct_name() {
+        return product_name;
     }
 
     @Column(name = "business_key'",
@@ -81,8 +81,8 @@ public class Product implements Serializable {
         this.id = id;
     }
 
-    private void setName(String name) {
-        this.name = name;
+    private void setProduct_name(String product_name) {
+        this.product_name = product_name;
     }
 
     private void setNumber(String number) {

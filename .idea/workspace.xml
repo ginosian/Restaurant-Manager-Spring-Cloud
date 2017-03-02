@@ -2,64 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba40e288-df88-47c4-a75d-20c62b829cbd" name="Default" comment="Adds implementations for DAO-s. Tested.&#10;Adds Hibernate second level cache functionality.&#10;Changes data source from Hikari to C3P0 as connection leaks was detected.&#10;Adds some of services implementations.&#10;Adds individual transaction management on DAO-s.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_h2database_h2_1_4_193.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__hsqldb_hsqldb_1_8_0_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/util/BusKeyGen.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/util/Logger.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/util/Validate.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/resources/test.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PersistenceLayer/src/test/java/TestConfiguration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PersistenceLayer/src/test/java/TestDAO.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/util/MockedData.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/config/PersistenceConfigurations.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/config/PersistenceConfigurations.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/controller/TestController.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/controller/TestController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/ProductDAO.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/ProductDAO.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/helperModels/ChooserProduct.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/helperModels/ChooserProduct.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/ProductDAOImpl.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/ProductDAOImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/ReservationDAO.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/ReservationDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/ReservationDAOImpl.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/ReservationDAOImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/UserDAO.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/UserDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/UserDAOImpl.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/UserDAOImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dto/Product.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dto/Product.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dto/ProductInReservation.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dto/ProductInReservation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dto/Reservation.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dto/Reservation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dto/Role.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dto/Role.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dto/User.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dto/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/ProductService.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/ProductService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/ProductServiceImpl.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/ProductServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/ReservationService.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/ReservationService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/ReservationServiceImpl.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/ReservationServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/UserService.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/UserServiceImpl.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/UserServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/test/TestDAO.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/test/TestDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/test/util/MockedData.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/test/util/MockedData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/PersistenceLayer/PersistenceLayer_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/PersistenceLayer/PersistenceLayer_main.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/PersistenceLayer/PersistenceLayer_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/PersistenceLayer/PersistenceLayer_test.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build.gradle" afterPath="$PROJECT_DIR$/PersistenceLayer/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/resources/main/application.properties" afterPath="$PROJECT_DIR$/PersistenceLayer/build/resources/main/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/config/PersistenceConfigurations.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/config/PersistenceConfigurations.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/controller/TestController.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/controller/TestController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ProductDAO.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ProductDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ProductDAOImpl.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ProductDAOImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ReservationDAO.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ReservationDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ReservationDAOImpl.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ReservationDAOImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/TransactionsUtil.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/TransactionsUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/UserDAO.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/UserDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/UserDAOImpl.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/UserDAOImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/Product.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/Product.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/ProductInReservation.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/ProductInReservation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/Reservation.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/Reservation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/Role.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/Role.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/User.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ProductService.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ProductService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ProductServiceImpl.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ProductServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ReservationService.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ReservationService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ReservationServiceImpl.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ReservationServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/UserService.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/UserService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/UserServiceImpl.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PersistenceLayer/application.properties" afterPath="$PROJECT_DIR$/out/production/PersistenceLayer/application.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/util/MockedData.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/test/java/util/MockedData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/test/java/TestDAO.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/test/java/TestDAO.java" />
     </list>
     <ignored path="RestaurantManager.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -108,7 +69,110 @@
     <favorites_list name="RestaurantManager" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1252">
+              <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestDAO.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/test/java/TestDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="309">
+              <caret line="105" column="75" selection-start-line="105" selection-start-column="75" selection-end-line="105" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ProductDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductDAOImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ProductDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="66" column="9" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/UserDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="563">
+              <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDAOImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/UserDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2457">
+              <caret line="131" column="61" selection-start-line="131" selection-start-column="57" selection-end-line="131" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReservationDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ReservationDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="20" column="51" selection-start-line="18" selection-start-column="4" selection-end-line="20" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ProductServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReservationDAOImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ReservationDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="563">
+              <caret line="235" column="24" selection-start-line="235" selection-start-column="20" selection-end-line="235" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -1149,8 +1213,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/config/GeneralConfig.java" />
-        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/config/AopAutoConfiguration.java" />
         <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/crosscuttingConcern/CacheMonitorAOP.java" />
         <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/TransactionManagement.java" />
         <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/OrderServiceImpl.java" />
@@ -1177,29 +1239,31 @@
         <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/util/BusKeyGen.java" />
         <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ProductDAO.java" />
         <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/util/Logger.java" />
-        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ReservationService.java" />
         <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ProductService.java" />
-        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ReservationServiceImpl.java" />
-        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ProductServiceImpl.java" />
         <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/util/Utils.java" />
         <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/util/Validate.java" />
         <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/UserDAO.java" />
         <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/UserService.java" />
-        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/controller/TestController.java" />
         <option value="$PROJECT_DIR$/PersistenceLayer/src/test/java/util/MockedData.java" />
         <option value="$PROJECT_DIR$/PersistenceLayer/build.gradle" />
         <option value="$PROJECT_DIR$/PersistenceLayer/src/main/resources/test.properties" />
         <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/Role.java" />
-        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/Reservation.java" />
-        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/ProductInReservation.java" />
-        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/Product.java" />
         <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/User.java" />
-        <option value="$PROJECT_DIR$/PersistenceLayer/src/test/java/TestDAO.java" />
-        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/UserDAOImpl.java" />
         <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ReservationDAOImpl.java" />
-        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ProductDAOImpl.java" />
         <option value="$PROJECT_DIR$/PersistenceLayer/src/test/java/TestConfiguration.java" />
+        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/helperModels/ChoosedProduct.java" />
+        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ReservationService.java" />
+        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/helperModels/ChooserProduct.java" />
+        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/Reservation.java" />
+        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/ProductInReservation.java" />
+        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ReservationServiceImpl.java" />
+        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ProductServiceImpl.java" />
+        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/Product.java" />
+        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ProductDAOImpl.java" />
+        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/controller/TestController.java" />
+        <option value="$PROJECT_DIR$/PersistenceLayer/src/test/java/TestDAO.java" />
       </list>
     </option>
   </component>
@@ -1253,9 +1317,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1422,6 +1485,78 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RestaurantManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RestaurantManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PersistenceLayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="restaurant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="helperModels" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RestaurantManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RestaurantManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PersistenceLayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="restaurant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="dto" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1460,8 +1595,77 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RestaurantManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RestaurantManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PersistenceLayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="restaurant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RestaurantManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RestaurantManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PersistenceLayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="restaurant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1496,49 +1700,7 @@
       <recent name="E:\Java\MyProjectsFromGit\RestourantManager\RestaurantManager\Restaurant" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestDAO.testCreateUserAndRole">
-    <configuration default="false" name="TestDAO.testUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="PersistenceLayer_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestDAO" />
-      <option name="METHOD_NAME" value="testUser" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/PersistenceLayer" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="TestDAO.testServices" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="PersistenceLayer_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestDAO" />
-      <option name="METHOD_NAME" value="testServices" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/PersistenceLayer" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.TestDAO.testProductService">
     <configuration default="false" name="TestDAO.testCreateUserAndRole" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="PersistenceLayer_test" />
@@ -1589,6 +1751,48 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestDAO" />
       <option name="METHOD_NAME" value="createUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/PersistenceLayer" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestDAO.testUserService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="PersistenceLayer_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestDAO" />
+      <option name="METHOD_NAME" value="testUserService" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/PersistenceLayer" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestDAO.testProductService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="PersistenceLayer_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestDAO" />
+      <option name="METHOD_NAME" value="testProductService" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -2275,19 +2479,19 @@
       <item index="3" class="java.lang.String" itemvalue="Spring Boot.restaurant-spring-boot" />
       <item index="4" class="java.lang.String" itemvalue="Spring Boot.discovery-spring-boot" />
       <item index="5" class="java.lang.String" itemvalue="Tomcat Server.Persistence" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.TestDAO.testUser" />
-      <item index="7" class="java.lang.String" itemvalue="JUnit.TestDAO.testServices" />
-      <item index="8" class="java.lang.String" itemvalue="JUnit.TestDAO.testCreateUserAndRole" />
-      <item index="9" class="java.lang.String" itemvalue="JUnit.TestDAO.createRole" />
-      <item index="10" class="java.lang.String" itemvalue="JUnit.TestDAO.createUser" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.TestDAO.testCreateUserAndRole" />
+      <item index="7" class="java.lang.String" itemvalue="JUnit.TestDAO.createRole" />
+      <item index="8" class="java.lang.String" itemvalue="JUnit.TestDAO.createUser" />
+      <item index="9" class="java.lang.String" itemvalue="JUnit.TestDAO.testUserService" />
+      <item index="10" class="java.lang.String" itemvalue="JUnit.TestDAO.testProductService" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TestDAO.testCreateUserAndRole" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TestDAO.createUser" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.TestDAO.createRole" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.TestDAO.testServices" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.TestDAO.testUser" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TestDAO.testProductService" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TestDAO.testUserService" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TestDAO.testCreateUserAndRole" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.TestDAO.createUser" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.TestDAO.createRole" />
       </list>
     </recent_temporary>
   </component>
@@ -2319,6 +2523,7 @@
       <workItem from="1488188468608" duration="41532000" />
       <workItem from="1488355311374" duration="28941000" />
       <workItem from="1488398304109" duration="6691000" />
+      <workItem from="1488405656195" duration="7816000" />
     </task>
     <task id="LOCAL-00001" summary="Creates project structure.&#10;Sets up persistance layer datasource  and ORM configurations, defines the beans. &#10;Implements persistance layer Entities, further can be a subject of chages.&#10;Defines DAO-s.">
       <created>1488025512392</created>
@@ -2345,39 +2550,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestDAO_createUser - 2017.03.02 at 01h 33m 32s.xml">
-      <configuration name="TestDAO.createUser" configurationId="JUnit" />
+    <history-entry file="TestDAO_testProductService - 2017.03.02 at 22h 29m 43s.xml">
+      <configuration name="TestDAO.testProductService" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDAO_testCreateUserAndRole - 2017.03.02 at 01h 35m 36s.xml">
-      <configuration name="TestDAO.testCreateUserAndRole" configurationId="JUnit" />
+    <history-entry file="TestDAO_testProductService - 2017.03.02 at 22h 33m 51s.xml">
+      <configuration name="TestDAO.testProductService" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDAO_testCreateUserAndRole - 2017.03.02 at 01h 37m 04s.xml">
-      <configuration name="TestDAO.testCreateUserAndRole" configurationId="JUnit" />
+    <history-entry file="TestDAO_testProductService - 2017.03.02 at 22h 40m 22s.xml">
+      <configuration name="TestDAO.testProductService" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDAO_testCreateUserAndRole - 2017.03.02 at 01h 39m 01s.xml">
-      <configuration name="TestDAO.testCreateUserAndRole" configurationId="JUnit" />
+    <history-entry file="TestDAO_testProductService - 2017.03.02 at 22h 49m 24s.xml">
+      <configuration name="TestDAO.testProductService" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDAO_testCreateUserAndRole - 2017.03.02 at 01h 40m 39s.xml">
-      <configuration name="TestDAO.testCreateUserAndRole" configurationId="JUnit" />
+    <history-entry file="TestDAO_testProductService - 2017.03.02 at 22h 50m 11s.xml">
+      <configuration name="TestDAO.testProductService" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDAO_testCreateUserAndRole - 2017.03.02 at 01h 43m 04s.xml">
-      <configuration name="TestDAO.testCreateUserAndRole" configurationId="JUnit" />
+    <history-entry file="TestDAO_testProductService - 2017.03.02 at 22h 51m 53s.xml">
+      <configuration name="TestDAO.testProductService" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDAO_testCreateUserAndRole - 2017.03.02 at 01h 49m 02s.xml">
-      <configuration name="TestDAO.testCreateUserAndRole" configurationId="JUnit" />
+    <history-entry file="TestDAO_testProductService - 2017.03.02 at 22h 54m 29s.xml">
+      <configuration name="TestDAO.testProductService" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDAO_testCreateUserAndRole - 2017.03.02 at 01h 50m 11s.xml">
-      <configuration name="TestDAO.testCreateUserAndRole" configurationId="JUnit" />
+    <history-entry file="TestDAO_testProductService - 2017.03.02 at 22h 58m 28s.xml">
+      <configuration name="TestDAO.testProductService" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDAO_testCreateUserAndRole - 2017.03.02 at 01h 50m 18s.xml">
-      <configuration name="TestDAO.testCreateUserAndRole" configurationId="JUnit" />
+    <history-entry file="TestDAO_testProductService - 2017.03.02 at 22h 59m 20s.xml">
+      <configuration name="TestDAO.testProductService" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDAO_testCreateUserAndRole - 2017.03.02 at 01h 50m 57s.xml">
-      <configuration name="TestDAO.testCreateUserAndRole" configurationId="JUnit" />
+    <history-entry file="TestDAO_testProductService - 2017.03.02 at 23h 01m 33s.xml">
+      <configuration name="TestDAO.testProductService" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="233241000" />
+    <option name="totallyTimeSpent" value="241057000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2390,7 +2595,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1370" height="744" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2404,20 +2609,21 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6603476" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48973143" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.014218009" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7993681" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.57977885" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25496182" sideWeight="0.49447078" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2687023" sideWeight="0.49447078" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25718608" sideWeight="0.5055292" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6635071" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36535552" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -2426,7 +2632,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6635071" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2506,12 +2711,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/UserServiceImpl.java</url>
-          <line>82</line>
-          <properties />
-          <option name="timeStamp" value="70" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/UserDAOImpl.java</url>
           <line>114</line>
           <properties />
@@ -2521,12 +2720,16 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="72" />
+      <option name="time" value="73" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
         <watch expression="user6.getId()" />
         <watch expression="reservation1.getId()" />
+      </configuration>
+      <configuration name="JUnit">
+        <watch expression="productName" />
+        <watch expression="query" />
       </configuration>
     </watches-manager>
   </component>
@@ -2535,18 +2738,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.2.8.Final/bedbeaf0b228acd169f76bf6472ecd1761dff949/hibernate-core-5.2.8.Final-sources.jar!/org/hibernate/internal/SessionFactoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="440" column="0" selection-start-line="440" selection-start-column="0" selection-end-line="440" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.2.8.Final/bedbeaf0b228acd169f76bf6472ecd1761dff949/hibernate-core-5.2.8.Final-sources.jar!/org/hibernate/Session.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
           <caret line="503" column="0" selection-start-line="503" selection-start-column="0" selection-end-line="503" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2572,32 +2767,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/controller/RestaurantController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-          <folding>
-            <element signature="e#532#533#0" expanded="false" />
-            <element signature="e#594#595#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/test/java/TestConfigurations.java" />
-    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/controller/GuestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-webmvc/4.3.6.RELEASE/51719142a860240ba4648bb6384e5653bffc82e9/spring-webmvc-4.3.6.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
@@ -2627,33 +2804,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/util/MockedData.java" />
-    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/controller/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/Assert.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/test/java/resources.java" />
-    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/config/PersistenceConfigurations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
-          <folding>
-            <element signature="e#711#749#0" expanded="false" />
-            <element signature="n#!!doc;n#dialect#0;n#PersistenceConfigurations#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
@@ -2680,28 +2838,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ReservationDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="20" column="51" selection-start-line="18" selection-start-column="4" selection-end-line="20" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/util/Logger.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ReservationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2713,53 +2853,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ReservationServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ProductServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/util/Validate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="42" column="20" selection-start-line="37" selection-start-column="8" selection-end-line="42" selection-end-column="20" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1407">
-          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/controller/TestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#6804#6805#0" expanded="false" />
-            <element signature="e#6831#6832#0" expanded="false" />
-            <element signature="e#6932#6933#0" expanded="false" />
-            <element signature="e#6959#6960#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2789,97 +2887,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/Reservation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="80" column="20" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/ProductInReservation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-189">
-          <caret line="93" column="20" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="68" column="20" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/Role.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="61" column="20" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ProductDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ProductDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="115" column="24" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ReservationDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="235" column="24" selection-start-line="235" selection-start-column="20" selection-end-line="235" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/UserDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="131" column="61" selection-start-line="131" selection-start-column="57" selection-end-line="131" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/lang/Integer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="83">
           <caret line="830" column="0" selection-start-line="830" selection-start-column="0" selection-end-line="830" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2887,7 +2898,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="52">
           <caret line="594" column="0" selection-start-line="594" selection-start-column="0" selection-end-line="594" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2895,9 +2905,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
           <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding>
-            <element signature="e#2096#2097#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2909,16 +2916,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="82" column="25" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/test/java/TestConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -2927,13 +2924,205 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/test/java/TestDAO.java">
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/helperModels/ChooserProduct.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="70" column="9" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
+        <state relative-caret-position="315">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding>
+            <element signature="e#361#362#0" expanded="true" />
+            <element signature="e#391#392#0" expanded="true" />
+            <element signature="e#420#421#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ReservationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ReservationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-280">
+          <caret line="19" column="81" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="635">
+          <caret line="61" column="20" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/Reservation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/ProductInReservation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="72" column="31" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="29" column="91" selection-start-line="29" selection-start-column="77" selection-end-line="29" selection-end-column="91" />
+          <folding>
+            <element signature="e#1999#2000#0" expanded="true" />
+            <element signature="e#2034#2035#0" expanded="true" />
+            <element signature="e#2383#2384#0" expanded="true" />
+            <element signature="e#2431#2432#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/config/PersistenceConfigurations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
+          <folding>
+            <element signature="e#711#749#0" expanded="false" />
+            <element signature="n#!!doc;n#dialect#0;n#PersistenceConfigurations#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/controller/GuestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/controller/RestaurantController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/controller/TestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="e#934#935#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ProductDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ProductDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="66" column="9" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ReservationDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="20" column="51" selection-start-line="18" selection-start-column="4" selection-end-line="20" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ReservationDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="235" column="24" selection-start-line="235" selection-start-column="20" selection-end-line="235" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/UserDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2457">
+          <caret line="131" column="61" selection-start-line="131" selection-start-column="57" selection-end-line="131" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1252">
+          <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ProductServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/test/java/TestDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="105" column="75" selection-start-line="105" selection-start-column="75" selection-end-line="105" selection-end-column="75" />
+          <folding />
         </state>
       </provider>
     </entry>

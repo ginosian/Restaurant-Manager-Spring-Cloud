@@ -66,6 +66,15 @@ public class ProductInReservation implements Serializable {
         this.amount = amount;
         this.number = number;
     }
+
+    public ProductInReservation(Product product,
+                                int amount,
+                                String number) {
+        this.product = product;
+        this.amount = amount;
+        this.number = number;
+    }
+
     // endregion
 
     // region Properties

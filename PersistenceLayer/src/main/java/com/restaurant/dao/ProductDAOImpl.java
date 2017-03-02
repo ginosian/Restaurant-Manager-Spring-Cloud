@@ -60,7 +60,7 @@ public class ProductDAOImpl implements ProductDAO{
         try{
             session = getSession();
             Query query = session.createNamedQuery("Product.getByName");
-            query.setParameter("name", productName);
+            query.setParameter("product_name", productName);
             return query.getResultList().size() != 0;
         }catch (HibernateException e) {
             e.printStackTrace();

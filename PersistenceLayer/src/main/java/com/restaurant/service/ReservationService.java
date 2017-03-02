@@ -1,6 +1,7 @@
 package com.restaurant.service;
 
 import com.restaurant.dto.Reservation;
+import com.restaurant.service.helperModels.ChooserProduct;
 
 import java.util.List;
 
@@ -9,7 +10,7 @@ import java.util.List;
  */
 public interface ReservationService {
 
-    Reservation createReservation(int userId);
+    Reservation createReservationAndAddProducts(int userId, List<ChooserProduct> products);
 
     Reservation addProductInReservation(int productId, int amount);
 
