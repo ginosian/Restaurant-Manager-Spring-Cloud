@@ -6,7 +6,9 @@ import com.restaurant.service.ProductService;
 import com.restaurant.service.ReservationService;
 import com.restaurant.service.UserService;
 import org.junit.Assert;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -34,6 +36,9 @@ public class TestDAO {
 
     @Autowired
     ReservationService reservationService;
+
+    @Rule
+    public ExpectedException thrown = ExpectedException.none();
 
     @Test
     public void testServices(){
@@ -102,10 +107,30 @@ public class TestDAO {
 
     @Test
     public void testProductService(){
+        // Product creation
         Product product1 = productService.createProduct(MockedData.productName());
         Assert.assertNotNull(productService.findProduct(product1.getId()));
-        Assert.assertNotNull(productService.findProduct(product1.getProduct_name()));
-        Assert.assertNull(productService.createProduct(product1.getProduct_name()));
+        Assert.assertNull(productService.createProduct(product1.getProductName()));
+
+        // Product reading
+        Assert.assertNotNull(productService.findProduct(product1.getProductName()));
+        Assert.assertEquals(productService.findProduct(product1.getProductName()), productService.findProduct(product1.getId()));
+
+        // Product updating
+        Product product2 = productService.updateProductName(product1.getId(), MockedData.productName());
+        Assert.assertEquals(product1.getId(), product2.getId());
+        Assert.assertEquals(product1, product2);
+        Assert.assertNotEquals(product1.getProductName(), product2.getProductName());
+
+        // Product deleting
+        Assert.assertTrue(productService.deleteProduct(product1.getId()));
+        Assert.assertNull(productService.findProduct(product1.getId()));
+
+
+        // Double deleting
+        thrown.expect(Exception.class);
+        productService.deleteProduct(product1.getId());
+
     }
 
 }

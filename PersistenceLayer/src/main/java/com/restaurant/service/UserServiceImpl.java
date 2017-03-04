@@ -48,8 +48,7 @@ public class UserServiceImpl implements UserService{
         // Validate args
         if(!Validate.valid(userId))return null;
         // Persist
-        User user = userDAO.readUser(userId);
-        return user;
+        return userDAO.readUser(userId);
     }
 
     @Override
@@ -71,8 +70,7 @@ public class UserServiceImpl implements UserService{
         User user = userDAO.readUser(userId);
         user.setRole(role);
         // Persist
-        User result = userDAO.updateUser(user);
-        return user;
+        return userDAO.updateUser(user);
     }
 
     @Override
@@ -86,8 +84,7 @@ public class UserServiceImpl implements UserService{
     @Override
     public List<User> getAllUsers() {
         // Persist
-        List<User> users = userDAO.getAllUsers();
-        return users;
+        return userDAO.getAllUsers();
     }
 
     @Override
@@ -97,8 +94,7 @@ public class UserServiceImpl implements UserService{
         Role role = userDAO.readRole(roleId);
         if(!Validate.valid(role)) return null;
         // Persist
-        List<User> users = userDAO.getAllUsers(role.getRole());
-        return users;
+        return userDAO.getAllUsers(role.getRole());
     }
 
     @Override
@@ -107,15 +103,13 @@ public class UserServiceImpl implements UserService{
         if(!Validate.valid(role))return null;
         // Persist
         Role roleObject = new Role(role, BusKeyGen.nextKey());
-        Role result = userDAO.writeRole(roleObject);
-        return result;
+        return userDAO.writeRole(roleObject);
     }
 
     @Override
     public List<Role> getAllRoles() {
         // Persist
-        List<Role> roles = userDAO.readRoles();
-        return roles;
+        return userDAO.readRoles();
     }
 
 }

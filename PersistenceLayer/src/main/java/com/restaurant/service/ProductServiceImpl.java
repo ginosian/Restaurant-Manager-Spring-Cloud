@@ -30,25 +30,37 @@ public class ProductServiceImpl implements ProductService{
 
     @Override
     public Product findProduct(int productId) {
-
-        return null;
+        // Validate args
+        if(!Validate.valid(productId))return null;
+        // Persist
+        return productDAO.readProduct(productId);
     }
 
     @Override
     public Product findProduct(String productName) {
-
-        return null;
+        // Validate args
+        if(!Validate.valid(productName)) return null;
+        // Persist
+        return productDAO.readProduct(productName);
     }
 
     @Override
     public Product updateProductName(int productId, String productName) {
-
-        return null;
+        // Validate
+        if(!Validate.valid(productName, productId))return null;
+        Product product = productDAO.readProduct(productId);
+        if(product == null) return null;
+        // Form entity
+        product.setProductName(productName);
+        // Persist
+        return productDAO.updateProduct(product);
     }
 
     @Override
     public boolean deleteProduct(int productId) {
-
-        return false;
+        // Validate
+        if(!Validate.valid(productId)) return false;
+        // Persist
+        return productDAO.deleteProduct(productId);
     }
 }

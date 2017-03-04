@@ -2,7 +2,6 @@ package com.restaurant.dto;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
-import org.hibernate.annotations.Immutable;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -10,7 +9,7 @@ import java.io.Serializable;
 /**
  * Created by Martha on 2/24/2017.
  */
-@Immutable
+//@Immutable
 @Entity
 @NamedQueries({
         @NamedQuery(
@@ -27,8 +26,14 @@ import java.io.Serializable;
                 hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
         @NamedQuery(
                 name = "Product.getByName",
-                query = "SELECT p FROM Product p WHERE p.product_name = :" + "product_name",
-                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
+                query = "SELECT p FROM Product p WHERE p.productName  = :" + "name",
+                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")})
+//        @NamedQuery(
+//                name = "Product.getByName",
+//                query = "select product0_.id_product as id_produ1_0_, product0_.business_key' " +
+//                        "as business2_0_, product0_.productName as productN3_0_ from product product0_ " +
+//                        "where product0_.productName=?",
+//                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")})
 })
 @Table(name = "product")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
@@ -36,7 +41,7 @@ public class Product implements Serializable {
 
     // region Fields
     private Integer id;
-    private String product_name;
+    private String productName;
     private String number;
     // endregion
 
@@ -44,9 +49,9 @@ public class Product implements Serializable {
     protected Product() {
     }
 
-    public Product(String product_name,
+    public Product(String productName,
                    String number) {
-        this.product_name = product_name;
+        this.productName = productName;
         this.number = number;
     }
     // endregion
@@ -59,14 +64,14 @@ public class Product implements Serializable {
         return id;
     }
 
-    @Column(name = "product_name",
+    @Column(name = "productName",
             unique = true,
             nullable = false)
-    public String getProduct_name() {
-        return product_name;
+    public String getProductName() {
+        return productName;
     }
 
-    @Column(name = "business_key'",
+    @Column(name = "business_key",
             unique = true,
             nullable = false,
             updatable = false)
@@ -81,8 +86,8 @@ public class Product implements Serializable {
         this.id = id;
     }
 
-    private void setProduct_name(String product_name) {
-        this.product_name = product_name;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
     private void setNumber(String number) {

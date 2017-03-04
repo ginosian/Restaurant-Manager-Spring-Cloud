@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="restaurant-manager" uuid="2172f023-f758-4bc4-8c07-9f0dc994efcf">
+      <database-info product="MySQL" version="5.7.14" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <secret-storage>memory</secret-storage>
+      <user-name>root</user-name>
+      <resolve-scope>restaurant-manager:</resolve-scope>
+    </data-source>
+    <data-source name="MySQL - restaurant-manager-test@localhost" uuid="a9a227d2-07fa-47d5-bbbc-8a40eff3e2ce">
+      <database-info product="MySQL" version="5.7.14" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <secret-storage>memory</secret-storage>
+      <user-name>root</user-name>
+      <resolve-scope>restaurant-manager-test:</resolve-scope>
+    </data-source>
+    <data-source name="MySQL - restaurant-manager-test@localhost [2]" uuid="4e23eb8e-20c2-4e21-8fbc-66103d2bf43a">
+      <database-info product="MySQL" version="5.7.14" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <secret-storage>memory</secret-storage>
+      <user-name>root</user-name>
+      <resolve-scope>restaurant-manager-test:</resolve-scope>
+    </data-source>
+  </component>
+</project>

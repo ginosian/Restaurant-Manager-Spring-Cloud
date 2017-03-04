@@ -60,7 +60,7 @@ public class ProductDAOImpl implements ProductDAO{
         try{
             session = getSession();
             Query query = session.createNamedQuery("Product.getByName");
-            query.setParameter("product_name", productName);
+            query.setParameter("name", productName);
             return query.getResultList().size() != 0;
         }catch (HibernateException e) {
             e.printStackTrace();
@@ -93,12 +93,12 @@ public class ProductDAOImpl implements ProductDAO{
     }
 
     @Override
-    public Product readProduct(String number) {
+    public Product readProduct(String name) {
         Session session = null;
         try{
             session = getSession();
-            Query query = session.createNamedQuery("Product.getByNumber");
-            query.setParameter("number", number);
+            Query query = session.createNamedQuery("Product.getByName");
+            query.setParameter("name", name);
             return (Product) query.getSingleResult();
         }catch (HibernateException e) {
             e.printStackTrace();
