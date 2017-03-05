@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.locks.ReentrantLock;
@@ -39,7 +40,7 @@ public class ReservationServiceImpl implements ReservationService {
 
     @Override
     public Reservation createReservationAndAddProducts(int userId, List<ChooserProduct> products) {
-        //Validations
+        //Validations (later to be separated in validations service)
         if(!Validate.valid(userId))return null;
         if(!Validate.valid(products) || products.size() == 0) return null;
         for(ChooserProduct product : products){
@@ -55,61 +56,122 @@ public class ReservationServiceImpl implements ReservationService {
         }
         User user = userDAO.readUser(userId);
         //Persist
-        Reservation reservation = reservationDAO.writeReservation(new Reservation(BusKeyGen.nextKey(), user, true));
-       return reservationDAO.writeReservation(reservation);
+        Reservation reservation = new Reservation(BusKeyGen.nextKey(), user, true);
+        for(ProductInReservation productInReservation : productInReservations){
+            productInReservation.setReservation(reservation);
+        }
+        reservation.setProducts(productInReservations);
+        return reservationDAO.writeReservation(reservation);
     }
 
     @Override
-    public Reservation addProductInReservation(int productId, int amount) {
-
-        return null;
+    public Reservation addProductInReservation(int reservationId, int productId, int amount) {
+        //Validations (later to be separated in validations service)
+        if(!Validate.valid(productId, amount, reservationId))return null;
+        Reservation reservation = reservationDAO.readReservation(reservationId);
+        if(reservation == null || !reservation.isOpen())return null;
+        if(!productDAO.containsProductById(productId))return null;
+        //Form entity
+        Product product = productDAO.readProduct(productId);
+        reservation.setProductInReservation(new ProductInReservation(product, reservation, amount, BusKeyGen.nextKey()));
+        // Persist
+        return reservationDAO.updateReservation(reservation);
     }
 
     @Override
-    public Reservation changeProductAmountInReservation(int reservationId, int productId, int amount) {
-
-        return null;
+    public Reservation changeProductAmountInReservation(int reservationId, int productInReservationId, int amount) {
+        //Validations (later to be separated in validations service)
+        if(!Validate.valid(productInReservationId, amount, reservationId))return null;
+        Reservation reservation = reservationDAO.readReservation(reservationId);
+        if(reservation == null || !reservation.isOpen())return null;
+        ProductInReservation productInReservation = reservationDAO.readProductInReservation(productInReservationId);
+        if(!Validate.valid(productInReservation.getId()))return null;
+        if(!productInReservation.getReservation().getId().equals(reservationId))return null;
+        // Persist
+        productInReservation.setAmount(amount);
+        reservation.setProductInReservation(productInReservation);
+        return reservationDAO.updateReservation(reservation);
     }
 
     @Override
-    public Reservation deleteProductFromReservation(int reservationId, int productId) {
-
-        return null;
+    public boolean deleteProductFromReservation(int reservationId, int productInReservationId) {
+        //Validations (later to be separated in validations service)
+        if(!Validate.valid(reservationId, productInReservationId))return false;
+        Reservation reservation = reservationDAO.readReservation(reservationId);
+        if(reservation == null || !reservation.isOpen())return false;
+        ProductInReservation productInReservation = reservationDAO.readProductInReservation(productInReservationId);
+        if(productInReservation == null)return true;
+        if(!productInReservation.getReservation().getId().equals(reservationId))return false;
+        // Persist
+        Iterator iterator = reservation.getProducts().iterator();
+        while (iterator.hasNext()){
+            ProductInReservation productToBeDeleted = (ProductInReservation) iterator.next();
+            if(productToBeDeleted.getId() == productInReservationId)
+                iterator.remove();
+        }
+        return reservationDAO.deleteProductInReservation(productInReservationId);
     }
 
     @Override
     public Reservation changeReservationState(int reservationId, boolean isActive) {
-
-        return null;
+        //Validations (later to be separated in validations service)
+        if(!Validate.valid(reservationId))return null;
+        Reservation reservation = reservationDAO.readReservation(reservationId);
+        if(reservation == null)return null;
+        // Form entity
+        reservation.setIsOpen(isActive);
+        // Persist
+        return reservationDAO.updateReservation(reservation);
     }
 
     @Override
     public Reservation findReservationById(int reservationId) {
-
-        return null;
+        //Validate  (later to be separated in validations service)
+        if(!Validate.valid(reservationId))return null;
+        // Persist
+        return reservationDAO.readReservation(reservationId);
     }
 
     @Override
     public List<Reservation> findAllReservations() {
-
-        return null;
+        return reservationDAO.getAllReservations();
     }
 
     @Override
     public List<Reservation> findAllReservationsByUserId(int userId) {
-
-        return null;
+        //Validate  (later to be separated in validations service)
+        if(!Validate.valid(userId))return null;
+        if(!userDAO.containsUserById(userId)) return null;
+        // Persist
+        return reservationDAO.getAllReservationsByUser(userId);
     }
 
     @Override
     public boolean deleteReservation(int reservationId) {
-
-        return false;
+        //Validations (later to be separated in validations service)
+        if(!Validate.valid(reservationId))return false;
+        Reservation reservation = reservationDAO.readReservation(reservationId);
+        if(reservation == null || reservation.isOpen())return false;
+        // Persist
+        return reservationDAO.deleteReservation(reservationId);
     }
 
     @Override
     public boolean deleteAllReservationsByUser(int userId) {
+        //Validate  (later to be separated in validations service)
+        if(!Validate.valid(userId))return false;
+        if(!userDAO.containsUserById(userId)) return false;
+        // Persist
+        List<Reservation> reservations =  reservationDAO.getAllReservationsByUser(userId);
+        if(reservations == null || reservations.size() == 0)return true;
+        for(Reservation reservation : reservations){
+            if(!reservationDAO.deleteReservation(reservation.getId())) return false;
+        }
+        return true;
+    }
 
-        return false;
+    @Override
+    public boolean productInReservetionIsDeleted(int productInReservationId){
+        return reservationDAO.readProductInReservation(productInReservationId) == null;
     }
 }

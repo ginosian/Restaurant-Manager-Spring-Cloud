@@ -20,7 +20,7 @@ public class ProductServiceImpl implements ProductService{
 
     @Override
     public Product createProduct(String productName) {
-        // Validate args
+        //Validate  (later to be separated in validations service)
         if(!Validate.valid(productName))return null;
         if(productDAO.containsProductByName(productName))return null;
         // Operate
@@ -30,15 +30,16 @@ public class ProductServiceImpl implements ProductService{
 
     @Override
     public Product findProduct(int productId) {
-        // Validate args
+        //Validate  (later to be separated in validations service)
         if(!Validate.valid(productId))return null;
+        if(!productDAO.containsProductById(productId))return null;
         // Persist
         return productDAO.readProduct(productId);
     }
 
     @Override
     public Product findProduct(String productName) {
-        // Validate args
+        //Validate  (later to be separated in validations service)
         if(!Validate.valid(productName)) return null;
         // Persist
         return productDAO.readProduct(productName);
@@ -46,7 +47,7 @@ public class ProductServiceImpl implements ProductService{
 
     @Override
     public Product updateProductName(int productId, String productName) {
-        // Validate
+        //Validate  (later to be separated in validations service)
         if(!Validate.valid(productName, productId))return null;
         Product product = productDAO.readProduct(productId);
         if(product == null) return null;
@@ -58,7 +59,7 @@ public class ProductServiceImpl implements ProductService{
 
     @Override
     public boolean deleteProduct(int productId) {
-        // Validate
+        //Validate  (later to be separated in validations service)
         if(!Validate.valid(productId)) return false;
         // Persist
         return productDAO.deleteProduct(productId);

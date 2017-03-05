@@ -16,20 +16,13 @@ import java.util.Set;
 @Entity
 @NamedQueries({
         @NamedQuery(
-                name = "Reservation.getByNumber",
-                query = "SELECT r FROM Reservation r WHERE r.number  = :" + "number"),
-        @NamedQuery(
-                name = "Reservation.deleteById",
-                query = "DELETE FROM Reservation r WHERE r.id  = :" + "id"),
-        @NamedQuery(
                 name = "Reservation.getAll",
-                query = "FROM Reservation"),
-        @NamedQuery(
-                name = "Reservation.changeState",
-                query = "UPDATE Reservation SET isOpen  =:" + "isOpen" + " WHERE id_order_product =:" + "id"),
+                query = "FROM Reservation",
+                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
         @NamedQuery(
                 name = "Reservation.getByUser",
-                query = "SELECT r FROM Reservation r JOIN r.user u WHERE u.id = :" + "id")
+                query = "SELECT r FROM Reservation r JOIN r.user u WHERE u.id = :" + "id",
+                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
 
 })
 @Table(name = "reservation")
@@ -78,13 +71,14 @@ public class Reservation implements Serializable {
         return user;
     }
 
-    @Column(name = "is_open")
+    @Column(name = "isopen")
     public boolean isOpen() {
         return isOpen;
     }
 
-    @ManyToMany(fetch = FetchType.EAGER,
-                cascade = {CascadeType.ALL})
+    @OneToMany(fetch = FetchType.EAGER,
+                cascade = {CascadeType.ALL},
+                mappedBy = "reservation")
     public Set<ProductInReservation> getProducts() {
         return products;
     }
@@ -93,7 +87,7 @@ public class Reservation implements Serializable {
 
     // region Setters
     public void setIsOpen(boolean isOpen) {
-        isOpen = isOpen;
+        this.isOpen = isOpen;
     }
 
     private void setId(Integer id) {

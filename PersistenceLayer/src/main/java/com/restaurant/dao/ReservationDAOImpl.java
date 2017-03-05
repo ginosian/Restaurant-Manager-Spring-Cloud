@@ -1,6 +1,5 @@
 package com.restaurant.dao;
 
-import com.restaurant.dto.Product;
 import com.restaurant.dto.ProductInReservation;
 import com.restaurant.dto.Reservation;
 import org.hibernate.HibernateException;
@@ -56,20 +55,6 @@ public class ReservationDAOImpl implements ReservationDAO {
     }
 
     @Override
-    public Reservation readReservation(String number) {
-        Session session = null;
-        try{
-            session = getSession();
-            Query query = session.createNamedQuery("Reservation.getByNumber");
-            query.setParameter("number", number);
-            return (Reservation) query.getSingleResult();
-        }catch (HibernateException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    @Override
     public boolean deleteReservation(int reservationId) {
         Session session = null;
         try{
@@ -114,21 +99,6 @@ public class ReservationDAOImpl implements ReservationDAO {
     }
 
     @Override
-    public Reservation changeReservationState(int reservationId, boolean isActive) {
-        Session session = null;
-        try{
-            session = getSession();
-            Query query = session.createNamedQuery("Reservation.changeState");
-            query.setParameter("isOpen", isActive);
-            query.setParameter("id_order_product", reservationId);
-            return (Reservation) query.getSingleResult();
-        }catch (HibernateException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    @Override
     public List<ProductInReservation> getAllProducts(int reservationId) {
         Session session = null;
         try{
@@ -144,60 +114,16 @@ public class ReservationDAOImpl implements ReservationDAO {
     }
 
     @Override
-    public ProductInReservation changeAmount(int productInReservationId, int amount) {
-        Session session = null;
+    public Reservation updateReservation(Reservation reservation) {
+        Session session;
         try{
             session = getSession();
-            Query query = session.createNamedQuery("ProductInReservation.changeAmount");
-            query.setParameter("amount", amount);
-            query.setParameter("id_order_product", productInReservationId);
-            return (ProductInReservation) query.getSingleResult();
+            session.update(reservation);
+            return reservation;
         }catch (HibernateException e) {
             e.printStackTrace();
         }
         return null;
-    }
-
-    @Override
-    public ProductInReservation writeProductInReservation(ProductInReservation productInReservation) {
-        Session session;
-        try{
-            session = getSession();
-            session.persist(productInReservation);
-            Integer id = (Integer) session.getIdentifier(productInReservation);
-            return session.find(ProductInReservation.class, id);
-        }catch (HibernateException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    @Override
-    public ProductInReservation updateProductInReservation(ProductInReservation productInReservation) {
-        Session session;
-        try{
-            session = getSession();
-            session.update(productInReservation);
-            return productInReservation;
-        }catch (HibernateException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    @Override
-    public boolean reservationContainsProduct(int reservationId, int productId) {
-        Session session;
-        try{
-            session = getSession();
-            Query query = session.createNamedQuery("ProductInReservation.containedInReservation");
-            query.setParameter("reservationId", reservationId);
-            query.setParameter("productId", productId);
-            return query.getResultList().size() != 0;
-        }catch (HibernateException e) {
-            e.printStackTrace();
-        }
-        return false;
     }
 
     @Override
@@ -213,26 +139,12 @@ public class ReservationDAOImpl implements ReservationDAO {
     }
 
     @Override
-    public ProductInReservation readProductInReservation(String number) {
-        Session session = null;
-        try{
-            session = getSession();
-            Query query = session.createNamedQuery("ProductInReservation.getByNumber");
-            query.setParameter("number", number);
-            return (ProductInReservation) query.getSingleResult();
-        }catch (HibernateException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    @Override
-    public boolean deleteProductInReservation(Integer productInReserevationId) {
+    public boolean deleteProductInReservation(Integer productInReservationId) {
         Session session = null;
         try{
             session = getSession();
             System.out.println("*****Transaction is active ********" + TransactionSynchronizationManager.isActualTransactionActive() + "**deleteProductInReservation**");
-            ProductInReservation productInReservation  = session.find(ProductInReservation.class, productInReserevationId);
+            ProductInReservation productInReservation  = session.find(ProductInReservation.class, productInReservationId);
             session.delete(productInReservation);
             return !session.contains(productInReservation);
         }catch (HibernateException e) {
@@ -242,13 +154,11 @@ public class ReservationDAOImpl implements ReservationDAO {
     }
 
     @Override
-    public List<Product> getAllProductsInReservation() {
+    public ProductInReservation findProductById(Integer productInReservationId) {
         Session session = null;
         try{
             session = getSession();
-            System.out.println("*****Transaction is active ********" + TransactionSynchronizationManager.isActualTransactionActive() + "**getAllProductsInReservation**");
-            Query query = session.createNamedQuery("ProductInReservation.getAll");
-            return query.getResultList();
+            return  session.find(ProductInReservation.class, productInReservationId);
         }catch (HibernateException e) {
             e.printStackTrace();
         }

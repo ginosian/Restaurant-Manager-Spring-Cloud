@@ -1,6 +1,5 @@
 package com.restaurant.dao;
 
-import com.restaurant.dto.Product;
 import com.restaurant.dto.ProductInReservation;
 import com.restaurant.dto.Reservation;
 
@@ -21,11 +20,6 @@ public interface ReservationDAO {
      * @return {@link Reservation} object from db or null if doesn't exist.*/
     Reservation readReservation(int reservationId);
 
-    /** Finds specified Reservation.
-     * @param number Reservation business key.
-     * @return {@link Reservation} object from db or null if doesn't exist.*/
-    Reservation readReservation(String number);
-
     /** Deletes specified Reservation.
      * @param reservationId generated id of Reservation.
      * @return true if Reservation was successfully deleted or did not exist.*/
@@ -40,24 +34,16 @@ public interface ReservationDAO {
      * @return list of {@link Reservation} objects from db or if non exist return a list with size of 0.*/
     List<Reservation> getAllReservationsByUser(int userId);
 
-    /** Adds or updates product in reservation.
-     * @param reservationId  id of reservation.
-     * @param isActive Indicates weather reservation is active or not.
-     * @return {@link Reservation} object from db or null if doesn't exist.*/
-    Reservation changeReservationState(int reservationId, boolean isActive);
 
     /** Gets all Products list within reservation.
      * @return list of {@link ProductInReservation} objects from db or if non exist return a list with size of 0.*/
     List<ProductInReservation> getAllProducts(int reservationId);
 
-    ProductInReservation changeAmount(int productInReservationId, int amount);
 
-    ProductInReservation writeProductInReservation(ProductInReservation productInReservation);
-    ProductInReservation updateProductInReservation(ProductInReservation productInReservation);
-    boolean reservationContainsProduct(int reservationId, int productId);
+    Reservation updateReservation(Reservation reservation);
 
     ProductInReservation readProductInReservation(Integer productInReservationId);
-    ProductInReservation readProductInReservation(String number);
     boolean deleteProductInReservation(Integer productInResrevationId);
-    List<Product> getAllProductsInReservation();
+
+    ProductInReservation findProductById(Integer productInReservationId);
 }

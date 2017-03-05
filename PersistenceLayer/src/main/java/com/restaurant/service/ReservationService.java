@@ -12,11 +12,11 @@ public interface ReservationService {
 
     Reservation createReservationAndAddProducts(int userId, List<ChooserProduct> products);
 
-    Reservation addProductInReservation(int productId, int amount);
+    Reservation addProductInReservation(int reservationId, int productId, int amount);
 
-    Reservation changeProductAmountInReservation(int reservationId, int productId, int amount);
+    Reservation changeProductAmountInReservation(int reservationId, int productInReservationId, int amount);
 
-    Reservation deleteProductFromReservation(int reservationId, int productId);
+    boolean deleteProductFromReservation(int reservationId, int productInReservationId);
 
     Reservation changeReservationState(int reservationId, boolean isActive);
 
@@ -29,4 +29,6 @@ public interface ReservationService {
     boolean deleteReservation(int reservationId);
 
     boolean deleteAllReservationsByUser(int userId);
+
+    boolean productInReservetionIsDeleted(int productInReservationId);
 }

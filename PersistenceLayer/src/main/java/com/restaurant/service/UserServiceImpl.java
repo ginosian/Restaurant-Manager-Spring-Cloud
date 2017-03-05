@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public User createUser(String username, String password, Role ... roles) {
-        // Validate args
+        //Validate  (later to be separated in validations service)
         if(!Validate.valid(username, password))return null;
         if(userDAO.containsUserByUsername(username)) return null;
         int index = roles.length - 1;
@@ -45,7 +45,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public User findUser(int userId) {
-        // Validate args
+        //Validate  (later to be separated in validations service)
         if(!Validate.valid(userId))return null;
         // Persist
         return userDAO.readUser(userId);
@@ -53,7 +53,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public User findUser(String username) {
-        // Validate args
+        //Validate  (later to be separated in validations service)
         if(!Validate.valid(username)) return null;
         // Persist
         User user = userDAO.readUser(username);
@@ -62,7 +62,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public User updateUserWithARole(int userId, int roleId) {
-        // Validate
+        //Validate  (later to be separated in validations service)
         if(!Validate.valid(userId, roleId))return null;
         Role role = userDAO.readRole(roleId);
         if(!userDAO.containsUserById(userId) || role == null) return null;
@@ -75,7 +75,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public boolean deleteUser(int userId) {
-        // Validate
+        //Validate  (later to be separated in validations service)
         if(!Validate.valid(userId)) return false;
         // Persist
        return userDAO.deleteUser(userId);
@@ -89,7 +89,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public List<User> getAllUsersByRole(int roleId) {
-        // Validate
+        //Validate  (later to be separated in validations service)
         if(!Validate.valid(roleId)) return null;
         Role role = userDAO.readRole(roleId);
         if(!Validate.valid(role)) return null;
@@ -99,7 +99,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public Role createRole(String role) {
-        // Validate args
+        //Validate  (later to be separated in validations service)
         if(!Validate.valid(role))return null;
         // Persist
         Role roleObject = new Role(role, BusKeyGen.nextKey());

@@ -12,34 +12,9 @@ import java.io.Serializable;
 @Entity
 @NamedQueries({
         @NamedQuery(
-                name = "ProductInReservation.getByNumber",
-                query = "SELECT p FROM ProductInReservation p WHERE p.number  = :" + "number",
-                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
-        @NamedQuery(
-                name = "ProductInReservation.delete",
-                query = "DELETE FROM ProductInReservation p WHERE p.id  = :" + "id",
-                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
-        @NamedQuery(
-                name = "ProductInReservation.changeAmount",
-                query = "UPDATE ProductInReservation SET amount =:" + "amount" + " WHERE id_order_product =:" + "id",
-                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
-        @NamedQuery(
                 name = "ProductInReservation.getByReservation",
                 query = "SELECT  p FROM ProductInReservation p JOIN p.reservation r WHERE r.id = :" + "id",
                 hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
-        @NamedQuery(
-                name = "ProductInReservation.addToReservation",
-                query = "SELECT  p FROM ProductInReservation p JOIN p.reservation r WHERE r.id = :" + "id",
-                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
-        @NamedQuery(
-                name = "ProductInReservation.getAll",
-                query = "FROM ProductInReservation",
-                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
-        @NamedQuery(
-                name = "ProductInReservation.containedInReservation",
-                query = "SELECT  p FROM ProductInReservation p " +
-                        "INNER JOIN p.reservation r ON r.id = :" + "reservationId" + " " +
-                        "INNER JOIN p.product op ON op.id =:" + "productId")
         })
 @Table(name = "productinreservation")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
@@ -119,11 +94,11 @@ public class ProductInReservation implements Serializable {
         this.product = product;
     }
 
-    private void setReservation(Reservation reservation) {
+    public void setReservation(Reservation reservation) {
         this.reservation = reservation;
     }
 
-    private void setAmount(int amount) {
+    public void setAmount(int amount) {
         this.amount = amount;
     }
 

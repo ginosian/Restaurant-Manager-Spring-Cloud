@@ -17,16 +17,20 @@ import java.util.Set;
 @NamedQueries({
         @NamedQuery(
                 name = "User.getUserByUsername",
-                query = "SELECT u FROM User u WHERE u.username  = :" + "username"),
+                query = "SELECT u FROM User u WHERE u.username  = :" + "username",
+                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
         @NamedQuery(
                 name = "User.deleteUserByUsername",
-                query = "DELETE FROM User u WHERE u.username  = :" + "username"),
+                query = "DELETE FROM User u WHERE u.username  = :" + "username",
+                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
         @NamedQuery(
                 name = "User.getAllUsers",
-                query = "FROM User"),
+                query = "FROM User",
+                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
         @NamedQuery(
                 name = "User.getUsersByRole",
-                query = "SELECT u FROM User u JOIN u.roles u_r WHERE u_r.role = :" + "role")
+                query = "SELECT u FROM User u JOIN u.roles u_r WHERE u_r.role = :" + "role",
+                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
 })
 @Table(name = "user")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)

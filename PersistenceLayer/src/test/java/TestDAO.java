@@ -1,11 +1,11 @@
 import com.restaurant.Application;
-import com.restaurant.dto.Product;
-import com.restaurant.dto.Role;
-import com.restaurant.dto.User;
+import com.restaurant.dto.*;
 import com.restaurant.service.ProductService;
 import com.restaurant.service.ReservationService;
 import com.restaurant.service.UserService;
+import com.restaurant.service.helperModels.ChooserProduct;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -18,6 +18,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 import util.MockedData;
 
+import java.util.*;
+
 /**
  * Created by Martha on 3/1/2017.
  */
@@ -25,7 +27,7 @@ import util.MockedData;
 @WebAppConfiguration
 @SpringBootTest(classes = Application.class)
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.AUTO_CONFIGURED)
-@TestPropertySource(locations="classpath:test.properties")
+@TestPropertySource(locations = "classpath:test.properties")
 public class TestDAO {
 
     @Autowired
@@ -40,97 +42,221 @@ public class TestDAO {
     @Rule
     public ExpectedException thrown = ExpectedException.none();
 
+    private Role role1;
+    private Role role2;
+
+    private User user1;
+
+    private Product product1;
+    private Product product2;
+    private Product product3;
+    private Product product4;
+    private Product product5;
+
+    private List<ChooserProduct> products1;
+    private List<ChooserProduct> products2;
+
+    @Before
+    public void initRawEntities(){
+        role1 = userService.createRole(MockedData.roleName());
+        role2 = userService.createRole(MockedData.roleName());
+
+        user1 = userService.createUser(MockedData.userName(), MockedData.password(), role1, role2);
+
+        product1 = productService.createProduct(MockedData.productName());
+        product2 = productService.createProduct(MockedData.productName());
+        product3 = productService.createProduct(MockedData.productName());
+        product4 = productService.createProduct(MockedData.productName());
+        product5 = productService.createProduct(MockedData.productName());
+
+        products1 = new LinkedList<>();
+        products1.add(new ChooserProduct(product1.getId(), 2));
+        products1.add(new ChooserProduct(product2.getId(), 8));
+        products1.add(new ChooserProduct(product3.getId(), 5));
+        products2 = new LinkedList<>();
+        products2.add(new ChooserProduct(product4.getId(), 20));
+        products2.add(new ChooserProduct(product5.getId(), 0));
+    }
+
     @Test
-    public void testServices(){
+    public void testServices() {
         Assert.assertNotNull(userService);
         Assert.assertNotNull(productService);
         Assert.assertNotNull(reservationService);
     }
 
     @Test
-    public void createRole(){
-        Role role1 = userService.createRole(MockedData.roleName());
+    public void testRole() {
+        // Roles are created
         Assert.assertNotNull(role1.getId());
-        Role role2 = userService.createRole(MockedData.roleName());
-        Assert.assertNotNull(role2.getId());
-        Role role3 = userService.createRole(MockedData.roleName());
-        Assert.assertNotNull(role3.getId());
     }
 
     @Test
-    public void createUser(){
-        Role role1 = userService.createRole(MockedData.roleName());
-        Assert.assertNotNull(role1.getId());
-        Role role2 = userService.createRole(MockedData.roleName());
-        Assert.assertNotNull(role2.getId());
-        Role role3 = userService.createRole(MockedData.roleName());
-        Assert.assertNotNull(role3.getId());
-
-        User user1 = userService.createUser(MockedData.userName(), MockedData.password(), role1, role2);
-        Assert.assertNotNull(user1.getId());
-        User user2 = userService.createUser(MockedData.userName(), MockedData.password(), role2, role3);
-        Assert.assertNotNull(user2.getId());
-        User user3 = userService.createUser(MockedData.userName(), MockedData.password(), role3, role1);
-        Assert.assertNotNull(user3.getId());
-    }
-
-    @Test
-    public void testUserService(){
-        // Create roles
-        Role role1 = userService.createRole(MockedData.roleName());
-        Assert.assertNotNull(role1.getId());
-        Role role2 = userService.createRole(MockedData.roleName());
-        Assert.assertNotNull(role2.getId());
-        Role role3 = userService.createRole(MockedData.roleName());
-        Assert.assertNotNull(role3.getId());
-
-        // Create user
-        User user1 = userService.createUser(MockedData.userName(), MockedData.password(), role1, role2);
+    public void testUserService() {
+        // Users are created
         Assert.assertNotNull(user1.getId());
         Assert.assertNotNull(userService.findUser(user1.getId()));
         Assert.assertNotNull(userService.findUser(user1.getUsername()));
-        User user2 = userService.createUser(MockedData.userName(), MockedData.password(), role2, role3);
-        Assert.assertNotNull(user2.getId());
-        User user3 = userService.createUser(MockedData.userName(), MockedData.password(), role3, role1);
-        Assert.assertNotNull(user3.getId());
 
-        // Override hashcode and equals applied effect
+        // Overriding effect of hashcode and equals are applied
         Assert.assertEquals(user1, userService.findUser(user1.getId()));
 
-        // Return null if duplicate user is attempt to record
+        // A null is returned if duplicate user is attempt to record
         Assert.assertNull(userService.createUser(user1.getUsername(), user1.getPassword(), role1, role2));
 
-        // Delete user
-        Assert.assertTrue(userService.deleteUser(user2.getId()));
-        Assert.assertNull(userService.findUser(user2.getId()));
+        // User deleted
+        Assert.assertTrue(userService.deleteUser(user1.getId()));
+        Assert.assertNull(userService.findUser(user1.getId()));
     }
 
     @Test
-    public void testProductService(){
-        // Product creation
-        Product product1 = productService.createProduct(MockedData.productName());
+    public void testProductService() {
+        // Product is created
         Assert.assertNotNull(productService.findProduct(product1.getId()));
         Assert.assertNull(productService.createProduct(product1.getProductName()));
 
-        // Product reading
+        // Product is read
         Assert.assertNotNull(productService.findProduct(product1.getProductName()));
         Assert.assertEquals(productService.findProduct(product1.getProductName()), productService.findProduct(product1.getId()));
 
-        // Product updating
+        // Product is updated
         Product product2 = productService.updateProductName(product1.getId(), MockedData.productName());
         Assert.assertEquals(product1.getId(), product2.getId());
         Assert.assertEquals(product1, product2);
         Assert.assertNotEquals(product1.getProductName(), product2.getProductName());
 
-        // Product deleting
+        // Product is deleted
         Assert.assertTrue(productService.deleteProduct(product1.getId()));
         Assert.assertNull(productService.findProduct(product1.getId()));
 
 
-        // Double deleting
+        // Product is deleted double times
         thrown.expect(Exception.class);
         productService.deleteProduct(product1.getId());
+    }
+
+    @Test
+    public void createReservation(){
+        // Reservation and products in reservation are created
+        Reservation reservation1 = reservationService.createReservationAndAddProducts(user1.getId(), products1);
+        Assert.assertNotNull(reservationService.findReservationById(reservation1.getId()));
+
+        //An association user with reservation is set
+        List<Reservation> reservations = reservationService.findAllReservationsByUserId(user1.getId());
+        Assert.assertNotNull(reservations);
+        Assert.assertEquals(reservations.size(), 1);
+        Assert.assertEquals((long) reservations.get(0).getId(), (long) reservation1.getId());
+
 
     }
+    @Test
+    public void addProductInReservation(){
+        Reservation reservation1 = reservationService.createReservationAndAddProducts(user1.getId(), products1);
+        // Products in reservation are created
+        for (ProductInReservation productInReservation : reservation1.getProducts()) {
+            Assert.assertNotNull(productInReservation.getId());
+        }
+
+        // A product in reservation is added
+        reservation1 = reservationService.addProductInReservation(reservation1.getId(), product4.getId(), 15);
+        Assert.assertEquals((long) reservation1.getProducts().size(), 4);
+        Iterator iterator = reservation1.getProducts().iterator();
+        ProductInReservation insertedProduct = null;
+        while (iterator.hasNext()) {
+            ProductInReservation temp = ((ProductInReservation) iterator.next());
+            if (temp.getProduct().getId() == product4.getId()) {
+                insertedProduct = temp;
+                break;
+            }
+        }
+        Assert.assertNotNull(insertedProduct);
+    }
+
+    @Test
+    public void changeProductAmount(){
+        Reservation reservation1 = reservationService.createReservationAndAddProducts(user1.getId(), products1);
+        // Amount of product from reservation is changed
+        ProductInReservation productWithInitialAmount = reservation1.getProducts().iterator().next();
+        int initialAmount = productWithInitialAmount.getAmount();
+        int productId = productWithInitialAmount.getId();
+        reservation1 = reservationService.changeProductAmountInReservation(reservation1.getId(),
+                productWithInitialAmount.getId(),
+                productWithInitialAmount.getAmount() + 20);
+        Iterator iterator = reservation1.getProducts().iterator();
+        while (iterator.hasNext()) {
+            ProductInReservation temp = ((ProductInReservation) iterator.next());
+            if (temp.getId() == productId) {
+                Assert.assertTrue(temp.getAmount() == initialAmount + 20);
+                break;
+            }
+        }
+
+    }
+    @Test
+    public void deleteProductFromReservation(){
+        Reservation reservation1 = reservationService.createReservationAndAddProducts(user1.getId(), products1);
+        // A product from reservation is deleted
+        Iterator iterator = reservation1.getProducts().iterator();
+        ProductInReservation productToBeDeleted = null;
+        int counter = 0;
+        while (iterator.hasNext()) {
+            if (counter == 0) {
+                productToBeDeleted = (ProductInReservation) iterator.next();
+            }
+            counter++;
+        }
+        reservationService.deleteProductFromReservation(reservation1.getId(), productToBeDeleted.getId());
+        reservation1 = reservationService.findReservationById(reservation1.getId());
+        iterator = reservation1.getProducts().iterator();
+        ProductInReservation deletedProduct = null;
+        while (iterator.hasNext()) {
+            ProductInReservation temp = (ProductInReservation) iterator.next();
+            if (temp.getId() == productToBeDeleted.getId()) {
+                deletedProduct = (ProductInReservation) iterator.next();
+            }
+        }
+        Assert.assertNull(deletedProduct);
+    }
+
+    @Test
+    public void deleteReservation(){
+        //Delete reservation
+        Reservation reservation1 = reservationService.createReservationAndAddProducts(user1.getId(), products2);
+        Assert.assertEquals(reservation1.getProducts().size(), 1);
+
+        ProductInReservation productInReservation = reservation1.getProducts().iterator().next();
+        Assert.assertNotNull(productInReservation.getId());
+
+        List<Reservation> reservationFromUser = reservationService.findAllReservationsByUserId(user1.getId());
+        Assert.assertEquals(reservation1, reservationFromUser.get(0));
+
+        reservationService.changeReservationState(reservation1.getId(), false);
+        reservationService.deleteReservation(reservation1.getId());
+
+        Assert.assertNull(reservationService.findReservationById(reservation1.getId()));
+        Assert.assertEquals(reservationService.findAllReservationsByUserId(user1.getId()).size(), 0);
+    }
+
+    @Test
+    public void deleteUser(){
+        Reservation reservation1 = reservationService.createReservationAndAddProducts(user1.getId(), products1);
+        Reservation reservation2 = reservationService.createReservationAndAddProducts(user1.getId(), products2);
+        List<Reservation> reservationFromUser = reservationService.findAllReservationsByUserId(user1.getId());
+        List<ProductInReservation> productsFromReservations = new LinkedList<>();
+        for(Reservation reservation : reservationFromUser){
+            productsFromReservations.addAll(reservation.getProducts());
+        }
+
+        userService.deleteUser(user1.getId());
+
+        Assert.assertNull(reservationService.findAllReservationsByUserId(user1.getId()));
+        Assert.assertNull(reservationService.findReservationById(reservation1.getId()));
+        Assert.assertNull(reservationService.findReservationById(reservation2.getId()));
+
+        for(ProductInReservation product : productsFromReservations){
+            Assert.assertTrue(reservationService.productInReservetionIsDeleted(product.getId()));
+        }
+    }
+
 
 }
