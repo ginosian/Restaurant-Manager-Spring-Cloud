@@ -49,7 +49,7 @@ public class MockedData {
     }
 
     public static ProductInReservation ggenerateProductInOrder(Product product, Reservation reservation, int amount){
-        return new ProductInReservation(product, reservation, amount, Integer.toString(++counter));
+        return new ProductInReservation(product, amount, Integer.toString(++counter));
     }
 
 //    public static Reservation generateOrder(User user){

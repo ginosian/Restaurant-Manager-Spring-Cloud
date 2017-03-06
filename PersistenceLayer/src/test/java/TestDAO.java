@@ -259,4 +259,11 @@ public class TestDAO {
     }
 
 
+    @Test
+    public void noLazyFetchingForProductInReservation(){
+        Reservation reservation1 = reservationService.createReservationAndAddProducts(user1.getId(), products2);
+        Assert.assertNull(reservation1.getProducts().iterator().next().getReservation());
+    }
+
+
 }

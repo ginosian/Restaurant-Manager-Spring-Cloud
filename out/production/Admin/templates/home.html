@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:data-th-text="http://www.w3.org/1999/xhtml"
+      xmlns:data-th-each="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<div th:unless="${#lists.isEmpty(allUsers)}">
+
+    <h2>List of Users</h2>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Username</th>
+            <th >Roles</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user : ${allUsers}">
+            <td th:text="${user.username}"/>
+            <td>
+                <table>
+                    <tbody>
+                    <tr th:each="role : ${user.roles}">
+                        <td th:text="${role.role}">1</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div th:unless="${#lists.isEmpty(allProducts)}">
+    <h2>List of Products</h2>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Product name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="product : ${allProducts}">
+            <td th:text="${product.productName}"/>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+
+    <div th:unless="${#lists.isEmpty(allRoles)}">
+    <h2>List of Roles</h2>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Roles</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="role : ${allRoles}">
+            <td th:text="${role.role}"/>
+        </tr>
+        </tbody>
+    </table>
+        </div>
+
+<div th:unless="${#lists.isEmpty(allReservations)}">
+    <h2>List of closed reservations</h2>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Reserved user</th>
+            <th >Products</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="reservation : ${allReservations}">
+            <td th:text="${reservation.user.username}"/>
+            <td>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Product name</th>
+                        <th >Product amount</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="product : ${reservation.products}">
+                        <td th:text="${product.productName}">1</td>
+                        <td th:text="${product.amount}">1</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+        <!--<td><a href="/templates/user-form.html" th:text="${user.username}">Username ...</a></td>-->

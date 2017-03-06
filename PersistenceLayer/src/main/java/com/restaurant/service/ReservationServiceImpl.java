@@ -134,7 +134,13 @@ public class ReservationServiceImpl implements ReservationService {
 
     @Override
     public List<Reservation> findAllReservations() {
-        return reservationDAO.getAllReservations();
+        List<Reservation> reservations = reservationDAO.getAllReservations();
+        for(Reservation reservation : reservations){
+            for (ProductInReservation productInReservation : reservation.getProducts()){
+                productInReservation.setReservation(null);
+            }
+        }
+        return reservations;
     }
 
     @Override
@@ -143,7 +149,13 @@ public class ReservationServiceImpl implements ReservationService {
         if(!Validate.valid(userId))return null;
         if(!userDAO.containsUserById(userId)) return null;
         // Persist
-        return reservationDAO.getAllReservationsByUser(userId);
+        List<Reservation> reservations = reservationDAO.getAllReservationsByUser(userId);
+        for(Reservation reservation : reservations){
+            for (ProductInReservation productInReservation : reservation.getProducts()){
+                productInReservation.setReservation(null);
+            }
+        }
+        return reservations;
     }
 
     @Override
@@ -172,6 +184,19 @@ public class ReservationServiceImpl implements ReservationService {
 
     @Override
     public boolean productInReservetionIsDeleted(int productInReservationId){
+        //Validate  (later to be separated in validations service)
+        if(!Validate.valid(productInReservationId))return true;
         return reservationDAO.readProductInReservation(productInReservationId) == null;
+    }
+
+    @Override
+    public Reservation updateReservation(Reservation reservation) {
+        //Validate  (later to be separated in validations service)
+        if(!Validate.valid(reservation)) return null;
+        if(!Validate.valid(reservation.getId(), reservation.getUser().getId())) return null;
+        if(reservationDAO.readReservation(reservation.getId()) == null)return null;
+        if(!userDAO.containsUserById(reservation.getUser().getId())) return null;
+        // Persist
+        return reservationDAO.updateReservation(reservation);
     }
 }
