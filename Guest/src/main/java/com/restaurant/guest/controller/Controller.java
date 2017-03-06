@@ -1,9 +1,16 @@
 package com.restaurant.guest.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.restaurant.guest.model.Product;
+import com.restaurant.guest.model.Reservation;
 import com.restaurant.guest.service.Service;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
+
+import java.util.List;
 
 /**
  * Created by Martha on 2/25/2017.
@@ -14,8 +21,23 @@ public class Controller {
     @Autowired
     Service service;
 
-    @GetMapping(value = "/guest")
-    public Object addOrUpdateUser(){
-        return service.getEntity();
+    @RequestMapping(path = "guest", method = RequestMethod.GET)
+    public ModelAndView homeData() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject(allProducts());
+        modelAndView.addObject(allReservations());
+        modelAndView.setViewName("home");
+        return modelAndView;
     }
+
+    @ModelAttribute("allProducts")
+    public List<Product> allProducts() {
+        return this.service.getAllProducts();
+    }
+
+    @ModelAttribute("allReservations")
+    public List<Reservation> allReservations() {
+        return this.service.getAllReservationsByUser();
+    }
+
 }

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:data-th-text="http://www.w3.org/1999/xhtml"
+      xmlns:data-th-each="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+
+<div th:unless="${#lists.isEmpty(allReservations)}">
+    <h2>List of closed reservations</h2>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Reserved user</th>
+            <th >ID</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="reservation : ${allReservations}">
+            <td th:text="${reservation.id}"/>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+        <!--<td><a href="/templates/user-form.html" th:text="${user.username}">Username ...</a></td>-->

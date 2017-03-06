@@ -25,12 +25,12 @@
       <module name="Admin_test" target="1.8" />
       <module name="DiscoveryServer_main" target="1.5" />
       <module name="DiscoveryServer_test" target="1.5" />
-      <module name="Guest_main" target="1.5" />
-      <module name="Guest_test" target="1.5" />
+      <module name="Guest_main" target="1.8" />
+      <module name="Guest_test" target="1.8" />
       <module name="PersistenceLayer_main" target="1.8" />
       <module name="PersistenceLayer_test" target="1.8" />
-      <module name="Restaurant_main" target="1.5" />
-      <module name="Restaurant_test" target="1.5" />
+      <module name="Restaurant_main" target="1.8" />
+      <module name="Restaurant_test" target="1.8" />
       <module name="RestaurantManager_main" target="1.5" />
       <module name="RestaurantManager_test" target="1.5" />
     </bytecodeTargetLevel>
