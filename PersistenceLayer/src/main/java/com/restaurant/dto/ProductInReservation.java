@@ -65,7 +65,7 @@ public class ProductInReservation implements Serializable {
         return product;
     }
 
-    @OneToOne
+    @ManyToOne
     public Reservation getReservation() {
         return reservation;
     }

@@ -1,6 +1,6 @@
 spring:
   application:
-    name: persistence-microservice
+    name: persist
 eureka:
   client:
     serviceUrl:

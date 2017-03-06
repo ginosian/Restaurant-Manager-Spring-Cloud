@@ -1,15 +1,10 @@
 package com.restaurant.restaurant.controller;
 
-import com.restaurant.restaurant.model.Reservation;
-import com.restaurant.restaurant.service.Service;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
 
-import java.util.List;
+import java.security.Principal;
 
 /**
  * Created by Martha on 2/25/2017.
@@ -17,20 +12,27 @@ import java.util.List;
 @RestController
 public class Controller {
 
-    @Autowired
-    Service service;
-
-    @RequestMapping(path = "restaurant", method = RequestMethod.GET)
-    public ModelAndView homeData() {
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject(allReservations());
-        modelAndView.setViewName("home");
-        return modelAndView;
+    @GetMapping("/")
+    @ResponseBody
+    public String homeTest(Principal principal) {
+        String name = principal.getName();
+        return "<html><h1>Welcome to the Restaurant home page!</h1><html/>" + name;
     }
 
-    @ModelAttribute("allReservations")
-    public List<Reservation> allReservations() {
-        return this.service.getAllReservations();
-    }
+//    @Autowired
+//    Service service;
+//
+//    @RequestMapping(path = "/", method = RequestMethod.GET)
+//    public ModelAndView homeData() {
+//        ModelAndView modelAndView = new ModelAndView();
+//        modelAndView.addObject(allReservations());
+//        modelAndView.setViewName("home");
+//        return modelAndView;
+//    }
+//
+//    @ModelAttribute("allReservations")
+//    public List<Reservation> allReservations() {
+//        return this.service.getAllReservations();
+//    }
 
 }

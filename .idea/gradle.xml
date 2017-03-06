@@ -10,7 +10,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Admin" />
+            <option value="$PROJECT_DIR$/AuthorizationServer" />
             <option value="$PROJECT_DIR$/DiscoveryServer" />
+            <option value="$PROJECT_DIR$/Gateway" />
             <option value="$PROJECT_DIR$/Guest" />
             <option value="$PROJECT_DIR$/PersistenceLayer" />
             <option value="$PROJECT_DIR$/Restaurant" />

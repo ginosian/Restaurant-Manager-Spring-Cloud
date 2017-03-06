@@ -14,7 +14,7 @@ import java.util.List;
  */
 @Repository
 public class ServiceImpl implements Service{
-    private static final String SERVICE_URL = "http://persistence-microservice";
+    private static final String SERVICE_URL = "http://persist";
 
     @Autowired
     RestTemplate restTemplate;

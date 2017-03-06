@@ -55,7 +55,7 @@ public class UserContoller {
 
     @GetMapping(path = "/users", produces = "application/json")
     public List<User> allUsers(){
-//        createUsers();
+        createUsers();
         List<User> users = userService.getAllUsers();
         return users;
     }
@@ -82,13 +82,9 @@ public class UserContoller {
         Role role2 = userService.createRole("guest");
         Role role3 = userService.createRole("restaurant");
 
-        User user1 = userService.createUser(MockedData.userName(), MockedData.password(), role1, role2);
-        User user2 = userService.createUser(MockedData.userName(), MockedData.password(), role3, role2);
-        User user3 = userService.createUser(MockedData.userName(), MockedData.password(), role2);
-        User user4 = userService.createUser(MockedData.userName(), MockedData.password(), role2);
-        User user5 = userService.createUser(MockedData.userName(), MockedData.password(), role2);
-        User user6 = userService.createUser(MockedData.userName(), MockedData.password(), role2);
-        User user7 = userService.createUser(MockedData.userName(), MockedData.password(), role2);
+        User user1 = userService.createUser("admin", "pass", role1);
+        User user2 = userService.createUser("guest", "pass", role2);
+        User user3 = userService.createUser("restaurant", "pass", role3);
 
         Product product1 = productService.createProduct(MockedData.productName());
         Product product2 = productService.createProduct(MockedData.productName());

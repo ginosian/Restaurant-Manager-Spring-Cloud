@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.7.5">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.dataformat/jackson-dataformat-cbor/2.7.5/92bb7588f3a7d2c10075840ac936a28642dd7dbe/jackson-dataformat-cbor-2.7.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.dataformat/jackson-dataformat-cbor/2.7.5/47c4ebda6913624eec35f3e0ffac6b138afbd639/jackson-dataformat-cbor-2.7.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -77,7 +77,7 @@ public class Reservation implements Serializable {
     }
 
     @OneToMany(fetch = FetchType.EAGER,
-                cascade = {CascadeType.ALL},
+                cascade = CascadeType.ALL,
                 mappedBy = "reservation")
     public Set<ProductInReservation> getProducts() {
         return products;

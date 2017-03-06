@@ -36,4 +36,7 @@ dependencies {
     compile group: 'hsqldb', name: 'hsqldb', version: '1.8.0.10'
     compile group: 'com.h2database', name: 'h2', version: '1.4.193'
 
+    compile('org.springframework.security.oauth:spring-security-oauth2:2.0.8.RELEASE')
+    compile('org.springframework.security:spring-security-jwt:1.0.3.RELEASE')
+
 }

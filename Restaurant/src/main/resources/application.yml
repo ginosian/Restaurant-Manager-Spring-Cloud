@@ -1,6 +1,6 @@
 spring:
   application:
-    name: restaurant-microservice
+    name: restaurant
 eureka:
   client:
     serviceUrl:

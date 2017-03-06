@@ -1,9 +1,9 @@
 spring:
   application:
-    name: admin-microservice
+    name: admin
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:1115/eureka/
 server:
-  port: 1117
+  port: 1112
