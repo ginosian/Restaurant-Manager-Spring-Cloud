@@ -9,7 +9,6 @@ import java.io.Serializable;
 /**
  * Created by Martha on 2/24/2017.
  */
-//@Immutable
 @Entity
 @NamedQueries({
         @NamedQuery(

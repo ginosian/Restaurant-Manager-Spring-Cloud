@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
  * Created by Martha on 2/25/2017.
  */
@@ -63,5 +65,10 @@ public class ProductServiceImpl implements ProductService{
         if(!Validate.valid(productId)) return false;
         // Persist
         return productDAO.deleteProduct(productId);
+    }
+
+    @Override
+    public List<Product> findAllProducts() {
+        return productDAO.getAllProducts();
     }
 }

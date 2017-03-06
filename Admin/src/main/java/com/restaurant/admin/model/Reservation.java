@@ -1,32 +1,12 @@
-package com.restaurant.dto;
+package com.restaurant.admin.model;
 
-import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
-
-import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Set;
 
 /**
  * Created by Martha on 2/24/2017.
  */
-@Entity
-@NamedQueries({
-        @NamedQuery(
-                name = "Reservation.getAll",
-                query = "FROM Reservation",
-                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
-        @NamedQuery(
-                name = "Reservation.getByUser",
-                query = "SELECT r FROM Reservation r JOIN r.user u WHERE u.id = :" + "id",
-                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
-
-})
-@Table(name = "reservation")
-@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class Reservation implements Serializable {
 
     // region Fields
@@ -51,34 +31,22 @@ public class Reservation implements Serializable {
     // endregion
 
     // region Properties
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_reservation")
     public Integer getId() {
         return id;
     }
 
-    @Column(name = "business_key",
-            unique = true,
-            nullable = false,
-            updatable = false)
     public String getNumber() {
         return number;
     }
 
-    @ManyToOne
     public User getUser() {
         return user;
     }
 
-    @Column(name = "isopen")
     public boolean getIsOpen() {
         return isOpen;
     }
 
-    @OneToMany(fetch = FetchType.EAGER,
-                cascade = {CascadeType.ALL},
-                mappedBy = "reservation")
     public Set<ProductInReservation> getProducts() {
         return products;
     }
