@@ -2,142 +2,90 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba40e288-df88-47c4-a75d-20c62b829cbd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__ch_qos_logback_logback_classic_1_1_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__ch_qos_logback_logback_core_1_1_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_classmate_1_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_core_2_8_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_databind_2_8_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_dataformat_jackson_dataformat_cbor_2_7_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_module_jackson_module_afterburner_2_7_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_netflix_hystrix_hystrix_core_1_5_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_netflix_hystrix_hystrix_javanica_1_5_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_netflix_hystrix_hystrix_metrics_event_stream_1_5_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_netflix_hystrix_hystrix_serialization_1_5_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_netflix_zuul_zuul_core_1_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_collections_commons_collections_3_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_io_commons_io_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_reactivex_rxjava_1_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__joda_time_joda_time_2_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_commons_commons_lang3_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tomcat_embed_tomcat_embed_jasper_8_5_11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_jackson_jackson_core_asl_1_9_13.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_jackson_jackson_mapper_asl_1_9_13.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jdt_core_compiler_ecj_4_5_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hdrhistogram_HdrHistogram_2_1_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hibernate_hibernate_validator_5_2_4_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jboss_logging_jboss_logging_3_2_1_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_jcl_over_slf4j_1_7_21.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_jul_to_slf4j_1_7_21.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_log4j_over_slf4j_1_7_21.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_slf4j_api_1_7_21.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_1_4_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_autoconfigure_1_4_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_1_4_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_logging_1_4_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_tomcat_1_4_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_web_1_4_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_cloud_spring_cloud_starter_eureka_1_2_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_cloud_spring_cloud_starter_hystrix_1_2_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_cloud_spring_cloud_starter_zuul_1_2_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_security_oauth_spring_security_oauth2_2_0_8_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_security_spring_security_config_3_2_8_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_security_spring_security_core_3_2_8_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_security_spring_security_jwt_1_0_3_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_security_spring_security_web_3_2_8_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_aop_4_3_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_beans_4_3_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_context_4_3_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_core_4_3_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_expression_4_3_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_web_4_3_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_webmvc_4_3_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/AuthorizationServer/AuthorizationServer.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/AuthorizationServer/AuthorizationServer_main.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/AuthorizationServer/AuthorizationServer_test.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/Gateway/Gateway.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/Gateway/Gateway_main.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/Gateway/Gateway_test.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/serverconfig/AccessDenyHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/serverconfig/JwtConfiguration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/serverconfig/LogInEntryPoint.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/serverconfig/ResourceServerConfiguration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Admin/src/main/resources/public.cert" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AuthorizationServer/src/main/java/com/restaurant/authserver/Application.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AuthorizationServer/src/main/java/com/restaurant/authserver/AuthController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AuthorizationServer/src/main/java/com/restaurant/authserver/OAuth2Config.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AuthorizationServer/src/main/java/com/restaurant/authserver/WebSecurityConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AuthorizationServer/src/main/resources/application.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AuthorizationServer/src/main/resources/jwt.jks" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AuthorizationServer/src/main/resources/templates/login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Guest/src/main/java/com/restaurant/guest/serverconfig/AccessDenyHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Guest/src/main/java/com/restaurant/guest/serverconfig/JwtConfiguration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Guest/src/main/java/com/restaurant/guest/serverconfig/LogInEntryPoint.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Guest/src/main/java/com/restaurant/guest/serverconfig/ResourceServerConfiguration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Guest/src/main/resources/public.cert" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/serverconfig/AccessDenyHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/serverconfig/JwtConfiguration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/serverconfig/LogInEntryPoint.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/serverconfig/ResourceServerConfiguration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/resources/public.cert" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Restaurant/src/main/java/com/restaurant/restaurant/serverconfig/AccessDenyHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Restaurant/src/main/java/com/restaurant/restaurant/serverconfig/JwtConfiguration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Restaurant/src/main/java/com/restaurant/restaurant/serverconfig/LogInEntryPoint.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Restaurant/src/main/java/com/restaurant/restaurant/serverconfig/ResourceServerConfiguration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Restaurant/src/main/resources/public.cert" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/test/TestConfiguration.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/test/TestDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/test/util/MockedData.class" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Admin/build/classes/main/com/restaurant/admin/serverconfig/AccessDenyHandler.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Admin/build/classes/main/com/restaurant/admin/serverconfig/JwtConfiguration.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Admin/build/classes/main/com/restaurant/admin/serverconfig/LogInEntryPoint.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Admin/build/classes/main/com/restaurant/admin/serverconfig/ResourceServerConfiguration.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AuthorizationServer/build/classes/main/com/restaurant/authserver/Application.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AuthorizationServer/build/classes/main/com/restaurant/authserver/AuthController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AuthorizationServer/build/classes/main/com/restaurant/authserver/OAuth2Config.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AuthorizationServer/build/classes/main/com/restaurant/authserver/WebSecurityConfig.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gateway/build/classes/main/com/restaurant/gateway/Application.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gateway/build/classes/main/com/restaurant/gateway/AuthenticationFilter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gateway/build/classes/main/com/restaurant/gateway/LogFilter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gateway/build/classes/main/com/restaurant/gateway/RefreshCookieToAttributeFilter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gateway/build/classes/main/com/restaurant/gateway/RefreshTokenRequestWrapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gateway/build/classes/main/com/restaurant/gateway/RefreshTokenToCookieFilter$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gateway/build/classes/main/com/restaurant/gateway/RefreshTokenToCookieFilter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gateway/build/classes/main/com/restaurant/gateway/Utils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Guest/build/classes/main/com/restaurant/guest/serverconfig/AccessDenyHandler.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Guest/build/classes/main/com/restaurant/guest/serverconfig/JwtConfiguration.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Guest/build/classes/main/com/restaurant/guest/serverconfig/LogInEntryPoint.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Guest/build/classes/main/com/restaurant/guest/serverconfig/ResourceServerConfiguration.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/serverconfig/AccessDenyHandler.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/serverconfig/JwtConfiguration.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/serverconfig/ResourceServerConfiguration.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Restaurant/build/classes/main/com/restaurant/restaurant/serverconfig/AccessDenyHandler.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Restaurant/build/classes/main/com/restaurant/restaurant/serverconfig/JwtConfiguration.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Restaurant/build/classes/main/com/restaurant/restaurant/serverconfig/LogInEntryPoint.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Restaurant/build/classes/main/com/restaurant/restaurant/serverconfig/ResourceServerConfiguration.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Admin/build/resources/main/public.cert" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AuthorizationServer/build.gradle" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AuthorizationServer/build/resources/main/application.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AuthorizationServer/build/resources/main/jwt.jks" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AuthorizationServer/build/resources/main/templates/login.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gateway/build.gradle" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gateway/build/resources/main/application.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gateway/src/main/java/com/restaurant/gateway/Application.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gateway/src/main/java/com/restaurant/gateway/AuthenticationFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gateway/src/main/java/com/restaurant/gateway/LogFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gateway/src/main/java/com/restaurant/gateway/RefreshCookieToAttributeFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gateway/src/main/java/com/restaurant/gateway/RefreshTokenRequestWrapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gateway/src/main/java/com/restaurant/gateway/RefreshTokenToCookieFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gateway/src/main/java/com/restaurant/gateway/Utils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gateway/src/main/resources/application.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Guest/build/resources/main/public.cert" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PersistenceLayer/build/resources/main/public.cert" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Restaurant/build/resources/main/public.cert" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Admin/public.cert" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Admin/templates/home.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Admin/templates/user-form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/AuthorizationServer/application.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/AuthorizationServer/jwt.jks" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/AuthorizationServer/templates/login.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Gateway/application.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Guest/public.cert" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Guest/templates/home.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Guest/templates/user-form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PersistenceLayer/public.cert" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Restaurant/public.cert" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Restaurant/templates/home.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Restaurant/templates/user-form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/build/classes/main/com/restaurant/admin/controller/Controller.class" afterPath="$PROJECT_DIR$/Admin/build/classes/main/com/restaurant/admin/controller/Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/build/classes/main/com/restaurant/admin/service/ServiceImpl.class" afterPath="$PROJECT_DIR$/Admin/build/classes/main/com/restaurant/admin/service/ServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Guest/build/classes/main/com/restaurant/guest/controller/Controller.class" afterPath="$PROJECT_DIR$/Guest/build/classes/main/com/restaurant/guest/controller/Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Guest/build/classes/main/com/restaurant/guest/service/ServiceImpl.class" afterPath="$PROJECT_DIR$/Guest/build/classes/main/com/restaurant/guest/service/ServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/controller/UserContoller.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/controller/UserContoller.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/ReservationDAO.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/ReservationDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/ReservationDAOImpl.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dao/ReservationDAOImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dto/ProductInReservation.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dto/ProductInReservation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Restaurant/build/classes/main/com/restaurant/restaurant/controller/Controller.class" afterPath="$PROJECT_DIR$/Restaurant/build/classes/main/com/restaurant/restaurant/controller/Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Restaurant/build/classes/main/com/restaurant/restaurant/service/ServiceImpl.class" afterPath="$PROJECT_DIR$/Restaurant/build/classes/main/com/restaurant/restaurant/service/ServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dto/Reservation.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dto/Reservation.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dto/User.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/dto/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/ReservationService.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/ReservationService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/ReservationServiceImpl.class" afterPath="$PROJECT_DIR$/PersistenceLayer/build/classes/main/com/restaurant/service/ReservationServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/Admin/Admin_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/Admin/Admin_main.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/Admin/Admin_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/Admin/Admin_test.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/Guest/Guest_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/Guest/Guest_main.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/Guest/Guest_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/Guest/Guest_test.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/PersistenceLayer/PersistenceLayer_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/PersistenceLayer/PersistenceLayer_main.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/PersistenceLayer/PersistenceLayer_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/PersistenceLayer/PersistenceLayer_test.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/Restaurant/Restaurant_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/Restaurant/Restaurant_main.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/Restaurant/Restaurant_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/Restaurant/Restaurant_test.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/build.gradle" afterPath="$PROJECT_DIR$/Admin/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/build/resources/main/application.yml" afterPath="$PROJECT_DIR$/Admin/build/resources/main/application.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/controller/Controller.java" afterPath="$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/controller/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/service/ServiceImpl.java" afterPath="$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/service/ServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/Admin/src/main/resources/application.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Guest/build.gradle" afterPath="$PROJECT_DIR$/Guest/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Guest/build/resources/main/application.yml" afterPath="$PROJECT_DIR$/Guest/build/resources/main/application.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Guest/src/main/java/com/restaurant/guest/controller/Controller.java" afterPath="$PROJECT_DIR$/Guest/src/main/java/com/restaurant/guest/controller/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Guest/src/main/java/com/restaurant/guest/service/ServiceImpl.java" afterPath="$PROJECT_DIR$/Guest/src/main/java/com/restaurant/guest/service/ServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Guest/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/Guest/src/main/resources/application.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build.gradle" afterPath="$PROJECT_DIR$/PersistenceLayer/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/resources/main/application.properties" afterPath="$PROJECT_DIR$/PersistenceLayer/build/resources/main/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/build/resources/main/application.yml" afterPath="$PROJECT_DIR$/PersistenceLayer/build/resources/main/application.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/controller/UserContoller.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/controller/UserContoller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ReservationDAO.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ReservationDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ReservationDAOImpl.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ReservationDAOImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/ProductInReservation.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/ProductInReservation.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/Reservation.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/Reservation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/User.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ReservationService.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ReservationService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ReservationServiceImpl.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ReservationServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/PersistenceLayer/src/main/resources/application.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Restaurant/build.gradle" afterPath="$PROJECT_DIR$/Restaurant/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Restaurant/build/resources/main/application.yml" afterPath="$PROJECT_DIR$/Restaurant/build/resources/main/application.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Restaurant/src/main/java/com/restaurant/restaurant/controller/Controller.java" afterPath="$PROJECT_DIR$/Restaurant/src/main/java/com/restaurant/restaurant/controller/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Restaurant/src/main/java/com/restaurant/restaurant/service/ServiceImpl.java" afterPath="$PROJECT_DIR$/Restaurant/src/main/java/com/restaurant/restaurant/service/ServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Restaurant/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/Restaurant/src/main/resources/application.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Admin/application.yml" afterPath="$PROJECT_DIR$/out/production/Admin/application.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Guest/application.yml" afterPath="$PROJECT_DIR$/out/production/Guest/application.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PersistenceLayer/application.properties" afterPath="$PROJECT_DIR$/out/production/PersistenceLayer/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PersistenceLayer/application.yml" afterPath="$PROJECT_DIR$/out/production/PersistenceLayer/application.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PersistenceLayer/test.properties" afterPath="$PROJECT_DIR$/out/production/PersistenceLayer/test.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Restaurant/application.yml" afterPath="$PROJECT_DIR$/out/production/Restaurant/application.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PersistenceLayer/src/test/java/TestDAO.java" afterPath="$PROJECT_DIR$/PersistenceLayer/src/test/java/TestDAO.java" />
     </list>
     <ignored path="RestaurantManager.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -209,70 +157,84 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="WebSecurityConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AuthorizationServer/src/main/java/com/restaurant/authserver/WebSecurityConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LogInEntryPoint.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/serverconfig/LogInEntryPoint.java">
+      <file leaf-file-name="ServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/service/ServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
-              <caret line="18" column="57" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
+              <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#1596#1597#0" expanded="false" />
+                <element signature="e#1655#1656#0" expanded="false" />
+                <element signature="e#1692#1693#0" expanded="false" />
+                <element signature="e#1748#1749#0" expanded="false" />
+                <element signature="e#1779#1780#0" expanded="false" />
+                <element signature="e#1835#1836#0" expanded="false" />
+                <element signature="e#1868#1869#0" expanded="false" />
+                <element signature="e#1927#1928#0" expanded="false" />
+                <element signature="e#1965#1966#0" expanded="false" />
+                <element signature="e#2028#2029#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AccessDenyHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/serverconfig/AccessDenyHandler.java">
+      <file leaf-file-name="ReservationController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/controller/ReservationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractProcessorLight.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/8.5.11/83cbe61a663259e7ef33943810ac328cfacfc67b/tomcat-embed-core-8.5.11-sources.jar!/org/apache/coyote/AbstractProcessorLight.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/controller/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state relative-caret-position="357">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
-                <element signature="e#2024#2025#0" expanded="true" />
-                <element signature="e#2066#2067#0" expanded="true" />
-                <element signature="e#2134#2135#0" expanded="true" />
-                <element signature="e#2200#2201#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#845#846#0" expanded="false" />
+                <element signature="e#910#911#0" expanded="false" />
+                <element signature="e#1010#1011#0" expanded="false" />
+                <element signature="e#1075#1076#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReservationServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ReservationServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2436">
+              <caret line="134" column="65" selection-start-line="134" selection-start-column="65" selection-end-line="134" selection-end-column="65" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthenticationFilter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gateway/src/main/java/com/restaurant/gateway/AuthenticationFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="546">
+              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#498#499#0" expanded="false" />
+                <element signature="e#526#527#0" expanded="false" />
+                <element signature="e#572#573#0" expanded="false" />
+                <element signature="e#596#597#0" expanded="false" />
+                <element signature="e#647#648#0" expanded="false" />
+                <element signature="e#674#675#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Restaurant/src/main/java/com/restaurant/restaurant/controller/Controller.java">
+        <entry file="file://$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/controller/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+            <state relative-caret-position="1596">
+              <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#2021#2022#0" expanded="false" />
+                <element signature="e#2063#2064#0" expanded="false" />
+                <element signature="e#2131#2132#0" expanded="false" />
+                <element signature="e#2197#2198#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -283,27 +245,40 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="231">
               <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#277#278#0" expanded="false" />
+                <element signature="e#307#308#0" expanded="false" />
+                <element signature="e#369#370#0" expanded="false" />
+                <element signature="e#399#400#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InvocableHandlerMethod.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/4.3.6.RELEASE/e41b15afc71764f982eec257729ac3fddda78f3e/spring-web-4.3.6.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+      <file leaf-file-name="OAuth2Config.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AuthorizationServer/src/main/java/com/restaurant/authserver/OAuth2Config.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="211" column="0" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="315">
+              <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+              <folding>
+                <element signature="e#2353#2354#0" expanded="false" />
+                <element signature="e#2413#2414#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AuthorizationServer/src/main/resources/templates/login.html">
+      <file leaf-file-name="Configurations.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/configuration/Configurations.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-              <folding />
+            <state relative-caret-position="378">
+              <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#622#623#0" expanded="false" />
+                <element signature="e#663#664#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -311,8 +286,18 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Admin/src/main/resources/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-469">
+            <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Admin/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -1419,7 +1404,7 @@
         <entry key="$PROJECT_DIR$/../../../GDX/SprotBallsAlpha1-1/SportBallsAlpha1" value="7200961435652" />
         <entry key="$PROJECT_DIR$/../../../GDX/SprotBallsAlpha1/SportBallsAlpha1" value="7200961435652" />
         <entry key="$PROJECT_DIR$/../../../GDX/SprotBallsAlpha2/SportBallsAlpha1" value="7200961435652" />
-        <entry key="$PROJECT_DIR$" value="13398422940482" />
+        <entry key="$PROJECT_DIR$" value="13398494375298" />
         <entry key="$PROJECT_DIR$/../../../PROJECT/Bubble Poke/BubblePoke" value="8680377986677" />
       </map>
     </option>
@@ -1633,25 +1618,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Guest/src/main/resources/templates/home.html" />
-        <option value="$PROJECT_DIR$/Restaurant/src/main/java/com/restaurant/restaurant/config/Configurations.java" />
-        <option value="$PROJECT_DIR$/Restaurant/src/main/java/com/restaurant/restaurant/model/User.java" />
-        <option value="$PROJECT_DIR$/Restaurant/src/main/java/com/restaurant/restaurant/service/Service.java" />
-        <option value="$PROJECT_DIR$/Restaurant/src/main/resources/templates/home.html" />
-        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/Reservation.java" />
-        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/ProductInReservation.java" />
-        <option value="$PROJECT_DIR$/PersistenceLayer/src/test/java/TestDAO.java" />
         <option value="$PROJECT_DIR$/Guest/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/service/ServiceImpl.java" />
         <option value="$PROJECT_DIR$/Guest/src/main/java/com/restaurant/guest/service/ServiceImpl.java" />
         <option value="$PROJECT_DIR$/Restaurant/src/main/java/com/restaurant/restaurant/service/ServiceImpl.java" />
         <option value="$PROJECT_DIR$/Admin/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/serverconfig/SecurityConfigurations.java" />
-        <option value="$PROJECT_DIR$/Admin/build.gradle" />
         <option value="$PROJECT_DIR$/AuthorizationServer/build.gradle" />
         <option value="$PROJECT_DIR$/Guest/build.gradle" />
-        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/controller/UserContoller.java" />
         <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/serverconfig/SecurityConfigurations.java" />
         <option value="$PROJECT_DIR$/PersistenceLayer/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/Restaurant/src/main/java/com/restaurant/restaurant/serverconfig/SecurityConfigurations.java" />
@@ -1683,7 +1657,18 @@
         <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/serverconfig/AccessDenyHandler.java" />
         <option value="$PROJECT_DIR$/AuthorizationServer/src/main/java/com/restaurant/authserver/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/AuthorizationServer/src/main/resources/templates/login.html" />
+        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/User.java" />
+        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/ProductInReservation.java" />
+        <option value="$PROJECT_DIR$/PersistenceLayer/src/test/java/TestDAO.java" />
+        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ReservationDAO.java" />
+        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ReservationDAOImpl.java" />
+        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ReservationService.java" />
+        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ReservationServiceImpl.java" />
+        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/Reservation.java" />
+        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/controller/UserContoller.java" />
+        <option value="$PROJECT_DIR$/PersistenceLayer/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/controller/Controller.java" />
+        <option value="$PROJECT_DIR$/Admin/build.gradle" />
       </list>
     </option>
   </component>
@@ -1741,7 +1726,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1770,330 +1757,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Restaurant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Restaurant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Restaurant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Restaurant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Restaurant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="restaurant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Restaurant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="restaurant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="serverconfig" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Restaurant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="restaurant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Guest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Guest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Guest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="guest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Guest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="guest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="serverconfig" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Guest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="guest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="AuthorizationServer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -2121,36 +1784,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AuthorizationServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2184,212 +1817,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="serverconfig" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RestaurantManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="configuration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2427,7 +1856,7 @@
       <recent name="E:\Java\MyProjectsFromGit\RestourantManager\RestaurantManager\Gateway\src\main\java\com\restaurant\gateway" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.auth">
+  <component name="RunManager" selected="Spring Boot.Gateway ">
     <configuration default="false" name="TestDAO.changeProductAmount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="PersistenceLayer_test" />
@@ -3241,7 +2670,7 @@
     </recent_temporary>
   </component>
   <component name="SbtLocalSettings">
-    <option name="lastUpdateTimestamp" value="1488823667306" />
+    <option name="lastUpdateTimestamp" value="1489338868421" />
     <option name="externalProjectsViewState">
       <projects_view />
     </option>
@@ -3273,7 +2702,8 @@
       <workItem from="1488621410795" duration="3613000" />
       <workItem from="1488626115279" duration="30869000" />
       <workItem from="1488795870889" duration="1175000" />
-      <workItem from="1488797374087" duration="35107000" />
+      <workItem from="1488797374087" duration="43393000" />
+      <workItem from="1489334518473" duration="1230000" />
     </task>
     <task id="LOCAL-00001" summary="Creates project structure.&#10;Sets up persistance layer datasource  and ORM configurations, defines the beans. &#10;Implements persistance layer Entities, further can be a subject of chages.&#10;Defines DAO-s.">
       <created>1488025512392</created>
@@ -3338,18 +2768,25 @@
       <option name="project" value="LOCAL" />
       <updated>1488806251873</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="OAuth 2 implemented.">
+      <created>1488841652256</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1488841652256</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
     <history-entry file="TestDAO - 2017.03.06 at 17h 22m 36s.xml">
       <configuration name="TestDAO" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDAO_deleteReservation - 2017.03.05 at 11h 42m 03s.xml">
-      <configuration name="TestDAO.deleteReservation" configurationId="JUnit" />
+    <history-entry file="TestDAO - 2017.03.07 at 13h 45m 34s.xml">
+      <configuration name="TestDAO" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDAO_deleteReservation - 2017.03.05 at 11h 44m 56s.xml">
-      <configuration name="TestDAO.deleteReservation" configurationId="JUnit" />
+    <history-entry file="TestDAO - 2017.03.07 at 13h 48m 39s.xml">
+      <configuration name="TestDAO" configurationId="JUnit" />
     </history-entry>
     <history-entry file="TestDAO_deleteReservation - 2017.03.05 at 11h 46m 00s.xml">
       <configuration name="TestDAO.deleteReservation" configurationId="JUnit" />
@@ -3374,7 +2811,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="327399000" />
+    <option name="totallyTimeSpent" value="336915000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -3387,7 +2824,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -3401,21 +2838,19 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48183253" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6161137" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3665087" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3965245" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11848341" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27382752" sideWeight="0.49131122" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32753405" sideWeight="0.49131122" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25718608" sideWeight="0.5055292" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6635071" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.04462935" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25642964" sideWeight="0.5086888" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -3423,8 +2858,10 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3665087" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="544" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6635071" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -3501,16 +2938,52 @@
     <MESSAGE value="Creates tests for reservation and product creation, but fails on product creation test with a message &#10;&quot;Parameter index out of range (1 &gt; number of parameters, which is 0).&quot;" />
     <MESSAGE value="Auth." />
     <MESSAGE value="Last modifications on microservices before applying oauth2." />
-    <option name="LAST_COMMIT_MESSAGE" value="Last modifications on microservices before applying oauth2." />
+    <MESSAGE value="OAuth 2 implemented." />
+    <option name="LAST_COMMIT_MESSAGE" value="OAuth 2 implemented." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/controller/Controller.java</url>
+          <line>64</line>
+          <properties />
+          <option name="timeStamp" value="172" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/controller/Controller.java</url>
+          <line>75</line>
+          <properties />
+          <option name="timeStamp" value="173" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/controller/Controller.java</url>
+          <line>80</line>
+          <properties />
+          <option name="timeStamp" value="174" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/controller/Controller.java</url>
+          <line>85</line>
+          <properties />
+          <option name="timeStamp" value="175" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/controller/Controller.java</url>
+          <line>90</line>
+          <properties />
+          <option name="timeStamp" value="176" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="171" />
+      <option name="time" value="177" />
     </breakpoint-manager>
     <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="ctx.getRequest().getRequestURI()" language="JAVA" />
+      </configuration>
       <configuration name="JUnit">
         <watch expression="reservation1" />
         <watch expression="reservation1.products" />
@@ -3524,152 +2997,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Gateway/src/main/java/com/restaurant/gateway/serverconfig/JwtConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gateway/src/main/java/com/restaurant/gateway/serverconfig/ResourceServerConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security.oauth/spring-security-oauth2/2.0.8.RELEASE/72e3ce14105c08f7ff827eb32ba6f09115395c7b/spring-security-oauth2-2.0.8.RELEASE-sources.jar!/org/springframework/security/oauth2/spring-security-oauth2-1.0.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="212" column="41" selection-start-line="212" selection-start-column="41" selection-end-line="212" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security.oauth/spring-security-oauth2/2.0.8.RELEASE/72e3ce14105c08f7ff827eb32ba6f09115395c7b/spring-security-oauth2-2.0.8.RELEASE-sources.jar!/org/springframework/security/oauth2/config/annotation/web/configuration/AuthorizationServerEndpointsConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="94" column="37" selection-start-line="94" selection-start-column="37" selection-end-line="94" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security.oauth/spring-security-oauth2/2.0.8.RELEASE/72e3ce14105c08f7ff827eb32ba6f09115395c7b/spring-security-oauth2-2.0.8.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/authentication/OAuth2AuthenticationProcessingFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gateway/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gateway/src/main/java/com/restaurant/gateway/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gateway/src/main/java/com/restaurant/gateway/GatewayController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-core/4.2.1.RELEASE/769c71e5a9b5f5f40c075d3d158e3d54c051dd36/spring-security-core-4.2.1.RELEASE-sources.jar!/org/springframework/security/core/Authentication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-core/4.2.1.RELEASE/769c71e5a9b5f5f40c075d3d158e3d54c051dd36/spring-security-core-4.2.1.RELEASE-sources.jar!/org/springframework/security/authentication/AbstractAuthenticationToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="37" column="64" selection-start-line="37" selection-start-column="64" selection-end-line="37" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security.oauth/spring-security-oauth2/2.0.8.RELEASE/72e3ce14105c08f7ff827eb32ba6f09115395c7b/spring-security-oauth2-2.0.8.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/OAuth2Authentication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.netflix.zuul/zuul-core/1.3.0/f882b342fd5428421d84a6e39d7b1b7f72af75dd/zuul-core-1.3.0-sources.jar!/com/netflix/zuul/ZuulFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.netflix.zuul/zuul-core/1.3.0/f882b342fd5428421d84a6e39d7b1b7f72af75dd/zuul-core-1.3.0-sources.jar!/com/netflix/zuul/FilterProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
-          <folding>
-            <element signature="e#1917#1918#0" expanded="false" />
-            <element signature="e#1948#1949#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.netflix.zuul/zuul-core/1.3.0/f882b342fd5428421d84a6e39d7b1b7f72af75dd/zuul-core-1.3.0-sources.jar!/com/netflix/zuul/ZuulRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.netflix.zuul/zuul-core/1.3.0/f882b342fd5428421d84a6e39d7b1b7f72af75dd/zuul-core-1.3.0-sources.jar!/com/netflix/zuul/http/ZuulServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AuthorizationServer/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AuthorizationServer/src/main/resources/jwt.jks">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AuthorizationServer/src/main/java/com/restaurant/authserver/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3677,7 +3008,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3685,7 +3015,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3693,7 +3022,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3701,7 +3029,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3709,17 +3036,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="284">
           <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gateway/src/main/java/com/restaurant/gateway/AuthenticationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3727,15 +3043,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
           <caret line="32" column="74" selection-start-line="32" selection-start-column="74" selection-end-line="32" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AuthorizationServer/src/main/java/com/restaurant/authserver/OAuth2Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3743,15 +3050,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/configuration/Configurations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3759,7 +3057,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
           <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="37" selection-end-column="65" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3767,31 +3064,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Guest/src/main/java/com/restaurant/guest/serverconfig/SecurityConfigurations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/serverconfig/SecurityConfigurations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Guest/src/main/java/com/restaurant/guest/serverconfig/SecurityConfigurations.java" />
+    <entry file="file://$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/serverconfig/SecurityConfigurations.java" />
     <entry file="file://$PROJECT_DIR$/Guest/src/main/java/com/restaurant/guest/serverconfig/LogInEntryPoint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3799,9 +3080,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3809,33 +3087,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/serverconfig/LogInEntryPoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/serverconfig/AccessDenyHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/serverconfig/ResourceServerConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-103">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3843,7 +3094,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="17" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3851,7 +3101,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
           <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3859,7 +3108,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
           <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3867,15 +3115,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
           <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/src/main/resources/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-469">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3883,7 +3122,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
           <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3891,9 +3129,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="18" column="57" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3901,7 +3136,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
           <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3909,7 +3143,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3917,7 +3150,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="211" column="0" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3925,8 +3157,218 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
           <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/ProductInReservation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2289">
+          <caret line="129" column="16" selection-start-line="129" selection-start-column="16" selection-end-line="129" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ReservationDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="987">
+          <caret line="50" column="50" selection-start-line="50" selection-start-column="50" selection-end-line="50" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ReservationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="36" column="49" selection-start-line="36" selection-start-column="49" selection-end-line="36" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/serverconfig/LogInEntryPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/test/java/TestDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="314" column="0" selection-start-line="314" selection-start-column="0" selection-end-line="314" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dao/ReservationDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="173" column="39" selection-start-line="173" selection-start-column="31" selection-end-line="173" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/dto/Reservation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="31" column="51" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/serverconfig/AccessDenyHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/serverconfig/JwtConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/serverconfig/ResourceServerConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="26" column="53" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gateway/src/main/java/com/restaurant/gateway/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/controller/ProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/controller/UserContoller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/src/main/resources/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/service/ServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1596#1597#0" expanded="false" />
+            <element signature="e#1655#1656#0" expanded="false" />
+            <element signature="e#1692#1693#0" expanded="false" />
+            <element signature="e#1748#1749#0" expanded="false" />
+            <element signature="e#1779#1780#0" expanded="false" />
+            <element signature="e#1835#1836#0" expanded="false" />
+            <element signature="e#1868#1869#0" expanded="false" />
+            <element signature="e#1927#1928#0" expanded="false" />
+            <element signature="e#1965#1966#0" expanded="false" />
+            <element signature="e#2028#2029#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/service/ReservationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2436">
+          <caret line="134" column="65" selection-start-line="134" selection-start-column="65" selection-end-line="134" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PersistenceLayer/src/main/java/com/restaurant/controller/ReservationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#845#846#0" expanded="false" />
+            <element signature="e#910#911#0" expanded="false" />
+            <element signature="e#1010#1011#0" expanded="false" />
+            <element signature="e#1075#1076#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gateway/src/main/java/com/restaurant/gateway/AuthenticationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#498#499#0" expanded="false" />
+            <element signature="e#526#527#0" expanded="false" />
+            <element signature="e#572#573#0" expanded="false" />
+            <element signature="e#596#597#0" expanded="false" />
+            <element signature="e#647#648#0" expanded="false" />
+            <element signature="e#674#675#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/configuration/Configurations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#622#623#0" expanded="false" />
+            <element signature="e#663#664#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1596">
+          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding>
+            <element signature="e#2021#2022#0" expanded="false" />
+            <element signature="e#2063#2064#0" expanded="false" />
+            <element signature="e#2131#2132#0" expanded="false" />
+            <element signature="e#2197#2198#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3935,19 +3377,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#277#278#0" expanded="false" />
+            <element signature="e#307#308#0" expanded="false" />
+            <element signature="e#369#370#0" expanded="false" />
+            <element signature="e#399#400#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/src/main/java/com/restaurant/admin/controller/Controller.java">
+    <entry file="file://$PROJECT_DIR$/AuthorizationServer/src/main/java/com/restaurant/authserver/OAuth2Config.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state relative-caret-position="315">
+          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
           <folding>
-            <element signature="e#2024#2025#0" expanded="true" />
-            <element signature="e#2066#2067#0" expanded="true" />
-            <element signature="e#2134#2135#0" expanded="true" />
-            <element signature="e#2200#2201#0" expanded="true" />
+            <element signature="e#2353#2354#0" expanded="false" />
+            <element signature="e#2413#2414#0" expanded="false" />
           </folding>
         </state>
       </provider>

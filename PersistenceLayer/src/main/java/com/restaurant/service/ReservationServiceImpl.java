@@ -57,9 +57,9 @@ public class ReservationServiceImpl implements ReservationService {
         User user = userDAO.readUser(userId);
         //Persist
         Reservation reservation = new Reservation(BusKeyGen.nextKey(), user, true);
-        for(ProductInReservation productInReservation : productInReservations){
-            productInReservation.setReservation(reservation);
-        }
+//        for(ProductInReservation productInReservation : productInReservations){
+//            productInReservation.setReservation(reservation);
+//        }
         reservation.setProducts(productInReservations);
         return reservationDAO.writeReservation(reservation);
     }
@@ -86,7 +86,6 @@ public class ReservationServiceImpl implements ReservationService {
         if(reservation == null || !reservation.getIsOpen())return null;
         ProductInReservation productInReservation = reservationDAO.readProductInReservation(productInReservationId);
         if(!Validate.valid(productInReservation.getId()))return null;
-        if(!productInReservation.getReservation().getId().equals(reservationId))return null;
         // Persist
         productInReservation.setAmount(amount);
         reservation.setProductInReservation(productInReservation);
@@ -101,7 +100,6 @@ public class ReservationServiceImpl implements ReservationService {
         if(reservation == null || !reservation.getIsOpen())return false;
         ProductInReservation productInReservation = reservationDAO.readProductInReservation(productInReservationId);
         if(productInReservation == null)return true;
-        if(!productInReservation.getReservation().getId().equals(reservationId))return false;
         // Persist
         Iterator iterator = reservation.getProducts().iterator();
         while (iterator.hasNext()){
@@ -135,11 +133,6 @@ public class ReservationServiceImpl implements ReservationService {
     @Override
     public List<Reservation> findAllReservations() {
         List<Reservation> reservations = reservationDAO.getAllReservations();
-        for(Reservation reservation : reservations){
-            for (ProductInReservation productInReservation : reservation.getProducts()){
-                productInReservation.setReservation(null);
-            }
-        }
         return reservations;
     }
 
@@ -150,11 +143,6 @@ public class ReservationServiceImpl implements ReservationService {
         if(!userDAO.containsUserById(userId)) return null;
         // Persist
         List<Reservation> reservations = reservationDAO.getAllReservationsByUser(userId);
-        for(Reservation reservation : reservations){
-            for (ProductInReservation productInReservation : reservation.getProducts()){
-                productInReservation.setReservation(null);
-            }
-        }
         return reservations;
     }
 
@@ -198,5 +186,11 @@ public class ReservationServiceImpl implements ReservationService {
         if(!userDAO.containsUserById(reservation.getUser().getId())) return null;
         // Persist
         return reservationDAO.updateReservation(reservation);
+    }
+
+    @Override
+    public List<Reservation> getAllClosedReservations() {
+        List<Reservation> reservations = reservationDAO.readAllClosedReservations();
+        return reservations;
     }
 }

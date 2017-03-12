@@ -2,12 +2,11 @@ package com.restaurant.dto;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -22,6 +21,10 @@ import java.util.Set;
         @NamedQuery(
                 name = "Reservation.getByUser",
                 query = "SELECT r FROM Reservation r JOIN r.user u WHERE u.id = :" + "id",
+                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
+        @NamedQuery(
+                name = "Reservation.getAllClosed",
+                query = "SELECT r FROM Reservation r WHERE r.isOpen = :" + "isOpen",
                 hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
 
 })
@@ -66,19 +69,20 @@ public class Reservation implements Serializable {
         return number;
     }
 
-    @ManyToOne
+    @OneToOne(fetch = FetchType.LAZY)
     public User getUser() {
         return user;
     }
 
     @Column(name = "isopen")
+    @Type(type = "true_false")
     public boolean getIsOpen() {
         return isOpen;
     }
 
     @OneToMany(fetch = FetchType.EAGER,
-                cascade = CascadeType.ALL,
-                mappedBy = "reservation")
+            cascade = {CascadeType.ALL},
+            orphanRemoval = true)
     public Set<ProductInReservation> getProducts() {
         return products;
     }

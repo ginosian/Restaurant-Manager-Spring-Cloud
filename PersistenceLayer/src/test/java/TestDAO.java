@@ -253,9 +253,68 @@ public class TestDAO {
         Assert.assertNull(reservationService.findReservationById(reservation1.getId()));
         Assert.assertNull(reservationService.findReservationById(reservation2.getId()));
 
-//        for(ProductInReservation product : productsFromReservations){
-//            Assert.assertTrue(reservationService.productInReservetionIsDeleted(product.getId()));
-//        }
+        for(ProductInReservation product : productsFromReservations){
+            Assert.assertTrue(reservationService.productInReservetionIsDeleted(product.getId()));
+        }
+    }
+
+    @Test
+    public void readReservationLazy(){
+        Reservation reservation1 = reservationService.createReservationAndAddProducts(user1.getId(), products1);
+        Reservation reservation2 = reservationService.createReservationAndAddProducts(user1.getId(), products2);
+        Reservation reservation3 = reservationService.createReservationAndAddProducts(user1.getId(), products1);
+        Reservation reservation4 = reservationService.createReservationAndAddProducts(user1.getId(), products2);
+
+        List<Reservation> reservations = reservationService.findAllReservations();
+        Assert.assertEquals(reservations.size(), 4);
+
+
+    }
+
+    @Test
+    public void readUsersLazy(){
+        Reservation reservation1 = reservationService.createReservationAndAddProducts(user1.getId(), products1);
+        Reservation reservation2 = reservationService.createReservationAndAddProducts(user1.getId(), products2);
+        Reservation reservation3 = reservationService.createReservationAndAddProducts(user1.getId(), products1);
+        Reservation reservation4 = reservationService.createReservationAndAddProducts(user1.getId(), products2);
+
+        Set<Reservation> reservations = userService.getAllUsers().get(0).getReservations();
+        Reservation reservation = (Reservation) reservations.iterator().next().getProducts().iterator().next().getReservation();
+        Assert.assertNull(reservation);
+    }
+
+
+    @Test
+    public void reservationsHasProducts(){
+        Reservation reservation1 = reservationService.createReservationAndAddProducts(user1.getId(), products1);
+        Reservation single = reservationService.findReservationById(reservation1.getId());
+        Assert.assertNotNull(single.getProducts());
+        Assert.assertTrue(single.getProducts().size() > 0);
+
+        Reservation reservation2 = reservationService.createReservationAndAddProducts(user1.getId(), products1);
+        Reservation fromList = reservationService.findAllReservations().get(0);
+        Assert.assertNotNull(fromList.getProducts());
+        Assert.assertTrue(fromList.getProducts().size() > 0);
+    }
+
+
+    @Test
+    public void closedReservationsAreRead(){
+        Reservation reservation1 = reservationService.createReservationAndAddProducts(user1.getId(), products1);
+        Reservation reservation2 = reservationService.createReservationAndAddProducts(user1.getId(), products2);
+        Reservation reservation3 = reservationService.createReservationAndAddProducts(user1.getId(), products1);
+        Reservation reservation4 = reservationService.createReservationAndAddProducts(user1.getId(), products2);
+        Reservation reservation5 = reservationService.createReservationAndAddProducts(user1.getId(), products2);
+
+
+        reservationService.changeReservationState(reservation1.getId(), false);
+        reservationService.changeReservationState(reservation2.getId(), false);
+        reservationService.changeReservationState(reservation3.getId(), false);
+        reservationService.changeReservationState(reservation4.getId(), false);
+
+        List<Reservation> closedReservations = reservationService.getAllClosedReservations();
+        Assert.assertEquals(closedReservations.size(), 4);
+
     }
 
 

@@ -164,4 +164,18 @@ public class ReservationDAOImpl implements ReservationDAO {
         }
         return null;
     }
+
+    @Override
+    public List<Reservation> readAllClosedReservations() {
+        Session session = null;
+        try{
+            session = getSession();
+            Query query = session.createNamedQuery("Reservation.getAllClosed");
+            query.setParameter("isOpen", false);
+            return query.getResultList();
+        }catch (HibernateException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

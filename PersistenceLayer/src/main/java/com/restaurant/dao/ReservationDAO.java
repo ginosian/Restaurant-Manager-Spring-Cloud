@@ -43,7 +43,10 @@ public interface ReservationDAO {
     Reservation updateReservation(Reservation reservation);
 
     ProductInReservation readProductInReservation(Integer productInReservationId);
+
     boolean deleteProductInReservation(Integer productInResrevationId);
 
     ProductInReservation findProductById(Integer productInReservationId);
+
+    List<Reservation> readAllClosedReservations();
 }

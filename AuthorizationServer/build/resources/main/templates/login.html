@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:data-th-text="http://www.w3.org/1999/xhtml"
+xmlns:data-th-each="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+    <title>Login page</title>
+</head>
+<body>
+<h1>Login page</h1>
+<form>
+    <label for="username">Username</label>:
+    <input type="text" id="username" name="username"/> <br />
+    <label for="password">Password</label>:
+    <input type="password" id="password" name="password"/> <br />
+    <input type="hidden" name="grant_type" value="password"/>
+    <button type="button" onclick="authenticate()">LOGIN</button><br />
+    <td th:text="${error}"/>
+    <!--<button type="submit">LOGIN</button>-->
+</form>
+</body>
+
+
+
+
+
+
+
+</html>
+
+<script>
+    function authenticate() {
+        var grantType = "password";
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        $.post("http://localhost:1110/auth/oauth/token",
+                { grant_type: "password",
+                    username: username,
+                    password: password },
+                function(data) {
+                    debugger;
+                    document.cookie = 'access_token=' + data.access_token + '; path=/' + '; expires=' + data.expires_in;
+                    window.location.href = "http://localhost:1110/admin/route";
+                });
+    }
+</script>

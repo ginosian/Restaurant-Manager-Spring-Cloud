@@ -55,7 +55,7 @@ public class UserContoller {
 
     @GetMapping(path = "/users", produces = "application/json")
     public List<User> allUsers(){
-        createUsers();
+//        createUsers();
         List<User> users = userService.getAllUsers();
         return users;
     }

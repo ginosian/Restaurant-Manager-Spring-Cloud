@@ -33,4 +33,6 @@ public interface ReservationService {
     boolean productInReservetionIsDeleted(int productInReservationId);
 
     Reservation updateReservation(Reservation reservation);
+
+    List<Reservation> getAllClosedReservations();
 }

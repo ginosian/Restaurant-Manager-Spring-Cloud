@@ -85,7 +85,7 @@ public class User implements Serializable {
         return roles;
     }
 
-    @ManyToMany(cascade = {CascadeType.ALL})
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "user")
     public Set<Reservation> getReservations() {
         return reservations;
     }

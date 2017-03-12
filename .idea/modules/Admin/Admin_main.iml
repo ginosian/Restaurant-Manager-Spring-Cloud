@@ -18,6 +18,8 @@
     <orderEntry type="library" name="Gradle: org.springframework.cloud:spring-cloud-starter-eureka-server:1.2.5.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.security.oauth:spring-security-oauth2:2.0.8.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.security:spring-security-jwt:1.0.3.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.codehaus.jackson:jackson-mapper-asl:1.9.13" level="project" />
+    <orderEntry type="library" name="Gradle: org.codehaus.jackson:jackson-core-asl:1.9.13" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot:1.5.1.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-autoconfigure:1.5.1.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-logging:1.5.1.RELEASE" level="project" />
@@ -38,7 +40,6 @@
     <orderEntry type="library" name="Gradle: org.springframework.cloud:spring-cloud-starter-ribbon:1.2.5.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: com.netflix.ribbon:ribbon-eureka:2.2.0" level="project" />
     <orderEntry type="library" name="Gradle: commons-codec:commons-codec:1.6" level="project" />
-    <orderEntry type="library" name="Gradle: org.codehaus.jackson:jackson-mapper-asl:1.9.13" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.tomcat.embed:tomcat-embed-core:8.5.11" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.tomcat.embed:tomcat-embed-el:8.5.11" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.tomcat.embed:tomcat-embed-websocket:8.5.11" level="project" />
@@ -69,7 +70,6 @@
     <orderEntry type="library" name="Gradle: com.netflix.ribbon:ribbon-loadbalancer:2.2.0" level="project" />
     <orderEntry type="library" name="Gradle: io.reactivex:rxjava:1.1.10" level="project" />
     <orderEntry type="library" name="Gradle: aopalliance:aopalliance:1.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.codehaus.jackson:jackson-core-asl:1.9.13" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-actuator:1.4.2.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.freemarker:freemarker:2.3.25-incubating" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework:spring-context-support:4.3.4.RELEASE" level="project" />

@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: auth
+  mvc:
+    view:
+      prefix: /static/
+      suffix: .html
+
+server:
+  port: 1111
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1115/eureka/
