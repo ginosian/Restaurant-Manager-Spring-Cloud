@@ -9,13 +9,18 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/APIService" />
             <option value="$PROJECT_DIR$/Admin" />
             <option value="$PROJECT_DIR$/AuthorizationServer" />
+            <option value="$PROJECT_DIR$/BookingService" />
+            <option value="$PROJECT_DIR$/ClientLibraries" />
             <option value="$PROJECT_DIR$/DiscoveryServer" />
             <option value="$PROJECT_DIR$/Gateway" />
             <option value="$PROJECT_DIR$/Guest" />
             <option value="$PROJECT_DIR$/PersistenceLayer" />
             <option value="$PROJECT_DIR$/Restaurant" />
+            <option value="$PROJECT_DIR$/RestaurantService" />
+            <option value="$PROJECT_DIR$/UserService" />
           </set>
         </option>
         <option name="useAutoImport" value="true" />

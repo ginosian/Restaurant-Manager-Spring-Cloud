@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: restaurant
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1115/eureka/
+server:
+  port: 1116
+
+
+

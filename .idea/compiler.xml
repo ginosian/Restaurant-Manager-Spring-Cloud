@@ -23,8 +23,14 @@
       <module name="Accounts_test" target="1.5" />
       <module name="Admin_main" target="1.8" />
       <module name="Admin_test" target="1.8" />
+      <module name="APIService_main" target="1.8" />
+      <module name="APIService_test" target="1.8" />
       <module name="AuthorizationServer_main" target="1.8" />
       <module name="AuthorizationServer_test" target="1.8" />
+      <module name="BookingService_main" target="1.8" />
+      <module name="BookingService_test" target="1.8" />
+      <module name="ClientLibraries_main" target="1.5" />
+      <module name="ClientLibraries_test" target="1.5" />
       <module name="DiscoveryServer_main" target="1.5" />
       <module name="DiscoveryServer_test" target="1.5" />
       <module name="Gateway_main" target="1.8" />
@@ -37,6 +43,10 @@
       <module name="Restaurant_test" target="1.8" />
       <module name="RestaurantManager_main" target="1.5" />
       <module name="RestaurantManager_test" target="1.5" />
+      <module name="RestaurantService_main" target="1.8" />
+      <module name="RestaurantService_test" target="1.8" />
+      <module name="UserService_main" target="1.5" />
+      <module name="UserService_test" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
