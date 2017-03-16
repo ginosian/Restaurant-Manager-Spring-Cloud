@@ -1,3 +1,20 @@
+buildscript {
+    ext {
+        springBootVersion = '1.5.1.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+jar {
+    baseName = 'admin'
+    version = '0.0.1-SNAPSHOT'
+}
+
 group 'RestaurantManager'
 version '1.0-SNAPSHOT'
 
@@ -29,4 +46,8 @@ dependencies {
 
 
     testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.13'
 }

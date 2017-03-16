@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:data-th-text="http://www.w3.org/1999/xhtml"
+xmlns:data-th-each="http://www.w3.org/1999/xhtml">
 <head>
     <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
     <title>Login page</title>
@@ -12,7 +13,8 @@
     <label for="password">Password</label>:
     <input type="password" id="password" name="password"/> <br />
     <input type="hidden" name="grant_type" value="password"/>
-    <button type="button" onclick="authenticate()">LOGIN</button>
+    <button type="button" onclick="authenticate()">LOGIN</button><br />
+    <td th:text="${error}"/>
     <!--<button type="submit">LOGIN</button>-->
 </form>
 </body>
@@ -37,7 +39,7 @@
                 function(data) {
                     debugger;
                     document.cookie = 'access_token=' + data.access_token + '; path=/' + '; expires=' + data.expires_in;
-                    window.location.href = "http://localhost:1110/admin";
+                    window.location.href = "http://localhost:1110/admin/route";
                 });
     }
 </script>

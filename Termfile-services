@@ -1,0 +1,19 @@
+# Use:
+#  $ termrc start Termfile-services
+
+root:
+  E:\Java\MyProjectsFromGit\RestourantManager\RestaurantManager
+
+commands:
+  discovery:           cd discovery;                ./gradlew bootRun
+  gateway:             cd gateway;                  ./gradlew bootRun
+  auth:                cd auth;                     ./gradlew bootRun
+  persist:             cd persist;                  ./gradlew bootRun
+  admin:               cd admin;                    ./gradlew bootRun
+  guest:               cd guest;                    ./gradlew bootRun
+  restaurant:          cd restaurant;               ./gradlew bootRun
+
+layout_type: row
+
+layout:
+  - [ discovery, gateway, auth, persist, admin, guest, restaurant ]

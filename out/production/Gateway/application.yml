@@ -12,18 +12,7 @@ eureka:
 
 zuul:
   sensitive-headers: Cookie, Set-Cookie
-#host:
-#  connect-timeout-millis: 5000
-#  socket-timeout-millis: 10000
 
-#zuul.host.max-total-connections: 200
-#zuul.host.max-per-route-connections: 20
-
-#hystrix:
-#  command:
-#    default:
-#      execution:
-#        isolation:
-#          thread:
-#            timeoutInMilliseconds: 10000
-
+security:
+  basic:
+    enabled: false

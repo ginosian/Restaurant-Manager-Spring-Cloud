@@ -1,3 +1,20 @@
+buildscript {
+    ext {
+        springBootVersion = '1.5.1.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+jar {
+    baseName = 'persist'
+    version = '0.0.1-SNAPSHOT'
+}
+
 group 'RestaurantManager'
 version '1.0-SNAPSHOT'
 
@@ -39,4 +56,8 @@ dependencies {
     compile('org.springframework.security.oauth:spring-security-oauth2:2.0.8.RELEASE')
     compile('org.springframework.security:spring-security-jwt:1.0.3.RELEASE')
 
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.13'
 }
