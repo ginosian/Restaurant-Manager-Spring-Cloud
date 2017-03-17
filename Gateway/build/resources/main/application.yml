@@ -1,3 +1,14 @@
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 15000
+
+ribbon:
+  ReadTimeout: 15000
+
 spring:
   application:
     name: gateway
@@ -16,3 +27,5 @@ zuul:
 security:
   basic:
     enabled: false
+
+

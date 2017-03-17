@@ -61,7 +61,6 @@ public class TestDAO {
 
         // Restaurant is read
         Assert.assertNotNull(restaurantService.findRestaurant(restaurant1.getName()));
-        Assert.assertEquals(restaurantService.findRestaurant(restaurant1.getName()), restaurantService.findRestaurant(restaurant1.getId()));
 
         // Restaurant is updated
         Restaurant restaurant2 = restaurantService.updateRestaurantName(restaurant1.getId(), MockedData.restaurantName());

@@ -1,12 +1,12 @@
 spring:
   application:
-    name: persist
+    name: user
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:1115/eureka/
 server:
-  port: 1116
+  port: 1123
 
 
 

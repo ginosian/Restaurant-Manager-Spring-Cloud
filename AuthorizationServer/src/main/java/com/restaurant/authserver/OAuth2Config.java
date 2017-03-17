@@ -30,7 +30,7 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
         clients.inMemory()
                 .withClient("web_app")
                 .secret("pass").scopes("WEB").autoApprove(true)
-                .authorities("ADMIN", "GUEST", "RESTAURANT")
+                .authorities("USER", "RESTAURANT", "ADMIN")
                 .authorizedGrantTypes("implicit", "refresh_token", "password", "authorization_code")
                 .accessTokenValiditySeconds(3000)
                 .refreshTokenValiditySeconds(36000);

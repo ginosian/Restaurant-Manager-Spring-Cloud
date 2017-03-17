@@ -93,7 +93,7 @@ public class PersistenceConfigurations {
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactoryBean = new LocalSessionFactoryBean();
         sessionFactoryBean.setDataSource(dataSource());
-        sessionFactoryBean.setPackagesToScan("com.restaurant");
+        sessionFactoryBean.setPackagesToScan("com.api");
         sessionFactoryBean.setHibernateProperties(hibernateProperties());
 
         return sessionFactoryBean;

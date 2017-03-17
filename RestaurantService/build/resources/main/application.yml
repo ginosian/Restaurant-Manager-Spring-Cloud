@@ -1,6 +1,6 @@
 spring:
   application:
-    name: persist
+    name: restaurant
 eureka:
   client:
     serviceUrl:

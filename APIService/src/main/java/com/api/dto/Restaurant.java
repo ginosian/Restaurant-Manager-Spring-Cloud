@@ -52,7 +52,7 @@ public class Restaurant implements Serializable {
     // region Properties
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_product")
+    @Column(name = "id_restaurant")
     public Integer getId() {
         return id;
     }

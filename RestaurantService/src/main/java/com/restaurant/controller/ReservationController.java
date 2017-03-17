@@ -18,8 +18,8 @@ public class ReservationController {
     ReservationService reservationService;
 
     @PostMapping(path = "/reservation")
-    public void createResrvation(Reservation reservation, List<ChooserProduct> products){
-        reservationService.createReservationAndAddProducts(products);
+    public void createResrvation(Integer restaurantId, List<ChooserProduct> products){
+        reservationService.createReservationAndAddProducts(products, restaurantId);
     }
 
     @GetMapping(path = "/reservation/{id}", produces = "application/json")
