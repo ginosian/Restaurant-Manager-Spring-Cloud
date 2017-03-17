@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: org.bouncycastle:bcprov-jdk15on:1.55">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.IntelliJIdea2016.2/system/gradle/wrapper/dists/gradle-2.13-all/wrapper/dists/gradle-2.13-all/1b9wlm73elu4cqnbc0rk7r7qn/gradle-2.13/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk15on/1.55/935f2e57a00ec2c489cbd2ad830d4a399708f979/bcprov-jdk15on-1.55.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk15on/1.55/935f2e57a00ec2c489cbd2ad830d4a399708f979/bcprov-jdk15on-1.55.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.IntelliJIdea2016.2/system/gradle/wrapper/dists/gradle-2.13-all/wrapper/dists/gradle-2.13-all/1b9wlm73elu4cqnbc0rk7r7qn/gradle-2.13/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk15on/1.55/1b46f5e1efe67c17ec2b793d1d4581e4978c52ca/bcprov-jdk15on-1.55-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk15on/1.55/1b46f5e1efe67c17ec2b793d1d4581e4978c52ca/bcprov-jdk15on-1.55-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

@@ -5,8 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/APIService/APIService.iml" filepath="$PROJECT_DIR$/.idea/modules/APIService/APIService.iml" group="APIService" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/APIService/APIService_main.iml" filepath="$PROJECT_DIR$/.idea/modules/APIService/APIService_main.iml" group="APIService" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/APIService/APIService_test.iml" filepath="$PROJECT_DIR$/.idea/modules/APIService/APIService_test.iml" group="APIService" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Admin/Admin_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Admin/Admin_main.iml" group="Admin" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Admin/Admin_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Admin/Admin_test.iml" group="Admin" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Admin/Admin.iml" filepath="$PROJECT_DIR$/.idea/modules/Admin/Admin.iml" group="Admin" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/AuthorizationServer/AuthorizationServer.iml" filepath="$PROJECT_DIR$/.idea/modules/AuthorizationServer/AuthorizationServer.iml" group="AuthorizationServer" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/AuthorizationServer/AuthorizationServer_main.iml" filepath="$PROJECT_DIR$/.idea/modules/AuthorizationServer/AuthorizationServer_main.iml" group="AuthorizationServer" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/AuthorizationServer/AuthorizationServer_test.iml" filepath="$PROJECT_DIR$/.idea/modules/AuthorizationServer/AuthorizationServer_test.iml" group="AuthorizationServer" />

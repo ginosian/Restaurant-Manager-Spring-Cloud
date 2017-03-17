@@ -1,6 +1,6 @@
-import com.restaurant.Application;
-import com.restaurant.dto.Booking;
-import com.restaurant.service.BookingService;
+import com.booking.Application;
+import com.booking.dto.Booking;
+import com.booking.service.BookingService;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Rule;
@@ -39,11 +39,11 @@ public class TestDAO {
 
     @Before
     public void initRawEntities(){
-        booking1 = bookingService.createRestaurant(MockedData.restaurantName());
-        booking2 = bookingService.createRestaurant(MockedData.restaurantName());
-        booking3 = bookingService.createRestaurant(MockedData.restaurantName());
-        booking4 = bookingService.createRestaurant(MockedData.restaurantName());
-        booking5 = bookingService.createRestaurant(MockedData.restaurantName());
+        booking1 = bookingService.createBooking(MockedData.userId(), MockedData.restaurantId(), MockedData.reservationId());
+        booking2 = bookingService.createBooking(MockedData.userId(), MockedData.restaurantId(), MockedData.reservationId());
+        booking3 = bookingService.createBooking(MockedData.userId(), MockedData.restaurantId(), MockedData.reservationId());
+        booking4 = bookingService.createBooking(MockedData.userId(), MockedData.restaurantId(), MockedData.reservationId());
+        booking5 = bookingService.createBooking(MockedData.userId(), MockedData.restaurantId(), MockedData.reservationId());
 
     }
 
@@ -54,29 +54,18 @@ public class TestDAO {
 
 
     @Test
-    public void testRestaurantService() {
+    public void testBookingService() {
         // Booking is created
-        Assert.assertNotNull(bookingService.findRestaurant(booking1.getId()));
-        Assert.assertNull(bookingService.createRestaurant(booking1.getRestaurantName()));
-
-        // Booking is read
-        Assert.assertNotNull(bookingService.findRestaurant(booking1.getRestaurantName()));
-        Assert.assertEquals(bookingService.findRestaurant(booking1.getRestaurantName()), bookingService.findRestaurant(booking1.getId()));
-
-        // Booking is updated
-        Booking booking2 = bookingService.updateRestaurantName(booking1.getId(), MockedData.restaurantName());
-        Assert.assertEquals(booking1.getId(), booking2.getId());
-        Assert.assertEquals(booking1, booking2);
-        Assert.assertNotEquals(booking1.getRestaurantName(), booking2.getRestaurantName());
+        Assert.assertNotNull(bookingService.findBookingById(booking1.getId()));
+        Assert.assertNull(bookingService.createBooking(booking1.getUserId(), booking1.getRestaurantId(), booking1.getReservationId()));
 
         // Booking is deleted
-        Assert.assertTrue(bookingService.deleteRestaurant(booking1.getId()));
-        Assert.assertNull(bookingService.findRestaurant(booking1.getId()));
-
+        Assert.assertTrue(bookingService.deleteBooking(booking1.getId()));
+        Assert.assertNull(bookingService.findBookingById(booking1.getId()));
 
         // Booking is deleted double times
         thrown.expect(Exception.class);
-        bookingService.deleteRestaurant(booking1.getId());
+        bookingService.deleteBooking(booking1.getId());
     }
 
 }

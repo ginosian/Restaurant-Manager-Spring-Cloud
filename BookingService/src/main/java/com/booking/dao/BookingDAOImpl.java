@@ -1,6 +1,6 @@
 package com.booking.dao;
 
-import com.restaurant.dto.Booking;
+import com.booking.dto.Booking;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -52,20 +52,6 @@ public class BookingDAOImpl implements BookingDAO {
             e.printStackTrace();
         }
         return null;
-    }
-
-    @Override
-    public boolean containsBookingByName(String bookingName) {
-        Session session;
-        try{
-            session = getSession();
-            Query query = session.createNamedQuery("Booking.getByName");
-            query.setParameter("name", bookingName);
-            return query.getResultList().size() != 0;
-        }catch (HibernateException e) {
-            e.printStackTrace();
-        }
-        return false;
     }
 
     @Override

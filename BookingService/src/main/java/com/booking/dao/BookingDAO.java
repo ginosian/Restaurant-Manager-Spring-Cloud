@@ -1,7 +1,7 @@
 package com.booking.dao;
 
 
-import com.restaurant.dto.Booking;
+import com.booking.dto.Booking;
 
 import java.util.List;
 
@@ -19,11 +19,6 @@ public interface BookingDAO {
      * @param booking instance of {@link Booking}
      * @return {@link Booking} entity with generated Id from db.*/
     Booking writeBooking(Booking booking);
-
-    /** Checks by username
-     * @param bookingname unique name of booking
-     * @return false if doesn't exist.*/
-    boolean containsBookingByName(String bookingname);
 
     /** Checks by username
      * @param bookingId unique id of booking

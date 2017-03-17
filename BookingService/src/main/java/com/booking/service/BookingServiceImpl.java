@@ -1,9 +1,9 @@
 package com.booking.service;
 
 import com.booking.dao.BookingDAO;
-import com.restaurant.dto.Booking;
-import com.restaurant.util.BusKeyGen;
-import com.restaurant.util.Validate;
+import com.booking.dto.Booking;
+import com.booking.util.BusKeyGen;
+import com.booking.util.Validate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,17 +21,16 @@ public class BookingServiceImpl implements BookingService {
     BookingDAO bookingDAO;
 
     @Override
-    public Booking createBooking(String bookingName) {
+    public Booking createBooking(String userId, String restaurantId, String reservationId) {
         //Validate  (later to be separated in validations service)
-        if(!Validate.valid(bookingName))return null;
-        if(bookingDAO.containsBookingByName(bookingName))return null;
+        if(!Validate.valid(userId, reservationId, reservationId))return null;
         // Operate
-        Booking bookingObject = new Booking(bookingName, BusKeyGen.nextKey());
+        Booking bookingObject = new Booking(BusKeyGen.nextKey(), restaurantId, userId, reservationId);
         return bookingDAO.writeBooking(bookingObject);
     }
 
     @Override
-    public Booking findBooking(int bookingId) {
+    public Booking findBookingById(int bookingId) {
         //Validate  (later to be separated in validations service)
         if(!Validate.valid(bookingId))return null;
         if(!bookingDAO.containsBookingById(bookingId))return null;
@@ -40,11 +39,8 @@ public class BookingServiceImpl implements BookingService {
     }
 
     @Override
-    public Booking findBooking(String bookingName) {
-        //Validate  (later to be separated in validations service)
-        if(!Validate.valid(bookingName)) return null;
-        // Persist
-        return bookingDAO.readBooking(bookingName);
+    public Booking findBookingByReservationId(String reservationId) {
+        return null;
     }
 
     @Override
@@ -58,5 +54,15 @@ public class BookingServiceImpl implements BookingService {
     @Override
     public List<Booking> findAllBookings() {
         return bookingDAO.getAllBookings();
+    }
+
+    @Override
+    public List<Booking> findAllBookingsByUserId() {
+        return null;
+    }
+
+    @Override
+    public List<Booking> findAllBookingsByRestaurantId() {
+        return null;
     }
 }

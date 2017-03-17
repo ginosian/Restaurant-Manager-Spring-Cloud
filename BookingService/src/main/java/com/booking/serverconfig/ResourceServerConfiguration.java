@@ -1,4 +1,4 @@
-package com.restaurant.serverconfig;
+package com.booking.serverconfig;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;

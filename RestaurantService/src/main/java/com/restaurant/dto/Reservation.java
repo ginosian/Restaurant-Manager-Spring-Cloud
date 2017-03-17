@@ -30,6 +30,7 @@ public class Reservation implements Serializable {
 
     // region Fields
     private Integer id;
+    private Integer restaurantId;
     private String number;
     private boolean isOpen;
     Set<ProductInReservation> products;
@@ -40,9 +41,11 @@ public class Reservation implements Serializable {
     }
 
     public Reservation(String number,
-                       boolean isOpen) {
+                       boolean isOpen,
+                       Integer restaurantId) {
         this.number = number;
         this.isOpen = isOpen;
+        this.restaurantId = restaurantId;
     }
     // endregion
 
@@ -52,6 +55,11 @@ public class Reservation implements Serializable {
     @Column(name = "id_reservation")
     public Integer getId() {
         return id;
+    }
+
+    @Column(name = "restaurant_id")
+    public Integer getRestaurantId() {
+        return restaurantId;
     }
 
     @Column(name = "business_key",
@@ -94,10 +102,16 @@ public class Reservation implements Serializable {
         this.products = products;
     }
 
+    @javax.persistence.Transient
     public void setProductInReservation(ProductInReservation newProduct) {
         if(products == null) products = new HashSet<>();
         products.add(newProduct);
     }
+
+    public void setRestaurantId(Integer restaurantId) {
+        this.restaurantId = restaurantId;
+    }
+
     // endregion
 
     // region Hashcode/equals overrides

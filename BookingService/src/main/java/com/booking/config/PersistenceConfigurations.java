@@ -1,4 +1,4 @@
-package com.restaurant.config;
+package com.booking.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;

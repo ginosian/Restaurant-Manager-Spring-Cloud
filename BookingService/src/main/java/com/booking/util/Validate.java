@@ -1,4 +1,4 @@
-package com.restaurant.util;
+package com.booking.util;
 
 /**
  * Created by Martha on 3/1/2017.

@@ -1,4 +1,4 @@
-package com.restaurant.dto;
+package com.booking.dto;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -30,6 +30,18 @@ import java.io.Serializable;
         @NamedQuery(
                 name = "Booking.deleteById",
                 query = "DELETE FROM Booking r WHERE r.id  = :" + "id",
+                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
+        @NamedQuery(
+                name = "Booking.getByRestaurant",
+                query = "SELECT r FROM Booking r WHERE r.restaurantId  =:" + "restaurantId",
+                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
+        @NamedQuery(
+                name = "Booking.getByReservation",
+                query = "SELECT r FROM Booking r WHERE r.reservationId  =:" + "reservationId",
+                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
+        @NamedQuery(
+                name = "Booking.getByUser",
+                query = "SELECT r FROM Booking r WHERE r.userId  =:" + "userId",
                 hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
         @NamedQuery(
                 name = "Booking.getAll",

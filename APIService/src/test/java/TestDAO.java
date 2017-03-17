@@ -1,6 +1,6 @@
-import com.restaurant.Application;
-import com.restaurant.dto.Restaurant;
-import com.restaurant.service.RestaurantService;
+import com.api.Application;
+import com.api.dto.Restaurant;
+import com.api.service.RestaurantService;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Rule;
@@ -25,11 +25,11 @@ import util.MockedData;
 @TestPropertySource(locations = "classpath:test.properties")
 public class TestDAO {
 
-    @Autowired
-    RestaurantService restaurantService;
-
     @Rule
     public ExpectedException thrown = ExpectedException.none();
+
+    @Autowired
+    RestaurantService restaurantService;
 
     private Restaurant restaurant1;
     private Restaurant restaurant2;
@@ -57,17 +57,17 @@ public class TestDAO {
     public void testRestaurantService() {
         // Restaurant is created
         Assert.assertNotNull(restaurantService.findRestaurant(restaurant1.getId()));
-        Assert.assertNull(restaurantService.createRestaurant(restaurant1.getRestaurantName()));
+        Assert.assertNull(restaurantService.createRestaurant(restaurant1.getName()));
 
         // Restaurant is read
-        Assert.assertNotNull(restaurantService.findRestaurant(restaurant1.getRestaurantName()));
-        Assert.assertEquals(restaurantService.findRestaurant(restaurant1.getRestaurantName()), restaurantService.findRestaurant(restaurant1.getId()));
+        Assert.assertNotNull(restaurantService.findRestaurant(restaurant1.getName()));
+        Assert.assertEquals(restaurantService.findRestaurant(restaurant1.getName()), restaurantService.findRestaurant(restaurant1.getId()));
 
         // Restaurant is updated
         Restaurant restaurant2 = restaurantService.updateRestaurantName(restaurant1.getId(), MockedData.restaurantName());
         Assert.assertEquals(restaurant1.getId(), restaurant2.getId());
         Assert.assertEquals(restaurant1, restaurant2);
-        Assert.assertNotEquals(restaurant1.getRestaurantName(), restaurant2.getRestaurantName());
+        Assert.assertNotEquals(restaurant1.getName(), restaurant2.getName());
 
         // Restaurant is deleted
         Assert.assertTrue(restaurantService.deleteRestaurant(restaurant1.getId()));

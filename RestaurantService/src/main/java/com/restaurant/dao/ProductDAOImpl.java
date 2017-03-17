@@ -55,12 +55,13 @@ public class ProductDAOImpl implements ProductDAO{
     }
 
     @Override
-    public boolean containsProductByName(String productName) {
+    public boolean containsProductByName(String productName, Integer restaurantId) {
         Session session;
         try{
             session = getSession();
             Query query = session.createNamedQuery("Product.getByName");
             query.setParameter("name", productName);
+            query.setParameter("restaurantId", restaurantId);
             return query.getResultList().size() != 0;
         }catch (HibernateException e) {
             e.printStackTrace();

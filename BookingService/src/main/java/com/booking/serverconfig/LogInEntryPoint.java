@@ -1,4 +1,4 @@
-package com.restaurant.serverconfig;
+package com.booking.serverconfig;
 
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;

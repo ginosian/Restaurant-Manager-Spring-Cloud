@@ -1,4 +1,4 @@
-package com.restaurant.dao;
+package com.booking.dao;
 
 
 import org.springframework.transaction.annotation.Isolation;

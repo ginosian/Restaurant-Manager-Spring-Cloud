@@ -1,7 +1,7 @@
 package com.booking.service;
 
 
-import com.restaurant.dto.Booking;
+import com.booking.dto.Booking;
 
 import java.util.List;
 
@@ -10,13 +10,18 @@ import java.util.List;
  */
 public interface BookingService {
 
-    Booking createBooking(String bookingName);
+    Booking createBooking(String userId, String restaurantId, String reservationId);
 
-    Booking findBooking(int bookingId);
+    Booking findBookingById(int bookingId);
 
-    Booking findBooking(String bookingName);
+    Booking findBookingByReservationId(String reservationId);
 
     boolean deleteBooking(int bookingId);
 
     List<Booking> findAllBookings();
+
+    List<Booking> findAllBookingsByUserId();
+
+    List<Booking> findAllBookingsByRestaurantId();
+
 }

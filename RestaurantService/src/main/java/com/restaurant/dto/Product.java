@@ -13,7 +13,7 @@ import java.io.Serializable;
 @NamedQueries({
         @NamedQuery(
                 name = "Product.getByNumber",
-                query = "SELECT p FROM Product p WHERE p.number  =:" + "number",
+                query = "SELECT p FROM Product p WHERE p.number  =:" + "number" + " AND p.restaurantId  =:" + "restaurantId",
                 hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
         @NamedQuery(
                 name = "Product.deleteById",
@@ -27,12 +27,6 @@ import java.io.Serializable;
                 name = "Product.getByName",
                 query = "SELECT p FROM Product p WHERE p.productName  = :" + "name",
                 hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")})
-//        @NamedQuery(
-//                name = "Product.getByName",
-//                query = "select product0_.id_product as id_produ1_0_, product0_.business_key' " +
-//                        "as business2_0_, product0_.productName as productN3_0_ from product product0_ " +
-//                        "where product0_.productName=?",
-//                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")})
 })
 @Table(name = "product")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
@@ -40,6 +34,7 @@ public class Product implements Serializable {
 
     // region Fields
     private Integer id;
+    private Integer restaurantId;
     private String productName;
     private String number;
     // endregion
@@ -49,9 +44,11 @@ public class Product implements Serializable {
     }
 
     public Product(String productName,
-                   String number) {
+                   String number,
+                   int restaurantId) {
         this.productName = productName;
         this.number = number;
+        this.restaurantId = restaurantId;
     }
     // endregion
 
@@ -64,7 +61,6 @@ public class Product implements Serializable {
     }
 
     @Column(name = "productName",
-            unique = true,
             nullable = false)
     public String getProductName() {
         return productName;
@@ -76,6 +72,11 @@ public class Product implements Serializable {
             updatable = false)
     public String getNumber() {
         return number;
+    }
+
+    @Column(name = "restaurant_id")
+    public Integer getRestaurantId() {
+        return restaurantId;
     }
     // endregion
 
@@ -92,6 +93,11 @@ public class Product implements Serializable {
     private void setNumber(String number) {
         this.number = number;
     }
+
+    public void setRestaurantId(Integer restaurantId) {
+        this.restaurantId = restaurantId;
+    }
+
     // endregion
 
     // region Hashcode/equals overrides

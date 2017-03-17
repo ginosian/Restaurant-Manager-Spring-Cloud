@@ -22,7 +22,7 @@ public interface ProductDAO {
     /** Checks by username
      * @param productname unique name of product
      * @return false if doesn't exist.*/
-    boolean containsProductByName(String productname);
+    boolean containsProductByName(String productname, Integer restaurantId);
 
     /** Checks by username
      * @param productId unique id of product
@@ -34,20 +34,14 @@ public interface ProductDAO {
      * @return {@link Product} object from db or null if doesn't exist.*/
     Product readProduct(Integer productId);
 
-    /** Finds specified product.
-     * @param number business key of product.
-     * @return {@link Product} object from db or null if doesn't exist.*/
-    Product readProduct(String number);
-
     /** Deletes specified product.
      * @param productId generated id of product.
      * @return true if product was successfully deleted or did not exist.*/
     boolean deleteProduct(Integer productId);
 
-    /** Gets all products.
+    /** Gets all products by restaurant.
      * @return list of {@link Product} objects from db or if non exist return a list with size of 0.*/
-    List<Product> getAllProducts();
-
+    List<Product> getAllProducts(Integer restaurantId);
 
 
 }

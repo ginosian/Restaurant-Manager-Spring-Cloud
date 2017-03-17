@@ -3,10 +3,13 @@ version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
 
-sourceCompatibility = 1.5
+sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+}
+configurations {
+    runtime.exclude group: "org.slf4j", module: "slf4j-log4j12"
 }
 
 dependencies {

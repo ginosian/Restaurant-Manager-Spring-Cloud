@@ -1,4 +1,4 @@
-package com.restaurant.util;
+package com.booking.util;
 
 import java.util.UUID;
 

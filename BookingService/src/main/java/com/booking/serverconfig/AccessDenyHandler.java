@@ -1,4 +1,4 @@
-package com.restaurant.serverconfig;
+package com.booking.serverconfig;
 
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.oauth2.provider.error.OAuth2AccessDeniedHandler;

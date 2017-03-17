@@ -1,7 +1,7 @@
-package com.restaurant.controller;
+package com.booking.controller;
 
-import com.restaurant.dto.Booking;
-import com.restaurant.service.BookingService;
+import com.booking.dto.Booking;
+import com.booking.service.BookingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,29 +17,24 @@ public class Controller {
     BookingService bookingService;
 
 
-    @PostMapping(path = "/restaurant")
-    public void addRestaurant(String restaurantName){
-        bookingService.createRestaurant(restaurantName);
-    }
-
-    @GetMapping(path = "/restaurant/{id}", produces = "application/json")
-    public Booking getRestaurant(@PathVariable("id") int id){
-        return bookingService.findRestaurant(id);
+    @GetMapping(path = "/booking/{id}", produces = "application/json")
+    public Booking getBooking(@PathVariable("id") int id){
+        return bookingService.findBookingById(id);
     }
 
     @PutMapping(path = "/booking")
-    public void updateRestaurant(Booking booking){
-        bookingService.updateRestaurantName(booking.getId(), booking.getRestaurantName());
+    public void updateBooking(Booking booking){
+//        bookingService.updateBookingName(booking.getId(), booking.getBookingName());
     }
 
     @DeleteMapping(path = "/booking")
-    public void deleteRestaurant(Booking booking){
-        bookingService.deleteRestaurant(booking.getId());
+    public void deleteBooking(Booking booking){
+        bookingService.deleteBooking(booking.getId());
     }
 
-    @GetMapping(path = "/restaurants", produces = "application/json")
-    public List<Booking> getRestaurants(){
-        List<Booking> bookings = bookingService.findAllRestaurants();
+    @GetMapping(path = "/bookings", produces = "application/json")
+    public List<Booking> getBookings(){
+        List<Booking> bookings = bookingService.findAllBookings();
         return bookings;
     }
 
