@@ -10,7 +10,7 @@ import java.util.List;
  */
 public interface ReservationService {
 
-    Reservation createReservationAndAddProducts(List<ChooserProduct> products);
+    Reservation createReservationAndAddProducts(List<ChooserProduct> products, Integer restaurantId);
 
     Reservation addProductInReservation(int reservationId, int productId, int amount);
 
@@ -24,11 +24,7 @@ public interface ReservationService {
 
     List<Reservation> findAllReservations();
 
-    List<Reservation> findAllReservationsByIds(int[] ids);
-
     boolean deleteReservation(int reservationId);
-
-    boolean deleteAllReservationsByIds(int[] ids);
 
     boolean productInReservetionIsDeleted(int productInReservationId);
 

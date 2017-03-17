@@ -22,6 +22,10 @@ import java.util.Set;
                 name = "Reservation.getAllClosed",
                 query = "SELECT r FROM Reservation r WHERE r.isOpen = :" + "isOpen",
                 hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
+        @NamedQuery(
+                name = "Reservation.getAllByRestaurantId",
+                query = "SELECT r FROM Reservation r WHERE r.restaurantId = :" + "restaurantId",
+                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
 
 })
 @Table(name = "reservation")

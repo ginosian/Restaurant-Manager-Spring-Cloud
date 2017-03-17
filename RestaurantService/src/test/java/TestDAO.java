@@ -53,11 +53,11 @@ public class TestDAO {
 
     @Before
     public void initRawEntities(){
-        product1 = productService.createProduct(MockedData.productName());
-        product2 = productService.createProduct(MockedData.productName());
-        product3 = productService.createProduct(MockedData.productName());
-        product4 = productService.createProduct(MockedData.productName());
-        product5 = productService.createProduct(MockedData.productName());
+        product1 = productService.createProduct(MockedData.productName(), MockedData.restaurantId());
+        product2 = productService.createProduct(MockedData.productName(), MockedData.restaurantId());
+        product3 = productService.createProduct(MockedData.productName(), MockedData.restaurantId());
+        product4 = productService.createProduct(MockedData.productName(), MockedData.restaurantId());
+        product5 = productService.createProduct(MockedData.productName(), MockedData.restaurantId());
 
         products1 = new LinkedList<>();
         products1.add(new ChooserProduct(product1.getId(), 2));
@@ -79,11 +79,9 @@ public class TestDAO {
     public void testProductService() {
         // Product is created
         Assert.assertNotNull(productService.findProduct(product1.getId()));
-        Assert.assertNull(productService.createProduct(product1.getProductName()));
 
         // Product is read
-        Assert.assertNotNull(productService.findProduct(product1.getProductName()));
-        Assert.assertEquals(productService.findProduct(product1.getProductName()), productService.findProduct(product1.getId()));
+        Assert.assertNotNull(productService.findProduct(product1.getId()));
 
         // Product is updated
         Product product2 = productService.updateProductName(product1.getId(), MockedData.productName());
@@ -104,14 +102,14 @@ public class TestDAO {
     @Test
     public void createReservation(){
         // Reservation and products in reservation are created
-        Reservation reservation1 = reservationService.createReservationAndAddProducts(products1);
+        Reservation reservation1 = reservationService.createReservationAndAddProducts(products1, MockedData.restaurantId());
         Assert.assertNotNull(reservationService.findReservationById(reservation1.getId()));
 
 
     }
     @Test
     public void addProductInReservation(){
-        Reservation reservation1 = reservationService.createReservationAndAddProducts(products1);
+        Reservation reservation1 = reservationService.createReservationAndAddProducts(products1, MockedData.restaurantId());
         // Products in reservation are created
         for (ProductInReservation productInReservation : reservation1.getProducts()) {
             Assert.assertNotNull(productInReservation.getId());
@@ -134,7 +132,7 @@ public class TestDAO {
 
     @Test
     public void changeProductAmount(){
-        Reservation reservation1 = reservationService.createReservationAndAddProducts(products1);
+        Reservation reservation1 = reservationService.createReservationAndAddProducts(products1, MockedData.restaurantId());
         // Amount of product from reservation is changed
         ProductInReservation productWithInitialAmount = reservation1.getProducts().iterator().next();
         int initialAmount = productWithInitialAmount.getAmount();
@@ -154,7 +152,7 @@ public class TestDAO {
     }
     @Test
     public void deleteProductFromReservation(){
-        Reservation reservation1 = reservationService.createReservationAndAddProducts(products1);
+        Reservation reservation1 = reservationService.createReservationAndAddProducts(products1, MockedData.restaurantId());
         // A product from reservation is deleted
         Iterator iterator = reservation1.getProducts().iterator();
         ProductInReservation productToBeDeleted = null;
@@ -181,7 +179,7 @@ public class TestDAO {
     @Test
     public void deleteReservation(){
         //Delete reservation
-        Reservation reservation1 = reservationService.createReservationAndAddProducts(products2);
+        Reservation reservation1 = reservationService.createReservationAndAddProducts(products2, MockedData.restaurantId());
         Assert.assertEquals(reservation1.getProducts().size(), 1);
 
         ProductInReservation productInReservation = reservation1.getProducts().iterator().next();
@@ -195,10 +193,10 @@ public class TestDAO {
 
     @Test
     public void readReservationLazy(){
-        Reservation reservation1 = reservationService.createReservationAndAddProducts(products1);
-        Reservation reservation2 = reservationService.createReservationAndAddProducts(products2);
-        Reservation reservation3 = reservationService.createReservationAndAddProducts(products1);
-        Reservation reservation4 = reservationService.createReservationAndAddProducts(products2);
+        Reservation reservation1 = reservationService.createReservationAndAddProducts(products1, MockedData.restaurantId());
+        Reservation reservation2 = reservationService.createReservationAndAddProducts(products2, MockedData.restaurantId());
+        Reservation reservation3 = reservationService.createReservationAndAddProducts(products1, MockedData.restaurantId());
+        Reservation reservation4 = reservationService.createReservationAndAddProducts(products2, MockedData.restaurantId());
 
         List<Reservation> reservations = reservationService.findAllReservations();
         Assert.assertEquals(reservations.size(), 4);
@@ -206,12 +204,12 @@ public class TestDAO {
 
     @Test
     public void reservationsHasProducts(){
-        Reservation reservation1 = reservationService.createReservationAndAddProducts(products1);
+        Reservation reservation1 = reservationService.createReservationAndAddProducts(products1, MockedData.restaurantId());
         Reservation single = reservationService.findReservationById(reservation1.getId());
         Assert.assertNotNull(single.getProducts());
         Assert.assertTrue(single.getProducts().size() > 0);
 
-        Reservation reservation2 = reservationService.createReservationAndAddProducts(products1);
+        Reservation reservation2 = reservationService.createReservationAndAddProducts(products1, MockedData.restaurantId());
         Reservation fromList = reservationService.findAllReservations().get(0);
         Assert.assertNotNull(fromList.getProducts());
         Assert.assertTrue(fromList.getProducts().size() > 0);
@@ -220,11 +218,11 @@ public class TestDAO {
 
     @Test
     public void closedReservationsAreRead(){
-        Reservation reservation1 = reservationService.createReservationAndAddProducts(products1);
-        Reservation reservation2 = reservationService.createReservationAndAddProducts(products2);
-        Reservation reservation3 = reservationService.createReservationAndAddProducts(products1);
-        Reservation reservation4 = reservationService.createReservationAndAddProducts(products2);
-        Reservation reservation5 = reservationService.createReservationAndAddProducts(products2);
+        Reservation reservation1 = reservationService.createReservationAndAddProducts(products1, MockedData.restaurantId());
+        Reservation reservation2 = reservationService.createReservationAndAddProducts(products2, MockedData.restaurantId());
+        Reservation reservation3 = reservationService.createReservationAndAddProducts(products1, MockedData.restaurantId());
+        Reservation reservation4 = reservationService.createReservationAndAddProducts(products2, MockedData.restaurantId());
+        Reservation reservation5 = reservationService.createReservationAndAddProducts(products2, MockedData.restaurantId());
 
 
         reservationService.changeReservationState(reservation1.getId(), false);

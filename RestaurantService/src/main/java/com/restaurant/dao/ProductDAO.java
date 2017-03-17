@@ -20,9 +20,9 @@ public interface ProductDAO {
     Product writeProduct(Product product);
 
     /** Checks by username
-     * @param productname unique name of product
+     * @param productNumber unique uuid of product
      * @return false if doesn't exist.*/
-    boolean containsProductByName(String productname, Integer restaurantId);
+    boolean containsProductByNumber(String productNumber);
 
     /** Checks by username
      * @param productId unique id of product
@@ -42,6 +42,8 @@ public interface ProductDAO {
     /** Gets all products by restaurant.
      * @return list of {@link Product} objects from db or if non exist return a list with size of 0.*/
     List<Product> getAllProducts(Integer restaurantId);
+
+    List<Product> getAllProducts();
 
 
 }

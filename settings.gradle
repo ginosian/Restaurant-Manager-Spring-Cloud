@@ -1,11 +1,10 @@
 rootProject.name = 'RestaurantManager'
-include 'PersistenceLayer'
 include 'DiscoveryServer'
 include 'AuthorizationServer'
-include 'Gateway'
-include 'RestaurantService'
-include 'APIService'
-include 'BookingService'
-include 'UserService'
+include 'Gateway' //
+include 'RestaurantService' //
+include 'APIService' //
+include 'BookingService' //
+include 'UserService' //
 include 'ClientLibraries'
 

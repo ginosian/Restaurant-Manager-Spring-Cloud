@@ -55,13 +55,12 @@ public class ProductDAOImpl implements ProductDAO{
     }
 
     @Override
-    public boolean containsProductByName(String productName, Integer restaurantId) {
+    public boolean containsProductByNumber(String productNumber) {
         Session session;
         try{
             session = getSession();
-            Query query = session.createNamedQuery("Product.getByName");
-            query.setParameter("name", productName);
-            query.setParameter("restaurantId", restaurantId);
+            Query query = session.createNamedQuery("Product.getByNumber");
+            query.setParameter("number", productNumber);
             return query.getResultList().size() != 0;
         }catch (HibernateException e) {
             e.printStackTrace();
@@ -87,20 +86,6 @@ public class ProductDAOImpl implements ProductDAO{
         try{
             session = getSession();
             return  session.find(Product.class, productId);
-        }catch (HibernateException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    @Override
-    public Product readProduct(String name) {
-        Session session = null;
-        try{
-            session = getSession();
-            Query query = session.createNamedQuery("Product.getByName");
-            query.setParameter("name", name);
-            return (Product) query.getSingleResult();
         }catch (HibernateException e) {
             e.printStackTrace();
         }
@@ -136,4 +121,17 @@ public class ProductDAOImpl implements ProductDAO{
         return null;
     }
 
+    @Override
+    public List<Product> getAllProducts(Integer restaurantId) {
+        Session session;
+        try{
+            session = getSession();
+            Query query = session.createNamedQuery("Product.getByRestaurant");
+            query.setParameter("restaurantId", restaurantId);
+            return query.getResultList();
+        }catch (HibernateException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

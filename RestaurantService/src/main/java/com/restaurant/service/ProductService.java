@@ -9,15 +9,15 @@ import java.util.List;
  */
 public interface ProductService {
 
-    Product createProduct(String productName);
+    Product createProduct(String productName, Integer restaurantId);
 
     Product findProduct(int productId);
-
-    Product findProduct(String productName);
 
     Product updateProductName(int productId, String productName);
 
     boolean deleteProduct(int productId);
 
     List<Product> findAllProducts();
+
+    List<Product> findAllProducts(Integer restaurantId);
 }

@@ -21,12 +21,11 @@ public class ProductServiceImpl implements ProductService{
     ProductDAO productDAO;
 
     @Override
-    public Product createProduct(String productName) {
+    public Product createProduct(String productName, Integer restaurantId) {
         //Validate  (later to be separated in validations service)
-        if(!Validate.valid(productName))return null;
-        if(productDAO.containsProductByName(productName))return null;
+        if(!Validate.valid(productName, restaurantId))return null;
         // Operate
-        Product productObject = new Product(productName, BusKeyGen.nextKey());
+        Product productObject = new Product(productName, BusKeyGen.nextKey(), restaurantId);
         return productDAO.writeProduct(productObject);
     }
 
@@ -37,14 +36,6 @@ public class ProductServiceImpl implements ProductService{
         if(!productDAO.containsProductById(productId))return null;
         // Persist
         return productDAO.readProduct(productId);
-    }
-
-    @Override
-    public Product findProduct(String productName) {
-        //Validate  (later to be separated in validations service)
-        if(!Validate.valid(productName)) return null;
-        // Persist
-        return productDAO.readProduct(productName);
     }
 
     @Override
@@ -70,5 +61,13 @@ public class ProductServiceImpl implements ProductService{
     @Override
     public List<Product> findAllProducts() {
         return productDAO.getAllProducts();
+    }
+
+    @Override
+    public List<Product> findAllProducts(Integer restaurantId) {
+        //Validate  (later to be separated in validations service)
+        if(!Validate.valid(restaurantId))return null;
+        // Persist
+        return productDAO.getAllProducts(restaurantId);
     }
 }

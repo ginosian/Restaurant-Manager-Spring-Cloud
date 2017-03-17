@@ -12,8 +12,8 @@ import java.io.Serializable;
 @Entity
 @NamedQueries({
         @NamedQuery(
-                name = "Product.getByNumber",
-                query = "SELECT p FROM Product p WHERE p.number  =:" + "number" + " AND p.restaurantId  =:" + "restaurantId",
+                name = "Product.getByRestaurant",
+                query = "SELECT p FROM Product p WHERE p.restaurantId  =:" + "restaurantId",
                 hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
         @NamedQuery(
                 name = "Product.deleteById",
@@ -24,8 +24,8 @@ import java.io.Serializable;
                 query = "FROM Product",
                 hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
         @NamedQuery(
-                name = "Product.getByName",
-                query = "SELECT p FROM Product p WHERE p.productName  = :" + "name",
+                name = "Product.getByNumber",
+                query = "SELECT p FROM Product p WHERE p.number  = :" + "number",
                 hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")})
 })
 @Table(name = "product")

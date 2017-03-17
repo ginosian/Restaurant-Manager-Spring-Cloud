@@ -22,9 +22,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Gateway/Gateway_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Gateway/Gateway_main.iml" group="Gateway" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Gateway/Gateway_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Gateway/Gateway_test.iml" group="Gateway" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Guest/Guest.iml" filepath="$PROJECT_DIR$/.idea/modules/Guest/Guest.iml" group="Guest" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PersistenceLayer/PersistenceLayer.iml" filepath="$PROJECT_DIR$/.idea/modules/PersistenceLayer/PersistenceLayer.iml" group="PersistenceLayer" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PersistenceLayer/PersistenceLayer_main.iml" filepath="$PROJECT_DIR$/.idea/modules/PersistenceLayer/PersistenceLayer_main.iml" group="PersistenceLayer" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PersistenceLayer/PersistenceLayer_test.iml" filepath="$PROJECT_DIR$/.idea/modules/PersistenceLayer/PersistenceLayer_test.iml" group="PersistenceLayer" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Restaurant/Restaurant.iml" filepath="$PROJECT_DIR$/.idea/modules/Restaurant/Restaurant.iml" group="Restaurant" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/RestaurantManager.iml" filepath="$PROJECT_DIR$/.idea/modules/RestaurantManager.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/RestaurantManager_main.iml" filepath="$PROJECT_DIR$/.idea/modules/RestaurantManager_main.iml" group="RestaurantManager" />

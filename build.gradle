@@ -11,62 +11,20 @@ repositories {
 
 allprojects {
     apply plugin: 'java'
-    dependencies {
-        compile project (":ClientLibraries")
-        compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '1.5.1.RELEASE'
-        compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.1.RELEASE'
-        compile group: 'org.springframework.cloud', name: 'spring-cloud-starter', version: '1.1.6.RELEASE'
-        compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-eureka-server', version: '1.2.5.RELEASE'
-        compile group: 'org.springframework.cloud', name: 'spring-cloud-dependencies', version: 'Camden.SR5'
-        compile('org.springframework.security.oauth:spring-security-oauth2:2.0.8.RELEASE')
-        compile('org.springframework.security:spring-security-jwt:1.0.3.RELEASE')
-        testCompile group: 'junit', name: 'junit', version: '4.11'
-
-        compile group: 'org.springframework.data', name: 'spring-data-jpa', version: '1.10.5.RELEASE'
-        compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '1.4.3.RELEASE'
-        compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '1.5.1.RELEASE'
-        compile group: 'org.springframework', name: 'spring-jdbc', version: '4.3.6.RELEASE'
-        compile group: 'org.springframework', name: 'spring-orm', version: '4.3.6.RELEASE'
-        compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.5.Final'
-        compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.40'
-        compile group: 'org.hibernate', name: 'hibernate-c3p0', version: '5.2.8.Final'
-        compile group: 'org.hibernate', name: 'hibernate-ehcache', version: '5.2.8.Final'
-        compile group: 'net.sf.ehcache', name: 'ehcache-core', version: '2.6.11'
-        compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.21'
-        compile group: 'com.zaxxer', name: 'HikariCP', version: '2.4.6'
-        compile group: 'c3p0', name: 'c3p0', version: '0.9.1.2'
-        compile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '1.5.1.RELEASE'
-        compile group: 'hsqldb', name: 'hsqldb', version: '1.8.0.10'
-        compile group: 'com.h2database', name: 'h2', version: '1.4.193'
-    }
-}
-
-project(":PersistenceLayer") {
-    dependencies {
-//        compile group: 'org.springframework.data', name: 'spring-data-jpa', version: '1.10.5.RELEASE'
-//        compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '1.4.3.RELEASE'
-        compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '1.5.1.RELEASE'
-        compile group: 'org.springframework', name: 'spring-jdbc', version: '4.3.6.RELEASE'
-        compile group: 'org.springframework', name: 'spring-orm', version: '4.3.6.RELEASE'
-        compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.5.Final'
-        compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.40'
-        compile group: 'org.hibernate', name: 'hibernate-c3p0', version: '5.2.8.Final'
-        compile group: 'org.hibernate', name: 'hibernate-ehcache', version: '5.2.8.Final'
-        compile group: 'net.sf.ehcache', name: 'ehcache-core', version: '2.6.11'
-        compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.21'
-        compile group: 'com.zaxxer', name: 'HikariCP', version: '2.4.6'
-        compile group: 'c3p0', name: 'c3p0', version: '0.9.1.2'
-        compile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '1.5.1.RELEASE'
-        compile group: 'hsqldb', name: 'hsqldb', version: '1.8.0.10'
-        compile group: 'com.h2database', name: 'h2', version: '1.4.193'
-    }
 }
 
 project(":RestaurantService") {
     dependencies {
-        compile group: 'org.springframework.data', name: 'spring-data-jpa', version: '1.10.5.RELEASE'
-        compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '1.4.3.RELEASE'
+        compile project (":ClientLibraries")
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '1.5.1.RELEASE'
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.1.RELEASE'
         compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '1.5.1.RELEASE'
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '1.5.1.RELEASE'
+        compile group: 'com.google.code.spring-crypto-utils', name: 'spring-crypto-utils', version: '1.3.0'
+
+        compile group: 'org.springframework.cloud', name: 'spring-cloud-starter', version: '1.1.6.RELEASE'
+        compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-eureka-server', version: '1.2.5.RELEASE'
+
         compile group: 'org.springframework', name: 'spring-jdbc', version: '4.3.6.RELEASE'
         compile group: 'org.springframework', name: 'spring-orm', version: '4.3.6.RELEASE'
         compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.5.Final'
@@ -76,19 +34,30 @@ project(":RestaurantService") {
         compile group: 'net.sf.ehcache', name: 'ehcache-core', version: '2.6.11'
         compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.21'
         compile group: 'com.zaxxer', name: 'HikariCP', version: '2.4.6'
+        testCompile group: 'junit', name: 'junit', version: '4.11'
         compile group: 'c3p0', name: 'c3p0', version: '0.9.1.2'
         compile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '1.5.1.RELEASE'
         compile group: 'hsqldb', name: 'hsqldb', version: '1.8.0.10'
         compile group: 'com.h2database', name: 'h2', version: '1.4.193'
+
+        compile('org.springframework.security.oauth:spring-security-oauth2:2.0.8.RELEASE')
+        compile('org.springframework.security:spring-security-jwt:1.0.3.RELEASE')
     }
 }
 
 project(":APIService") {
     apply plugin: 'java'
     dependencies {
-        compile group: 'org.springframework.data', name: 'spring-data-jpa', version: '1.10.5.RELEASE'
-        compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '1.4.3.RELEASE'
+        compile project (":ClientLibraries")
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '1.5.1.RELEASE'
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.1.RELEASE'
         compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '1.5.1.RELEASE'
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '1.5.1.RELEASE'
+        compile group: 'com.google.code.spring-crypto-utils', name: 'spring-crypto-utils', version: '1.3.0'
+
+        compile group: 'org.springframework.cloud', name: 'spring-cloud-starter', version: '1.1.6.RELEASE'
+        compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-eureka-server', version: '1.2.5.RELEASE'
+
         compile group: 'org.springframework', name: 'spring-jdbc', version: '4.3.6.RELEASE'
         compile group: 'org.springframework', name: 'spring-orm', version: '4.3.6.RELEASE'
         compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.5.Final'
@@ -98,18 +67,29 @@ project(":APIService") {
         compile group: 'net.sf.ehcache', name: 'ehcache-core', version: '2.6.11'
         compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.21'
         compile group: 'com.zaxxer', name: 'HikariCP', version: '2.4.6'
+        testCompile group: 'junit', name: 'junit', version: '4.11'
         compile group: 'c3p0', name: 'c3p0', version: '0.9.1.2'
         compile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '1.5.1.RELEASE'
         compile group: 'hsqldb', name: 'hsqldb', version: '1.8.0.10'
         compile group: 'com.h2database', name: 'h2', version: '1.4.193'
+
+        compile('org.springframework.security.oauth:spring-security-oauth2:2.0.8.RELEASE')
+        compile('org.springframework.security:spring-security-jwt:1.0.3.RELEASE')
     }
 }
 
 project(":BookingService") {
     dependencies {
-        compile group: 'org.springframework.data', name: 'spring-data-jpa', version: '1.10.5.RELEASE'
-        compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '1.4.3.RELEASE'
+        compile project (":ClientLibraries")
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '1.5.1.RELEASE'
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.1.RELEASE'
         compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '1.5.1.RELEASE'
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '1.5.1.RELEASE'
+        compile group: 'com.google.code.spring-crypto-utils', name: 'spring-crypto-utils', version: '1.3.0'
+
+        compile group: 'org.springframework.cloud', name: 'spring-cloud-starter', version: '1.1.6.RELEASE'
+        compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-eureka-server', version: '1.2.5.RELEASE'
+
         compile group: 'org.springframework', name: 'spring-jdbc', version: '4.3.6.RELEASE'
         compile group: 'org.springframework', name: 'spring-orm', version: '4.3.6.RELEASE'
         compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.5.Final'
@@ -119,19 +99,30 @@ project(":BookingService") {
         compile group: 'net.sf.ehcache', name: 'ehcache-core', version: '2.6.11'
         compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.21'
         compile group: 'com.zaxxer', name: 'HikariCP', version: '2.4.6'
+        testCompile group: 'junit', name: 'junit', version: '4.11'
         compile group: 'c3p0', name: 'c3p0', version: '0.9.1.2'
         compile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '1.5.1.RELEASE'
         compile group: 'hsqldb', name: 'hsqldb', version: '1.8.0.10'
         compile group: 'com.h2database', name: 'h2', version: '1.4.193'
+
+        compile('org.springframework.security.oauth:spring-security-oauth2:2.0.8.RELEASE')
+        compile('org.springframework.security:spring-security-jwt:1.0.3.RELEASE')
     }
 }
 
 project(":UserService") {
     apply plugin: 'java'
     dependencies {
-        compile group: 'org.springframework.data', name: 'spring-data-jpa', version: '1.10.5.RELEASE'
-        compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '1.4.3.RELEASE'
+        compile project(":ClientLibraries")
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '1.5.1.RELEASE'
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.1.RELEASE'
         compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '1.5.1.RELEASE'
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '1.5.1.RELEASE'
+        compile group: 'com.google.code.spring-crypto-utils', name: 'spring-crypto-utils', version: '1.3.0'
+
+        compile group: 'org.springframework.cloud', name: 'spring-cloud-starter', version: '1.1.6.RELEASE'
+        compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-eureka-server', version: '1.2.5.RELEASE'
+
         compile group: 'org.springframework', name: 'spring-jdbc', version: '4.3.6.RELEASE'
         compile group: 'org.springframework', name: 'spring-orm', version: '4.3.6.RELEASE'
         compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.5.Final'
@@ -141,10 +132,14 @@ project(":UserService") {
         compile group: 'net.sf.ehcache', name: 'ehcache-core', version: '2.6.11'
         compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.21'
         compile group: 'com.zaxxer', name: 'HikariCP', version: '2.4.6'
+        testCompile group: 'junit', name: 'junit', version: '4.11'
         compile group: 'c3p0', name: 'c3p0', version: '0.9.1.2'
         compile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '1.5.1.RELEASE'
         compile group: 'hsqldb', name: 'hsqldb', version: '1.8.0.10'
         compile group: 'com.h2database', name: 'h2', version: '1.4.193'
+
+        compile('org.springframework.security.oauth:spring-security-oauth2:2.0.8.RELEASE')
+        compile('org.springframework.security:spring-security-jwt:1.0.3.RELEASE')
     }
 }
 
@@ -155,8 +150,50 @@ project(":Gateway") {
         compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-zuul', version: '1.2.5.RELEASE'
         compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-eureka', version: '1.2.5.RELEASE'
         compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-ribbon'
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
         compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator'
+        compile group: 'org.springframework.cloud', name: 'spring-cloud-dependencies', version: 'Camden.SR5'
         compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '8.5.11'
+
+        compile('org.springframework.security.oauth:spring-security-oauth2:2.0.8.RELEASE')
+        compile('org.springframework.security:spring-security-jwt:1.0.3.RELEASE')
+        testCompile group: 'junit', name: 'junit', version: '4.11'
+    }
+}
+
+project(":DiscoveryServer") {
+    apply plugin: 'java'
+    dependencies {
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '1.5.1.RELEASE'
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.1.RELEASE'
+
+        compile group: 'org.springframework.cloud', name: 'spring-cloud-starter', version: '1.1.6.RELEASE'
+        compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-eureka-server', version: '1.2.5.RELEASE'
+        compile group: 'org.springframework.cloud', name: 'spring-cloud-dependencies', version: 'Camden.SR5'
+
+        testCompile group: 'junit', name: 'junit', version: '4.11'
+    }
+}
+
+project(":AuthorizationServer") {
+    apply plugin: 'java'
+    dependencies {
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.1.RELEASE'
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '1.5.1.RELEASE'
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '1.5.1.RELEASE'
+        compile('org.springframework.security.oauth:spring-security-oauth2:2.0.8.RELEASE')
+        compile('org.springframework.security:spring-security-jwt:1.0.3.RELEASE')
+
+        compile group: 'org.springframework.cloud', name: 'spring-cloud-starter', version: '1.1.6.RELEASE'
+        compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-eureka-server', version: '1.2.5.RELEASE'
+        testCompile group: 'junit', name: 'junit', version: '4.11'
+    }
+}
+
+project(":ClientLibraries") {
+    apply plugin: 'java'
+    dependencies {
+        compile('com.fasterxml.jackson.core:jackson-annotations:2.8.0')
     }
 }
 

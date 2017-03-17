@@ -139,7 +139,7 @@ public class ReservationDAOImpl implements ReservationDAO {
     }
 
     @Override
-    public ProductInReservation findProductById(Integer productInReservationId) {
+    public ProductInReservation findProductInReservationById(Integer productInReservationId) {
         Session session = null;
         try{
             session = getSession();
@@ -165,7 +165,17 @@ public class ReservationDAOImpl implements ReservationDAO {
     }
 
     @Override
-    public List<Reservation> getAllReservationsByIds(int[] id) {
+    public List<Reservation> getAllReservations(Integer restaurantId) {
+        Session session = null;
+        try{
+            session = getSession();
+            System.out.println("*****Transaction is active ********" + TransactionSynchronizationManager.isActualTransactionActive() + "**getAllProducts**");
+            Query query = session.createNamedQuery("Reservation.getAllByRestaurantId");
+            query.setParameter("restaurantId", restaurantId);
+            return query.getResultList();
+        }catch (HibernateException e) {
+            e.printStackTrace();
+        }
         return null;
     }
 }
