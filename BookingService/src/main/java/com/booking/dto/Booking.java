@@ -13,11 +13,11 @@ import java.io.Serializable;
 @NamedQueries({
         @NamedQuery(
                 name = "Booking.getByNumber",
-                query = "SELECT r FROM Booking r WHERE r.number  =:" + "number",
+                query = "SELECT b FROM Booking b WHERE b.number  =:" + "number",
                 hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
         @NamedQuery(
                 name = "Booking.getByRestaurant",
-                query = "SELECT r FROM Booking r WHERE r.restaurantId  =:" + "restaurantId",
+                query = "SELECT b FROM Booking b WHERE b.restaurantId  =:" + "restaurantId",
                 hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
         @NamedQuery(
                 name = "Booking.getByReservation",
@@ -32,23 +32,11 @@ import java.io.Serializable;
                 query = "DELETE FROM Booking r WHERE r.id  = :" + "id",
                 hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
         @NamedQuery(
-                name = "Booking.getByRestaurant",
-                query = "SELECT r FROM Booking r WHERE r.restaurantId  =:" + "restaurantId",
-                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
-        @NamedQuery(
-                name = "Booking.getByReservation",
-                query = "SELECT r FROM Booking r WHERE r.reservationId  =:" + "reservationId",
-                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
-        @NamedQuery(
-                name = "Booking.getByUser",
-                query = "SELECT r FROM Booking r WHERE r.userId  =:" + "userId",
-                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
-        @NamedQuery(
                 name = "Booking.getAll",
                 query = "FROM Booking",
                 hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
 })
-@Table(name = "restaurant")
+@Table(name = "booking")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class Booking implements Serializable {
 
@@ -77,7 +65,7 @@ public class Booking implements Serializable {
     // region Properties
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_product")
+    @Column(name = "id_booking")
     public Integer getId() {
         return id;
     }
@@ -91,7 +79,6 @@ public class Booking implements Serializable {
     }
 
     @Column(name = "restaurant_id",
-            unique = true,
             nullable = false,
             updatable = false)
     public String getRestaurantId() {
@@ -99,7 +86,6 @@ public class Booking implements Serializable {
     }
 
     @Column(name = "user_id",
-            unique = true,
             nullable = false,
             updatable = false)
     public String getUserId() {
@@ -107,7 +93,6 @@ public class Booking implements Serializable {
     }
 
     @Column(name = "reservation_id",
-            unique = true,
             nullable = false,
             updatable = false)
     public String getReservationId() {
