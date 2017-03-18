@@ -29,7 +29,7 @@ public interface ReservationDAO {
      * @return list of {@link Reservation} objects from db or if non exist return a list with size of 0.*/
     List<Reservation> getAllReservations();
 
-    List<Reservation> getAllReservations(Integer restaurantId);
+    List<Reservation> getAllReservations(List<Integer> ids);
 
     /** Gets all Products list within reservation.
      * @return list of {@link ProductInReservation} objects from db or if non exist return a list with size of 0.*/
@@ -40,6 +40,8 @@ public interface ReservationDAO {
     ProductInReservation readProductInReservation(Integer productInReservationId);
 
     boolean deleteProductInReservation(Integer productInResrevationId);
+
+    void deleteProductInReservationByProduct(Integer productId);
 
     ProductInReservation findProductInReservationById(Integer productInReservationId);
 

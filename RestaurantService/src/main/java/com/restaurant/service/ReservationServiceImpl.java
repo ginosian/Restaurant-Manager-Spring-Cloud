@@ -34,7 +34,7 @@ public class ReservationServiceImpl implements ReservationService {
     ReentrantLock lock = new ReentrantLock();
 
     @Override
-    public Reservation createReservationAndAddProducts(List<ChooserProduct> products, Integer restaurantId) {
+    public Reservation createReservationAndAddProducts(List<ChooserProduct> products) {
         //Validations (later to be separated in validations service)
         if (!Validate.valid(products) || products.size() == 0) return null;
         for (ChooserProduct product : products) {
@@ -49,7 +49,7 @@ public class ReservationServiceImpl implements ReservationService {
             productInReservations.add(new ProductInReservation(chooserProduct, product.getAmount(), BusKeyGen.nextKey()));
         }
         //Persist
-        Reservation reservation = new Reservation(BusKeyGen.nextKey(), true, restaurantId);
+        Reservation reservation = new Reservation(BusKeyGen.nextKey(), true);
         reservation.setProducts(productInReservations);
         return reservationDAO.writeReservation(reservation);
     }
@@ -160,4 +160,11 @@ public class ReservationServiceImpl implements ReservationService {
         return reservations;
     }
 
+    @Override
+    public List<Reservation> findAllReservations(List<Integer> ids) {
+        //Validations (later to be separated in validations service)
+        if (!Validate.valid(ids)) return null;
+        // Persist
+        return reservationDAO.getAllReservations(ids);
+    }
 }

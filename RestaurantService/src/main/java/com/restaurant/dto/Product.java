@@ -12,10 +12,6 @@ import java.io.Serializable;
 @Entity
 @NamedQueries({
         @NamedQuery(
-                name = "Product.getByRestaurant",
-                query = "SELECT p FROM Product p WHERE p.restaurantId  =:" + "restaurantId",
-                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
-        @NamedQuery(
                 name = "Product.deleteById",
                 query = "DELETE FROM Product p WHERE p.id  = :" + "id",
                 hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
@@ -26,6 +22,10 @@ import java.io.Serializable;
         @NamedQuery(
                 name = "Product.getByNumber",
                 query = "SELECT p FROM Product p WHERE p.number  = :" + "number",
+                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
+        @NamedQuery(
+                name = "Product.getAllByIds",
+                query = "SELECT p FROM Product p WHERE p.id IN :" + "list",
                 hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")})
 })
 @Table(name = "product")
@@ -34,7 +34,6 @@ public class Product implements Serializable {
 
     // region Fields
     private Integer id;
-    private Integer restaurantId;
     private String productName;
     private String number;
     // endregion
@@ -44,11 +43,9 @@ public class Product implements Serializable {
     }
 
     public Product(String productName,
-                   String number,
-                   int restaurantId) {
+                   String number) {
         this.productName = productName;
         this.number = number;
-        this.restaurantId = restaurantId;
     }
     // endregion
 
@@ -73,11 +70,6 @@ public class Product implements Serializable {
     public String getNumber() {
         return number;
     }
-
-    @Column(name = "restaurant_id")
-    public Integer getRestaurantId() {
-        return restaurantId;
-    }
     // endregion
 
     // region Setters
@@ -92,10 +84,6 @@ public class Product implements Serializable {
 
     private void setNumber(String number) {
         this.number = number;
-    }
-
-    public void setRestaurantId(Integer restaurantId) {
-        this.restaurantId = restaurantId;
     }
 
     // endregion

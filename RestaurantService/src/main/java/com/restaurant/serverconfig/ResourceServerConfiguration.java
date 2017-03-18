@@ -3,6 +3,7 @@ package com.restaurant.serverconfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableOAuth2Client;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
@@ -18,6 +19,7 @@ import org.springframework.security.web.authentication.LoginUrlAuthenticationEnt
 @Configuration
 @EnableResourceServer
 @EnableOAuth2Client
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter {
 
     @Autowired
@@ -30,10 +32,8 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
     public void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeRequests()
-                .antMatchers(HttpMethod.GET, "/home/**").hasAnyAuthority("ADMIN", "GUEST", "RESTAURANT")
                 .antMatchers("/**").authenticated()
                 .antMatchers("/route").permitAll()
-                .anyRequest().hasAuthority("ADMIN")
                 .and().exceptionHandling()
                 .accessDeniedHandler(new AccessDenyHandler())
                 .authenticationEntryPoint(new LoginUrlAuthenticationEntryPoint("http://localhost:1110/auth"));

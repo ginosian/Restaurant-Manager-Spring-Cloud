@@ -33,7 +33,7 @@ public class Controller {
     }
 
     @PreAuthorize("hasAnyAuthority('ADMIN')")
-    @PostMapping(path = "/restaurant/delete/{id}")
+    @PostMapping(path = "/restaurant/delete/{id}") // A POST mapping instead of DELETE in due to my tomcat with current configs doesn't support DELETE
     public void deleteRestaurant(@PathVariable("id") int id){
         try {
             Thread.sleep(14000);

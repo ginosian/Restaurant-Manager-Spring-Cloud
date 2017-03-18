@@ -9,7 +9,7 @@ import java.util.List;
  */
 public interface ProductService {
 
-    Product createProduct(String productName, Integer restaurantId);
+    Product createProduct(String productName);
 
     Product findProduct(int productId);
 
@@ -19,5 +19,5 @@ public interface ProductService {
 
     List<Product> findAllProducts();
 
-    List<Product> findAllProducts(Integer restaurantId);
+    List<Product> findAllProducts(List<Integer> ids);
 }

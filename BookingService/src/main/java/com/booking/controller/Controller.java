@@ -22,12 +22,12 @@ public class Controller {
         return bookingService.findBookingById(id);
     }
 
-    @PutMapping(path = "/booking")
+    @PutMapping(path = "/booking") // A POST mapping instead of PUT in due to my tomcat with current configs doesn't support PUT
     public void updateBooking(Booking booking){
 //        bookingService.updateBookingName(booking.getId(), booking.getBookingName());
     }
 
-    @DeleteMapping(path = "/booking")
+    @DeleteMapping(path = "/booking") // A POST mapping instead of DELETE in due to my tomcat with current configs doesn't support DELETE
     public void deleteBooking(Booking booking){
         bookingService.deleteBooking(booking.getId());
     }

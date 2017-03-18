@@ -165,17 +165,29 @@ public class ReservationDAOImpl implements ReservationDAO {
     }
 
     @Override
-    public List<Reservation> getAllReservations(Integer restaurantId) {
+    public List<Reservation> getAllReservations(List<Integer> ids) {
         Session session = null;
         try{
             session = getSession();
-            System.out.println("*****Transaction is active ********" + TransactionSynchronizationManager.isActualTransactionActive() + "**getAllProducts**");
-            Query query = session.createNamedQuery("Reservation.getAllByRestaurantId");
-            query.setParameter("restaurantId", restaurantId);
+            Query query = session.createNamedQuery("Reservation.getAllByIds");
+            query.setParameter("list", ids);
             return query.getResultList();
         }catch (HibernateException e) {
             e.printStackTrace();
         }
         return null;
+    }
+
+    @Override
+    public void deleteProductInReservationByProduct(Integer productId) {
+        Session session = null;
+        try{
+            session = getSession();
+            Query query = session.createNamedQuery("ProductInReservation.deleteByProduct");
+            query.setParameter("id", productId);
+            query.executeUpdate();
+        }catch (HibernateException e) {
+            e.printStackTrace();
+        }
     }
 }

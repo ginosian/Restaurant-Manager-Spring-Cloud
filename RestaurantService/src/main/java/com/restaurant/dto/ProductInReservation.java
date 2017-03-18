@@ -15,7 +15,11 @@ import java.io.Serializable;
                 name = "ProductInReservation.getByReservation",
                 query = "SELECT  p FROM ProductInReservation p JOIN p.reservation r WHERE r.id = :" + "id",
                 hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
-        })
+        @NamedQuery(
+                name = "ProductInReservation.deleteByProduct",
+                query = "SELECT  p FROM ProductInReservation p JOIN p.product rp WHERE rp.id = :" + "id",
+                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
+})
 @Table(name = "productinreservation")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class ProductInReservation implements Serializable {

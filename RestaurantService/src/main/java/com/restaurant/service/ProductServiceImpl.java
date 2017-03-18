@@ -20,12 +20,15 @@ public class ProductServiceImpl implements ProductService{
     @Autowired
     ProductDAO productDAO;
 
+    @Autowired
+    ReservationService reservationService;
+
     @Override
-    public Product createProduct(String productName, Integer restaurantId) {
+    public Product createProduct(String productName) {
         //Validate  (later to be separated in validations service)
-        if(!Validate.valid(productName, restaurantId))return null;
+        if(!Validate.valid(productName))return null;
         // Operate
-        Product productObject = new Product(productName, BusKeyGen.nextKey(), restaurantId);
+        Product productObject = new Product(productName, BusKeyGen.nextKey());
         return productDAO.writeProduct(productObject);
     }
 
@@ -55,6 +58,7 @@ public class ProductServiceImpl implements ProductService{
         //Validate  (later to be separated in validations service)
         if(!Validate.valid(productId)) return false;
         // Persist
+
         return productDAO.deleteProduct(productId);
     }
 
@@ -64,10 +68,10 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
-    public List<Product> findAllProducts(Integer restaurantId) {
+    public List<Product> findAllProducts(List<Integer> ids) {
         //Validate  (later to be separated in validations service)
-        if(!Validate.valid(restaurantId))return null;
+        if(!Validate.valid(ids))return null;
         // Persist
-        return productDAO.getAllProducts(restaurantId);
+        return productDAO.getAllProducts(ids);
     }
 }

@@ -7,6 +7,7 @@ import com.restaurant.service.ReservationService;
 import com.restaurant.service.helperModels.ChooserProduct;
 import com.restaurant.util.MockedData;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.LinkedList;
@@ -25,47 +26,60 @@ public class ProductController {
     @Autowired
     ReservationService reservationService;
 
+    @PreAuthorize("hasAnyAuthority('RESTAURANT')")
     @PostMapping(path = "/product")
-    public void addProduct(String productName, Integer restaurantId){
-        productService.createProduct(productName, restaurantId);
+    public void addProduct(String productName){
+        productService.createProduct(productName);
     }
 
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'USER', 'RESTAURANT')")
     @GetMapping(path = "/product/{id}", produces = "application/json")
     public Product getProduct(@PathVariable("id") int id){
         return productService.findProduct(id);
     }
 
-    @PutMapping(path = "/product")
+    @PreAuthorize("hasAnyAuthority('RESTAURANT')")
+    @PostMapping(path = "/product/update")  // A POST mapping instead of PUT in due to my tomcat with current configs doesn't support PUT
     public void updateProduct(Product product){
         productService.updateProductName(product.getId(), product.getProductName());
     }
 
-    @DeleteMapping(path = "/product")
-    public void deleteProduct(Product product){
-        productService.deleteProduct(product.getId());
+    @PreAuthorize("hasAnyAuthority('RESTAURANT')")
+    @PostMapping(path = "/product/delete/{id}")  // A POST mapping instead of DELETE in due to my tomcat with current configs doesn't support DELETE
+    public void deleteProduct(@PathVariable("id") int id){
+        productService.deleteProduct(id);
     }
 
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'RESTAURANT')")
     @GetMapping(path = "/products", produces = "application/json")
     public List<Product> getProducts(){
+//        createProducts();
         List<Product> products = productService.findAllProducts();
+        return products;
+    }
+
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'USER', 'RESTAURANT')")
+    @PostMapping(path = "/products", produces = "application/json")
+    public List<Product> getProductsByIds(List<Integer> ids){
+        List<Product> products = productService.findAllProducts(ids);
         return products;
     }
 
     public void createProducts(){
         if(dataIsCreated) return;
 
-        Product product1 = productService.createProduct(MockedData.productName(), 1);
-        Product product2 = productService.createProduct(MockedData.productName(), 2);
-        Product product3 = productService.createProduct(MockedData.productName(), 3);
-        Product product4 = productService.createProduct(MockedData.productName(), 4);
-        Product product5 = productService.createProduct(MockedData.productName(), 5);
-        Product product6 = productService.createProduct(MockedData.productName(), 6);
-        Product product7 = productService.createProduct(MockedData.productName(), 7);
-        Product product8 = productService.createProduct(MockedData.productName(), 1);
-        Product product9 = productService.createProduct(MockedData.productName(), 1);
-        Product product10 = productService.createProduct(MockedData.productName(), 2);
-        Product product11 = productService.createProduct(MockedData.productName(), 2);
-        Product product12 = productService.createProduct(MockedData.productName(), 2);
+        Product product1 = productService.createProduct(MockedData.productName());
+        Product product2 = productService.createProduct(MockedData.productName());
+        Product product3 = productService.createProduct(MockedData.productName());
+        Product product4 = productService.createProduct(MockedData.productName());
+        Product product5 = productService.createProduct(MockedData.productName());
+        Product product6 = productService.createProduct(MockedData.productName());
+        Product product7 = productService.createProduct(MockedData.productName());
+        Product product8 = productService.createProduct(MockedData.productName());
+        Product product9 = productService.createProduct(MockedData.productName());
+        Product product10 = productService.createProduct(MockedData.productName());
+        Product product11 = productService.createProduct(MockedData.productName());
+        Product product12 = productService.createProduct(MockedData.productName());
 
         List<ChooserProduct> products1 = new LinkedList<>();
         products1.add(new ChooserProduct(product1.getId(), 2));
@@ -75,13 +89,13 @@ public class ProductController {
         products2.add(new ChooserProduct(product4.getId(), 20));
         products2.add(new ChooserProduct(product5.getId(), 0));
 
-        Reservation reservation1 = reservationService.createReservationAndAddProducts(products1, 1);
-        Reservation reservation2 = reservationService.createReservationAndAddProducts(products2, 1);
-        Reservation reservation3 = reservationService.createReservationAndAddProducts(products1, 1);
-        Reservation reservation4 = reservationService.createReservationAndAddProducts(products2, 2);
-        Reservation reservation5 = reservationService.createReservationAndAddProducts(products1, 2);
-        Reservation reservation6 = reservationService.createReservationAndAddProducts(products2, 2);
-        Reservation reservation7 = reservationService.createReservationAndAddProducts(products1, 2);
+        Reservation reservation1 = reservationService.createReservationAndAddProducts(products1);
+        Reservation reservation2 = reservationService.createReservationAndAddProducts(products2);
+        Reservation reservation3 = reservationService.createReservationAndAddProducts(products1);
+        Reservation reservation4 = reservationService.createReservationAndAddProducts(products2);
+        Reservation reservation5 = reservationService.createReservationAndAddProducts(products1);
+        Reservation reservation6 = reservationService.createReservationAndAddProducts(products2);
+        Reservation reservation7 = reservationService.createReservationAndAddProducts(products1);
 
         reservationService.changeReservationState(reservation2.getId(), false);
         reservationService.changeReservationState(reservation3.getId(), false);

@@ -41,7 +41,7 @@ public interface ProductDAO {
 
     /** Gets all products by restaurant.
      * @return list of {@link Product} objects from db or if non exist return a list with size of 0.*/
-    List<Product> getAllProducts(Integer restaurantId);
+    List<Product> getAllProducts(List<Integer> ids);
 
     List<Product> getAllProducts();
 

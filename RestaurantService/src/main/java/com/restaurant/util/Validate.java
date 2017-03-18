@@ -1,5 +1,7 @@
 package com.restaurant.util;
 
+import java.util.Collection;
+
 /**
  * Created by Martha on 3/1/2017.
  */
@@ -19,6 +21,10 @@ public class Validate {
 
     public static boolean valid(Object object){
         return object != null;
+    }
+
+    public static boolean valid(Collection object){
+        return object != null && object.size() > 0;
     }
 
     public static boolean valid(Object object, String entry1, int entry2){

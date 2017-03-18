@@ -23,10 +23,9 @@ import java.util.Set;
                 query = "SELECT r FROM Reservation r WHERE r.isOpen = :" + "isOpen",
                 hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
         @NamedQuery(
-                name = "Reservation.getAllByRestaurantId",
-                query = "SELECT r FROM Reservation r WHERE r.restaurantId = :" + "restaurantId",
-                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
-
+                name = "Reservation.getAllByIds",
+                query = "SELECT r FROM Reservation r WHERE r.id IN :" + "list",
+                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")})
 })
 @Table(name = "reservation")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
@@ -34,7 +33,6 @@ public class Reservation implements Serializable {
 
     // region Fields
     private Integer id;
-    private Integer restaurantId;
     private String number;
     private boolean isOpen;
     Set<ProductInReservation> products;
@@ -45,11 +43,9 @@ public class Reservation implements Serializable {
     }
 
     public Reservation(String number,
-                       boolean isOpen,
-                       Integer restaurantId) {
+                       boolean isOpen) {
         this.number = number;
         this.isOpen = isOpen;
-        this.restaurantId = restaurantId;
     }
     // endregion
 
@@ -59,11 +55,6 @@ public class Reservation implements Serializable {
     @Column(name = "id_reservation")
     public Integer getId() {
         return id;
-    }
-
-    @Column(name = "restaurant_id")
-    public Integer getRestaurantId() {
-        return restaurantId;
     }
 
     @Column(name = "business_key",
@@ -110,10 +101,6 @@ public class Reservation implements Serializable {
     public void setProductInReservation(ProductInReservation newProduct) {
         if(products == null) products = new HashSet<>();
         products.add(newProduct);
-    }
-
-    public void setRestaurantId(Integer restaurantId) {
-        this.restaurantId = restaurantId;
     }
 
     // endregion

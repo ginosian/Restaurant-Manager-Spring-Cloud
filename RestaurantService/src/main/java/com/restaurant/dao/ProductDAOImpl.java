@@ -122,12 +122,12 @@ public class ProductDAOImpl implements ProductDAO{
     }
 
     @Override
-    public List<Product> getAllProducts(Integer restaurantId) {
+    public List<Product> getAllProducts(List<Integer> ids) {
         Session session;
         try{
             session = getSession();
-            Query query = session.createNamedQuery("Product.getByRestaurant");
-            query.setParameter("restaurantId", restaurantId);
+            Query query = session.createNamedQuery("Product.getAllByIds");
+            query.setParameter("list", ids);
             return query.getResultList();
         }catch (HibernateException e) {
             e.printStackTrace();
