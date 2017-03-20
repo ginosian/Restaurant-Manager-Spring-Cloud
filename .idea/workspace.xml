@@ -4,107 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/Gateway/src/main/java/com/restaurant/gateway/RefreshTokenToCookieFilter.java" description="String responseBody = IOUtils.toString(inputStream..." line="44" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba40e288-df88-47c4-a75d-20c62b829cbd" name="Default" comment="Ready for first stage. A stable version.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/APIService/build/classes/main/com/api/config/OauthClientConfig.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/APIService/build/classes/main/com/api/config/RestConfig.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/APIService/build/classes/main/com/api/service/OauthConnectionService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/APIService/build/classes/main/com/api/service/OauthConnectionServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ApplicationDetails/restaurant_manager.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ApplicationDetails/restaurant_manager_rest.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BookingService/build/classes/main/com/booking/config/RestConfig.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ClientLibraries/build/classes/main/model/BookingModel.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ClientLibraries/build/classes/main/model/BookingProduct.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ClientLibraries/build/classes/main/model/ProductInReservation.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ClientLibraries/build/classes/main/model/Reservations.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ClientLibraries/build/classes/main/model/RestaurantCreation.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ClientLibraries/build/classes/main/model/Role.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/APIService/src/main/java/com/api/config/OauthClientConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/APIService/src/main/java/com/api/config/RestConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/APIService/src/main/java/com/api/service/OauthConnectionService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/APIService/src/main/java/com/api/service/OauthConnectionServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ApplicationDetails/restaurant_manager.postman_shortcut.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/booking/config/RestConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ClientLibraries/src/main/java/model/BookingModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ClientLibraries/src/main/java/model/BookingProduct.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ClientLibraries/src/main/java/model/ProductInReservation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ClientLibraries/src/main/java/model/Reservations.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ClientLibraries/src/main/java/model/RestaurantCreation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ClientLibraries/src/main/java/model/Role.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ClientLibraries/build/classes/main/model/Restaurant.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ClientLibraries/build/classes/main/model/User.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ClientLibraries/src/main/java/model/Restaurant.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ClientLibraries/src/main/java/model/User.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/postmanRequestsTemplates/restaurant_manager.postman_collection.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/postmanRequestsTemplates/restaurant_manager.xlsx" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/APIService/build/classes/main/com/api/controller/Controller.class" afterPath="$PROJECT_DIR$/APIService/build/classes/main/com/api/controller/Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/APIService/build/classes/main/com/api/dao/RestaurantDAO.class" afterPath="$PROJECT_DIR$/APIService/build/classes/main/com/api/dao/RestaurantDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/APIService/build/classes/main/com/api/dao/RestaurantDAOImpl.class" afterPath="$PROJECT_DIR$/APIService/build/classes/main/com/api/dao/RestaurantDAOImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/APIService/build/classes/main/com/api/dataLoader/DataLoader.class" afterPath="$PROJECT_DIR$/APIService/build/classes/main/com/api/dataLoader/DataLoader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/APIService/build/classes/main/com/api/dto/Restaurant.class" afterPath="$PROJECT_DIR$/APIService/build/classes/main/com/api/dto/Restaurant.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/APIService/build/classes/main/com/api/service/RestaurantService.class" afterPath="$PROJECT_DIR$/APIService/build/classes/main/com/api/service/RestaurantService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/APIService/build/classes/main/com/api/service/RestaurantServiceImpl.class" afterPath="$PROJECT_DIR$/APIService/build/classes/main/com/api/service/RestaurantServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BookingService/build/classes/main/com/booking/controller/Controller.class" afterPath="$PROJECT_DIR$/BookingService/build/classes/main/com/booking/controller/Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BookingService/build/classes/main/com/booking/dao/BookingDAO.class" afterPath="$PROJECT_DIR$/BookingService/build/classes/main/com/booking/dao/BookingDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BookingService/build/classes/main/com/booking/dao/BookingDAOImpl.class" afterPath="$PROJECT_DIR$/BookingService/build/classes/main/com/booking/dao/BookingDAOImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BookingService/build/classes/main/com/booking/dataLoader/DataLoader.class" afterPath="$PROJECT_DIR$/BookingService/build/classes/main/com/booking/dataLoader/DataLoader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BookingService/build/classes/main/com/booking/dto/Booking.class" afterPath="$PROJECT_DIR$/BookingService/build/classes/main/com/booking/dto/Booking.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BookingService/build/classes/main/com/booking/serverconfig/ResourceServerConfiguration.class" afterPath="$PROJECT_DIR$/BookingService/build/classes/main/com/booking/serverconfig/ResourceServerConfiguration.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BookingService/build/classes/main/com/booking/service/BookingService.class" afterPath="$PROJECT_DIR$/BookingService/build/classes/main/com/booking/service/BookingService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BookingService/build/classes/main/com/booking/service/BookingServiceImpl.class" afterPath="$PROJECT_DIR$/BookingService/build/classes/main/com/booking/service/BookingServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BookingService/build/classes/main/com/booking/util/MockedData.class" afterPath="$PROJECT_DIR$/BookingService/build/classes/main/com/booking/util/MockedData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ClientLibraries/build/classes/main/model/Product.class" afterPath="$PROJECT_DIR$/ClientLibraries/build/classes/main/model/Product.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ClientLibraries/build/classes/main/model/Reservation.class" afterPath="$PROJECT_DIR$/ClientLibraries/build/classes/main/model/Reservation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RestaurantService/build/classes/main/com/restaurant/controller/ProductController.class" afterPath="$PROJECT_DIR$/RestaurantService/build/classes/main/com/restaurant/controller/ProductController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RestaurantService/build/classes/main/com/restaurant/controller/ReservationController.class" afterPath="$PROJECT_DIR$/RestaurantService/build/classes/main/com/restaurant/controller/ReservationController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RestaurantService/build/classes/main/com/restaurant/dataLoader/DataLoader.class" afterPath="$PROJECT_DIR$/RestaurantService/build/classes/main/com/restaurant/dataLoader/DataLoader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RestaurantService/build/classes/main/com/restaurant/service/ReservationService.class" afterPath="$PROJECT_DIR$/RestaurantService/build/classes/main/com/restaurant/service/ReservationService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RestaurantService/build/classes/main/com/restaurant/service/ReservationServiceImpl.class" afterPath="$PROJECT_DIR$/RestaurantService/build/classes/main/com/restaurant/service/ReservationServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserService/build/classes/main/com/user/controller/UserContoller.class" afterPath="$PROJECT_DIR$/UserService/build/classes/main/com/user/controller/UserContoller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserService/build/classes/main/com/user/dataLoader/DataLoader.class" afterPath="$PROJECT_DIR$/UserService/build/classes/main/com/user/dataLoader/DataLoader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserService/build/classes/main/com/user/dto/Role.class" afterPath="$PROJECT_DIR$/UserService/build/classes/main/com/user/dto/Role.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserService/build/classes/main/com/user/dto/User.class" afterPath="$PROJECT_DIR$/UserService/build/classes/main/com/user/dto/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserService/build/classes/main/com/user/service/UserService.class" afterPath="$PROJECT_DIR$/UserService/build/classes/main/com/user/service/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserService/build/classes/main/com/user/service/UserServiceImpl.class" afterPath="$PROJECT_DIR$/UserService/build/classes/main/com/user/service/UserServiceImpl.class" />
+    <list default="true" id="ba40e288-df88-47c4-a75d-20c62b829cbd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/APIService/build/resources/main/templates/home.html" afterPath="$PROJECT_DIR$/APIService/build/resources/main/templates/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/APIService/src/main/java/com/api/controller/Controller.java" afterPath="$PROJECT_DIR$/APIService/src/main/java/com/api/controller/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/APIService/src/main/java/com/api/dao/RestaurantDAO.java" afterPath="$PROJECT_DIR$/APIService/src/main/java/com/api/dao/RestaurantDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/APIService/src/main/java/com/api/dao/RestaurantDAOImpl.java" afterPath="$PROJECT_DIR$/APIService/src/main/java/com/api/dao/RestaurantDAOImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/APIService/src/main/java/com/api/dataLoader/DataLoader.java" afterPath="$PROJECT_DIR$/APIService/src/main/java/com/api/dataLoader/DataLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/APIService/src/main/java/com/api/dto/Restaurant.java" afterPath="$PROJECT_DIR$/APIService/src/main/java/com/api/dto/Restaurant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/APIService/src/main/java/com/api/service/RestaurantService.java" afterPath="$PROJECT_DIR$/APIService/src/main/java/com/api/service/RestaurantService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/APIService/src/main/java/com/api/service/RestaurantServiceImpl.java" afterPath="$PROJECT_DIR$/APIService/src/main/java/com/api/service/RestaurantServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/APIService/src/main/resources/templates/home.html" afterPath="$PROJECT_DIR$/APIService/src/main/resources/templates/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/booking/controller/Controller.java" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/booking/controller/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/booking/dao/BookingDAO.java" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/booking/dao/BookingDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/booking/dao/BookingDAOImpl.java" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/booking/dao/BookingDAOImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/booking/dataLoader/DataLoader.java" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/booking/dataLoader/DataLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/booking/dto/Booking.java" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/booking/dto/Booking.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/booking/serverconfig/ResourceServerConfiguration.java" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/booking/serverconfig/ResourceServerConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/booking/service/BookingService.java" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/booking/service/BookingService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/booking/service/BookingServiceImpl.java" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/booking/service/BookingServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/booking/util/MockedData.java" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/booking/util/MockedData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BookingService/src/test/java/util/MockedData.java" afterPath="$PROJECT_DIR$/BookingService/src/test/java/util/MockedData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ClientLibraries/src/main/java/model/Product.java" afterPath="$PROJECT_DIR$/ClientLibraries/src/main/java/model/Product.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ClientLibraries/src/main/java/model/Reservation.java" afterPath="$PROJECT_DIR$/ClientLibraries/src/main/java/model/Reservation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RestaurantService/build/resources/main/application.properties" afterPath="$PROJECT_DIR$/RestaurantService/build/resources/main/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RestaurantService/build/resources/main/templates/home.html" afterPath="$PROJECT_DIR$/RestaurantService/build/resources/main/templates/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RestaurantService/build/resources/main/test.properties" afterPath="$PROJECT_DIR$/RestaurantService/build/resources/main/test.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/restaurant/controller/ProductController.java" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/restaurant/controller/ProductController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/restaurant/controller/ReservationController.java" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/restaurant/controller/ReservationController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/restaurant/dataLoader/DataLoader.java" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/restaurant/dataLoader/DataLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/restaurant/service/ReservationService.java" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/restaurant/service/ReservationService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/restaurant/service/ReservationServiceImpl.java" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/restaurant/service/ReservationServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RestaurantService/src/main/resources/templates/home.html" afterPath="$PROJECT_DIR$/RestaurantService/src/main/resources/templates/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RestaurantService/src/test/java/TestDAO.java" afterPath="$PROJECT_DIR$/RestaurantService/src/test/java/TestDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserService/src/main/java/com/user/controller/UserContoller.java" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/user/controller/UserContoller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserService/src/main/java/com/user/dataLoader/DataLoader.java" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/user/dataLoader/DataLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserService/src/main/java/com/user/dto/Role.java" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/user/dto/Role.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserService/src/main/java/com/user/dto/User.java" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/user/dto/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserService/src/main/java/com/user/serverconfig/ResourceServerConfiguration.java" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/user/serverconfig/ResourceServerConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserService/src/main/java/com/user/service/UserService.java" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/user/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserService/src/main/java/com/user/service/UserServiceImpl.java" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/user/service/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserService/src/test/java/TestDAO.java" afterPath="$PROJECT_DIR$/UserService/src/test/java/TestDAO.java" />
     </list>
     <ignored path="RestaurantManager.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -291,8 +192,8 @@
       <file leaf-file-name="restaurant_manager.postman_shortcut.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ApplicationDetails/restaurant_manager.postman_shortcut.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+            <state relative-caret-position="378">
+              <caret line="174" column="22" selection-start-line="174" selection-start-column="22" selection-end-line="174" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -2831,7 +2732,7 @@
       <workItem from="1489724231688" duration="9358000" />
       <workItem from="1489736714956" duration="21738000" />
       <workItem from="1489849943053" duration="11454000" />
-      <workItem from="1489865026635" duration="51058000" />
+      <workItem from="1489865026635" duration="51113000" />
     </task>
     <task id="LOCAL-00001" summary="Creates project structure.&#10;Sets up persistance layer datasource  and ORM configurations, defines the beans. &#10;Implements persistance layer Entities, further can be a subject of chages.&#10;Defines DAO-s.">
       <created>1488025512392</created>
@@ -2924,7 +2825,14 @@
       <option name="project" value="LOCAL" />
       <updated>1489854585978</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Ready for first stage. A stable version.">
+      <created>1489989365200</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1489989365200</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -2960,7 +2868,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="457237000" />
+    <option name="totallyTimeSpent" value="457292000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -3552,8 +3460,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ApplicationDetails/restaurant_manager.postman_shortcut.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+        <state relative-caret-position="378">
+          <caret line="174" column="22" selection-start-line="174" selection-start-column="22" selection-end-line="174" selection-end-column="22" />
           <folding />
         </state>
       </provider>
