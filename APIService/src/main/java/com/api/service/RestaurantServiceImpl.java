@@ -21,12 +21,12 @@ public class RestaurantServiceImpl implements RestaurantService {
     RestaurantDAO restaurantDAO;
 
     @Override
-    public Restaurant createRestaurant(String restaurantName) {
+    public Restaurant createRestaurant(String restaurantName, Integer adminId) {
         //Validate  (later to be separated in validations service)
         if(!Validate.valid(restaurantName))return null;
         if(restaurantDAO.containsRestaurantByName(restaurantName))return null;
         // Operate
-        Restaurant restaurantObject = new Restaurant(restaurantName, BusKeyGen.nextKey());
+        Restaurant restaurantObject = new Restaurant(restaurantName, BusKeyGen.nextKey(), adminId);
         return restaurantDAO.writeRestaurant(restaurantObject);
     }
 
@@ -70,5 +70,12 @@ public class RestaurantServiceImpl implements RestaurantService {
     @Override
     public List<Restaurant> findAllRestaurants() {
         return restaurantDAO.getAllRestaurants();
+    }
+
+    @Override
+    public Restaurant findRestaurantByAdmin(String adminId) {
+        //Validate  (later to be separated in validations service)
+        if(!Validate.valid(adminId)) return null;
+        return restaurantDAO.readRestaurant(adminId);
     }
 }

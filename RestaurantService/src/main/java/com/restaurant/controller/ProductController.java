@@ -36,9 +36,9 @@ public class ProductController {
     }
 
     @PreAuthorize("hasAnyAuthority('RESTAURANT')")
-    @PostMapping(path = "/product/update")  // A POST mapping instead of PUT in due to my tomcat with current configs doesn't support PUT
-    public void updateProduct(Product product){
-        productService.updateProductName(product.getId(), product.getProductName());
+    @PostMapping(path = "/product/update", produces = "application/json")  // A POST mapping instead of PUT in due to my tomcat with current configs doesn't support PUT
+    public Product updateProduct(Product product){
+        return productService.updateProductName(product.getId(), product.getProductName());
     }
 
     @PreAuthorize("hasAnyAuthority('RESTAURANT')")

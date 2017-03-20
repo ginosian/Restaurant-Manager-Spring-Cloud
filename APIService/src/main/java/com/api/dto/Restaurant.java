@@ -20,6 +20,10 @@ import java.io.Serializable;
                 query = "SELECT r FROM Restaurant r WHERE r.name  =:" + "name",
                 hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
         @NamedQuery(
+                name = "Restaurant.getByAdmin",
+                query = "SELECT r FROM Restaurant r WHERE r.restaurantAdminId  =:" + "restaurantAdminId",
+                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
+        @NamedQuery(
                 name = "Restaurant.deleteById",
                 query = "DELETE FROM Restaurant r WHERE r.id  = :" + "id",
                 hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")}),
@@ -36,6 +40,7 @@ public class Restaurant implements Serializable {
     private Integer id;
     private String name;
     private String number;
+    private Integer restaurantAdminId;
     // endregion
 
     // region Constructors
@@ -43,9 +48,11 @@ public class Restaurant implements Serializable {
     }
 
     public Restaurant(String name,
-                      String number) {
+                      String number,
+                      Integer restaurantAdminId) {
         this.name = name;
         this.number = number;
+        this.restaurantAdminId = restaurantAdminId;
     }
     // endregion
 
@@ -71,6 +78,14 @@ public class Restaurant implements Serializable {
     public String getNumber() {
         return number;
     }
+
+
+    @Column(name = "admin_id",
+            nullable = false)
+    public Integer getRestaurantAdminId() {
+        return restaurantAdminId;
+    }
+
     // endregion
 
     // region Setters
@@ -86,6 +101,11 @@ public class Restaurant implements Serializable {
     private void setNumber(String number) {
         this.number = number;
     }
+
+    public void setRestaurantAdminId(Integer restaurantAdminId) {
+        this.restaurantAdminId = restaurantAdminId;
+    }
+
     // endregion
 
     // region Hashcode/equals overrides

@@ -40,6 +40,8 @@ public interface RestaurantDAO {
      * @return {@link Restaurant} object from db or null if doesn't exist.*/
     Restaurant readRestaurant(String number);
 
+    Restaurant readRestaurantByAdmin(Integer adminId);
+
     /** Deletes specified restaurant.
      * @param restaurantId generated id of restaurant.
      * @return true if restaurant was successfully deleted or did not exist.*/

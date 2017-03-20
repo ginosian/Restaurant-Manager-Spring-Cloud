@@ -1,0 +1,726 @@
+{
+	"variables": [],
+	"info": {
+		"name": "restaurant_manager",
+		"_postman_id": "f9b0346d-3067-f107-2aee-71f6102e380b",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "admin_scopes",
+			"description": "",
+			"item": [
+				{
+					"name": "read_all_products_ADMIN_RESTAURANT",
+					"request": {
+						"url": "http://localhost:1110/restaurant/products",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0ODk5NDAyMTYsInVzZXJfbmFtZSI6ImFkbWluIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiMTFiYTYzZjItMTIzZi00MTUzLWI3OWMtNTg3NTUwNGMyMGI4IiwiY2xpZW50X2lkIjoid2ViX2FwcCIsInNjb3BlIjpbIldFQiJdfQ.g3t2AH4xQbbOembu-S6vWcwLXMER8SUdCMOkCk6ij1NGcKazHLuAbjRVhyM9srErKBd1wAGKcuHDZQUsN9DlGRtehTuXMcAw7xO9hyz1fqjG2ZFWzpg8v7437cv8iqY3QniKENb0mcAbIoCUd2AMxzDgCDMBl2gZDBBtHVZSM4J0OfIeUt19hOrWQp7YLXk0eOK5MvLxWtxY6em_Qn4hSBIhGH-snrzB1QiHqiBAuUTVr6fONaZPbrEMcnhsOP01pTbgvoextNpVZeR0QARFFKQJ8GJEKmdz66Z-0cZCtY1H9OPsmLj138fKmgxFOdpjCvTXevjvBQ0TB3tTE8Z5qw",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"description": "service-restaurant"
+					},
+					"response": []
+				},
+				{
+					"name": "read_product_ALL",
+					"request": {
+						"url": "http://localhost:1110/restaurant/product/2",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0ODk3ODE5NDIsInVzZXJfbmFtZSI6InJlc3RhdXJhbnQiLCJhdXRob3JpdGllcyI6WyJSRVNUQVVSQU5UIl0sImp0aSI6ImJmNGJkMWEzLWM0OGItNDdjNS04OWExLTJhMjVkNzE0ZTdhYSIsImNsaWVudF9pZCI6IndlYl9hcHAiLCJzY29wZSI6WyJXRUIiXX0.LMrB9dAEU6tgJXgvGqaWjQGVoTpVHYwZyFPDJe07iLP94wxAKeu4Ek5VSdge4FN6GQRI8vUUAFI2OWhHGr1nlZVE0-vEDWOEl9gTA9PRIswY-Ra-iS9ljXgTRGhb3IOvA82sFQGqdX-9T5UjKQD0_wbEs7J5QT9Cu2k2Tm-PLMeN6p18OL5TzWuJ4tfpEsconGxLgJT_U10OeF_rsMmhDAHsI7c7NKwXMjbrQlSXNfLtvmq7oB9J7QmHbbzlYlcOe0mt5MtmtUf3-B68VTuJR8VKUsQewEh3ArA2lycS25iL-pUK5-3knyYsWaUZHnfBf0VqlqbsgSVkP5ZNgwMKaQ",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "productName",
+									"value": "Test_Product_Postman",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "read_restaurant_ALL ",
+					"request": {
+						"url": "http://localhost:1110/api/restaurant/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0ODk3Njk4NjksInVzZXJfbmFtZSI6ImFkbWluIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiOTc5NzRmMGYtYzVkNi00OWY2LTg0ZjUtOGQ2NTBmN2M1NzVkIiwiY2xpZW50X2lkIjoid2ViX2FwcCIsInNjb3BlIjpbIldFQiJdfQ.NYPgem_8sbhAAGSVUnbQSvP26fNysH6RnqGSJWovQD4_HCuhdBQ0KGiyUEZ067HLQMOgKxicS9PJnalJy0NSUXn-IDt9DHUZwk8LezC0dloG0-PtjTBWkih3WIUBigrKOh8MWEj8-g3jjSEGa4baLXRcFSf6jSz9C01VR9vdQxQirvEiZHdcT2g8J2iN6CEN8pYYgvSdgsNLO4NBYrSC3YCA3Ym6YYmdKs3wHwrkWE-9b3gnZM_TT00GrYCySEqMF1JrbNi1eybSL8c28hpB7lN99owu3_b6ON5tW6TR1j58IXGi7cUrU_rf8Ek5n6LYtHps59H4FVYknzGr-KSCQg",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "restaurantName",
+									"value": "test_restaurant_postman1",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "service:api"
+					},
+					"response": []
+				},
+				{
+					"name": "create_restaurant_ADMIN",
+					"request": {
+						"url": "http://localhost:1110/api/restaurant",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0ODk5MzIyMTYsInVzZXJfbmFtZSI6ImFkbWluIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiZTM0MTNmOWMtZjE2MS00MjRjLTg3OTMtZWM1Mzg5MjM4MTI5IiwiY2xpZW50X2lkIjoid2ViX2FwcCIsInNjb3BlIjpbIldFQiJdfQ.hy6PZ9GLpV3a5mLXAHBvg_4eBhMTmi6Oc0Q-L38ItcWfaBxCNcJ_IyTBU8GKcAtxc8nUrw-bPJ2qgom5gEm9FBqDsh1QrBgUOaqqQ1N5jOrYWnEXhjCD9OYxl9i7FXc99696azJoGA1ai0JvmIySoM-Ohhwx6al8ma4fVkRH8JkAaCpVnwbYJG6xnZUjAOjeekcq6orWyLsu2Kjf0L7b8oWJN-k1I6gIT-edx1qh-Pm6qy1eYCHF9_5X_kr5-sUbUFSeqJ4FwyInCKirUIqdd8qopvHGJowhCJYjx3mmYSx6PNr2sRWFxIgSZG8fw7ClyITvJEv3D57ntFVK1rbm_w",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n \t\"restaurantName\":\"PostmanRestaurant31\",\r\n \t\"username\":\"PostmanUser31\",\r\n \t\"password\":\"PostmanPassword31\",\r\n  \t\"role\":\"RESTAURANT\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "read_all_restaurants-ALL",
+					"request": {
+						"url": "http://localhost:1110/api/restaurants",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0ODk3Njk4NjksInVzZXJfbmFtZSI6ImFkbWluIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiOTc5NzRmMGYtYzVkNi00OWY2LTg0ZjUtOGQ2NTBmN2M1NzVkIiwiY2xpZW50X2lkIjoid2ViX2FwcCIsInNjb3BlIjpbIldFQiJdfQ.NYPgem_8sbhAAGSVUnbQSvP26fNysH6RnqGSJWovQD4_HCuhdBQ0KGiyUEZ067HLQMOgKxicS9PJnalJy0NSUXn-IDt9DHUZwk8LezC0dloG0-PtjTBWkih3WIUBigrKOh8MWEj8-g3jjSEGa4baLXRcFSf6jSz9C01VR9vdQxQirvEiZHdcT2g8J2iN6CEN8pYYgvSdgsNLO4NBYrSC3YCA3Ym6YYmdKs3wHwrkWE-9b3gnZM_TT00GrYCySEqMF1JrbNi1eybSL8c28hpB7lN99owu3_b6ON5tW6TR1j58IXGi7cUrU_rf8Ek5n6LYtHps59H4FVYknzGr-KSCQg",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"description": "service-api"
+					},
+					"response": []
+				},
+				{
+					"name": "delete_restaurant_ADMIN",
+					"request": {
+						"url": "http://localhost:1110/api/restaurant/delete/3",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0ODk3Njk4NjksInVzZXJfbmFtZSI6ImFkbWluIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiOTc5NzRmMGYtYzVkNi00OWY2LTg0ZjUtOGQ2NTBmN2M1NzVkIiwiY2xpZW50X2lkIjoid2ViX2FwcCIsInNjb3BlIjpbIldFQiJdfQ.NYPgem_8sbhAAGSVUnbQSvP26fNysH6RnqGSJWovQD4_HCuhdBQ0KGiyUEZ067HLQMOgKxicS9PJnalJy0NSUXn-IDt9DHUZwk8LezC0dloG0-PtjTBWkih3WIUBigrKOh8MWEj8-g3jjSEGa4baLXRcFSf6jSz9C01VR9vdQxQirvEiZHdcT2g8J2iN6CEN8pYYgvSdgsNLO4NBYrSC3YCA3Ym6YYmdKs3wHwrkWE-9b3gnZM_TT00GrYCySEqMF1JrbNi1eybSL8c28hpB7lN99owu3_b6ON5tW6TR1j58IXGi7cUrU_rf8Ek5n6LYtHps59H4FVYknzGr-KSCQg",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"description": "service-api"
+					},
+					"response": []
+				},
+				{
+					"name": "read_all_reservations_ADMIN_RESTAURANT",
+					"request": {
+						"url": "http://localhost:1110/restaurant/reservations",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0ODk5NDEzMDYsInVzZXJfbmFtZSI6InJlc3RhdXJhbnQiLCJhdXRob3JpdGllcyI6WyJSRVNUQVVSQU5UIl0sImp0aSI6ImRhYTBjZjJhLWQ5NGMtNDA5MS1iYjEyLWUzZTljM2Q3M2ZhNSIsImNsaWVudF9pZCI6IndlYl9hcHAiLCJzY29wZSI6WyJXRUIiXX0.RBlwJOcyywen9TTZqDPXG2084iJYZ9MErWNqJWC8bKhusQml3W_2ZTed43zxL4PLN9idhY2bsjSr1HiOI9qA7oJcoJ9DMw-EV8129VjJKabdJLdxeW0MSsUqWJh17AxlxTmr-6g8ywUOKDDOcmH-pnxa91T0aqCjz7LOn-irXDyziSPg5J9QqLoUF3pBla8ZUg3Rm3w2fkQhtsD7Lc96_2G9kgxAdr-e_CXrR2c3gQyG60Bs0CYVPaTcysG_Nq64HW2gBkU8qhUiQHzXb1X8kaZOqfZTti4uW2K-0ZiKDjd5C1EttBXNGYJcerBQQkENm3Zz1IEpUh7V7WdU1pxUqQ",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"description": "service-restaurant"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"description": "",
+			"item": [
+				{
+					"name": "login_as_admin",
+					"request": {
+						"url": "http://localhost:1110/auth/oauth/token",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "pass",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "login_as_user",
+					"request": {
+						"url": "http://localhost:1110/auth/oauth/token",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "pass",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "login_as_restaurant",
+					"request": {
+						"url": "http://localhost:1110/auth/oauth/token",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "username",
+									"value": "restaurant",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "pass",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "restaurant_scopes",
+			"description": "",
+			"item": [
+				{
+					"name": "read_all_products_ADMIN_RESTAURANT",
+					"request": {
+						"url": "http://localhost:1110/restaurant/products",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0ODk5NDAyMTYsInVzZXJfbmFtZSI6ImFkbWluIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiMTFiYTYzZjItMTIzZi00MTUzLWI3OWMtNTg3NTUwNGMyMGI4IiwiY2xpZW50X2lkIjoid2ViX2FwcCIsInNjb3BlIjpbIldFQiJdfQ.g3t2AH4xQbbOembu-S6vWcwLXMER8SUdCMOkCk6ij1NGcKazHLuAbjRVhyM9srErKBd1wAGKcuHDZQUsN9DlGRtehTuXMcAw7xO9hyz1fqjG2ZFWzpg8v7437cv8iqY3QniKENb0mcAbIoCUd2AMxzDgCDMBl2gZDBBtHVZSM4J0OfIeUt19hOrWQp7YLXk0eOK5MvLxWtxY6em_Qn4hSBIhGH-snrzB1QiHqiBAuUTVr6fONaZPbrEMcnhsOP01pTbgvoextNpVZeR0QARFFKQJ8GJEKmdz66Z-0cZCtY1H9OPsmLj138fKmgxFOdpjCvTXevjvBQ0TB3tTE8Z5qw",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"description": "service-restaurant"
+					},
+					"response": []
+				},
+				{
+					"name": "create_product_RESTAURANT",
+					"request": {
+						"url": "http://localhost:1110/restaurant/product",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0ODk3ODE5NDIsInVzZXJfbmFtZSI6InJlc3RhdXJhbnQiLCJhdXRob3JpdGllcyI6WyJSRVNUQVVSQU5UIl0sImp0aSI6ImJmNGJkMWEzLWM0OGItNDdjNS04OWExLTJhMjVkNzE0ZTdhYSIsImNsaWVudF9pZCI6IndlYl9hcHAiLCJzY29wZSI6WyJXRUIiXX0.LMrB9dAEU6tgJXgvGqaWjQGVoTpVHYwZyFPDJe07iLP94wxAKeu4Ek5VSdge4FN6GQRI8vUUAFI2OWhHGr1nlZVE0-vEDWOEl9gTA9PRIswY-Ra-iS9ljXgTRGhb3IOvA82sFQGqdX-9T5UjKQD0_wbEs7J5QT9Cu2k2Tm-PLMeN6p18OL5TzWuJ4tfpEsconGxLgJT_U10OeF_rsMmhDAHsI7c7NKwXMjbrQlSXNfLtvmq7oB9J7QmHbbzlYlcOe0mt5MtmtUf3-B68VTuJR8VKUsQewEh3ArA2lycS25iL-pUK5-3knyYsWaUZHnfBf0VqlqbsgSVkP5ZNgwMKaQ",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "productName",
+									"value": "Test_Product_Postman",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "read_product_ALL",
+					"request": {
+						"url": "http://localhost:1110/restaurant/product/2",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0ODk3ODE5NDIsInVzZXJfbmFtZSI6InJlc3RhdXJhbnQiLCJhdXRob3JpdGllcyI6WyJSRVNUQVVSQU5UIl0sImp0aSI6ImJmNGJkMWEzLWM0OGItNDdjNS04OWExLTJhMjVkNzE0ZTdhYSIsImNsaWVudF9pZCI6IndlYl9hcHAiLCJzY29wZSI6WyJXRUIiXX0.LMrB9dAEU6tgJXgvGqaWjQGVoTpVHYwZyFPDJe07iLP94wxAKeu4Ek5VSdge4FN6GQRI8vUUAFI2OWhHGr1nlZVE0-vEDWOEl9gTA9PRIswY-Ra-iS9ljXgTRGhb3IOvA82sFQGqdX-9T5UjKQD0_wbEs7J5QT9Cu2k2Tm-PLMeN6p18OL5TzWuJ4tfpEsconGxLgJT_U10OeF_rsMmhDAHsI7c7NKwXMjbrQlSXNfLtvmq7oB9J7QmHbbzlYlcOe0mt5MtmtUf3-B68VTuJR8VKUsQewEh3ArA2lycS25iL-pUK5-3knyYsWaUZHnfBf0VqlqbsgSVkP5ZNgwMKaQ",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "productName",
+									"value": "Test_Product_Postman",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "read_restaurant_ALL ",
+					"request": {
+						"url": "http://localhost:1110/api/restaurant/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0ODk3Njk4NjksInVzZXJfbmFtZSI6ImFkbWluIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiOTc5NzRmMGYtYzVkNi00OWY2LTg0ZjUtOGQ2NTBmN2M1NzVkIiwiY2xpZW50X2lkIjoid2ViX2FwcCIsInNjb3BlIjpbIldFQiJdfQ.NYPgem_8sbhAAGSVUnbQSvP26fNysH6RnqGSJWovQD4_HCuhdBQ0KGiyUEZ067HLQMOgKxicS9PJnalJy0NSUXn-IDt9DHUZwk8LezC0dloG0-PtjTBWkih3WIUBigrKOh8MWEj8-g3jjSEGa4baLXRcFSf6jSz9C01VR9vdQxQirvEiZHdcT2g8J2iN6CEN8pYYgvSdgsNLO4NBYrSC3YCA3Ym6YYmdKs3wHwrkWE-9b3gnZM_TT00GrYCySEqMF1JrbNi1eybSL8c28hpB7lN99owu3_b6ON5tW6TR1j58IXGi7cUrU_rf8Ek5n6LYtHps59H4FVYknzGr-KSCQg",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "restaurantName",
+									"value": "test_restaurant_postman1",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "service:api"
+					},
+					"response": []
+				},
+				{
+					"name": "read_all_restaurants-ALL",
+					"request": {
+						"url": "http://localhost:1110/api/restaurants",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0ODk3Njk4NjksInVzZXJfbmFtZSI6ImFkbWluIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiOTc5NzRmMGYtYzVkNi00OWY2LTg0ZjUtOGQ2NTBmN2M1NzVkIiwiY2xpZW50X2lkIjoid2ViX2FwcCIsInNjb3BlIjpbIldFQiJdfQ.NYPgem_8sbhAAGSVUnbQSvP26fNysH6RnqGSJWovQD4_HCuhdBQ0KGiyUEZ067HLQMOgKxicS9PJnalJy0NSUXn-IDt9DHUZwk8LezC0dloG0-PtjTBWkih3WIUBigrKOh8MWEj8-g3jjSEGa4baLXRcFSf6jSz9C01VR9vdQxQirvEiZHdcT2g8J2iN6CEN8pYYgvSdgsNLO4NBYrSC3YCA3Ym6YYmdKs3wHwrkWE-9b3gnZM_TT00GrYCySEqMF1JrbNi1eybSL8c28hpB7lN99owu3_b6ON5tW6TR1j58IXGi7cUrU_rf8Ek5n6LYtHps59H4FVYknzGr-KSCQg",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"description": "service-api"
+					},
+					"response": []
+				},
+				{
+					"name": "read_all_reservations_ADMIN_RESTAURANT",
+					"request": {
+						"url": "http://localhost:1110/restaurant/reservations",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0ODk5NDEzMDYsInVzZXJfbmFtZSI6InJlc3RhdXJhbnQiLCJhdXRob3JpdGllcyI6WyJSRVNUQVVSQU5UIl0sImp0aSI6ImRhYTBjZjJhLWQ5NGMtNDA5MS1iYjEyLWUzZTljM2Q3M2ZhNSIsImNsaWVudF9pZCI6IndlYl9hcHAiLCJzY29wZSI6WyJXRUIiXX0.RBlwJOcyywen9TTZqDPXG2084iJYZ9MErWNqJWC8bKhusQml3W_2ZTed43zxL4PLN9idhY2bsjSr1HiOI9qA7oJcoJ9DMw-EV8129VjJKabdJLdxeW0MSsUqWJh17AxlxTmr-6g8ywUOKDDOcmH-pnxa91T0aqCjz7LOn-irXDyziSPg5J9QqLoUF3pBla8ZUg3Rm3w2fkQhtsD7Lc96_2G9kgxAdr-e_CXrR2c3gQyG60Bs0CYVPaTcysG_Nq64HW2gBkU8qhUiQHzXb1X8kaZOqfZTti4uW2K-0ZiKDjd5C1EttBXNGYJcerBQQkENm3Zz1IEpUh7V7WdU1pxUqQ",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"description": "service-restaurant"
+					},
+					"response": []
+				},
+				{
+					"name": "read_bookings_by_user_USER_RESTAURANT",
+					"request": {
+						"url": "http://localhost:1110/booking/bookings/user/10",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0ODk5NDkzMzEsInVzZXJfbmFtZSI6InJlc3RhdXJhbnQiLCJhdXRob3JpdGllcyI6WyJSRVNUQVVSQU5UIl0sImp0aSI6ImJmOThkYjViLTZlMjYtNGE4Yy04MjIyLTI4NzdiNjJjOTczOSIsImNsaWVudF9pZCI6IndlYl9hcHAiLCJzY29wZSI6WyJXRUIiXX0.SB7Cu4NB30PFoOIFi6AB1mWTTmwcIoZfwYh440HO3e0QVGWBr94UNvrDjs99a3kMvi8uOGpG_UKTDXmvpif04sMdZP86-z9Xt9G3CbyiXHemRmJDpxy3sK6SgQQ4RSe1rBBi340TBLx4d18rutGEmtKaVRa5GCWvwbphgxxuGfUAK7me8QIlDaaNlesGZcbNcnBtGCU4HhgWjG0vz9y2AljK3MGgBl-d0ZCuCmbdUSK2_6xpqYFZRNzl-yGQJPyh87if7oFDT65gavBACEwVzqWt_nF83eFVB30UvAibbVwjSurRFTdXyuRChSDi5bozjDKjcLSC6uLN6arSDo7FFg",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"description": "service-booking"
+					},
+					"response": []
+				},
+				{
+					"name": "read_all_closed_reservations_RESTAURANT",
+					"request": {
+						"url": "http://localhost:1110/restaurant/reservations/closed",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0ODk5ODkzMDMsInVzZXJfbmFtZSI6InJlc3RhdXJhbnQiLCJhdXRob3JpdGllcyI6WyJSRVNUQVVSQU5UIl0sImp0aSI6ImE4M2MzOGFiLTFkMzUtNGQxNS04OWNkLTlhMzJlMDc4YjUxYiIsImNsaWVudF9pZCI6IndlYl9hcHAiLCJzY29wZSI6WyJXRUIiXX0.PdXZdIN6w0GiUjTYYCKej0ha-dNfrj7cEgofWaO7I-VdBGOpDLx5wd9ptDigWS_AO0VHL_HXc-gU_bRT0u6c5GqB__yfUSQWSoY_PJpx0gQ2rqfTAGs4MEd7Llt3vPRu0D9f86cui9T68oaACflhusLvM13-k3l3M4l4NzZsu4cpmbYpeoHXZQLUTglUzPgAkYRQFU1lL9udVTi0LseoFqDWj2uA1jg6dJADAtwsSjfO3VEz3ZVcrJpP8CjteuoL231hrFlF1zPvyGUzH-mPLoCVwVv9c3vMpZvTpAYH-B9GFE0eN4rAMD7jaQ1KK80JPGhci8wFfkSulZ2w0iBXCg",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"description": "service-restaurant"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user_scopes",
+			"description": "",
+			"item": [
+				{
+					"name": "read_product_ALL",
+					"request": {
+						"url": "http://localhost:1110/restaurant/product/2",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0ODk3ODE5NDIsInVzZXJfbmFtZSI6InJlc3RhdXJhbnQiLCJhdXRob3JpdGllcyI6WyJSRVNUQVVSQU5UIl0sImp0aSI6ImJmNGJkMWEzLWM0OGItNDdjNS04OWExLTJhMjVkNzE0ZTdhYSIsImNsaWVudF9pZCI6IndlYl9hcHAiLCJzY29wZSI6WyJXRUIiXX0.LMrB9dAEU6tgJXgvGqaWjQGVoTpVHYwZyFPDJe07iLP94wxAKeu4Ek5VSdge4FN6GQRI8vUUAFI2OWhHGr1nlZVE0-vEDWOEl9gTA9PRIswY-Ra-iS9ljXgTRGhb3IOvA82sFQGqdX-9T5UjKQD0_wbEs7J5QT9Cu2k2Tm-PLMeN6p18OL5TzWuJ4tfpEsconGxLgJT_U10OeF_rsMmhDAHsI7c7NKwXMjbrQlSXNfLtvmq7oB9J7QmHbbzlYlcOe0mt5MtmtUf3-B68VTuJR8VKUsQewEh3ArA2lycS25iL-pUK5-3knyYsWaUZHnfBf0VqlqbsgSVkP5ZNgwMKaQ",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "productName",
+									"value": "Test_Product_Postman",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "read_restaurant_ALL",
+					"request": {
+						"url": "http://localhost:1110/api/restaurant/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0ODk3Njk4NjksInVzZXJfbmFtZSI6ImFkbWluIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiOTc5NzRmMGYtYzVkNi00OWY2LTg0ZjUtOGQ2NTBmN2M1NzVkIiwiY2xpZW50X2lkIjoid2ViX2FwcCIsInNjb3BlIjpbIldFQiJdfQ.NYPgem_8sbhAAGSVUnbQSvP26fNysH6RnqGSJWovQD4_HCuhdBQ0KGiyUEZ067HLQMOgKxicS9PJnalJy0NSUXn-IDt9DHUZwk8LezC0dloG0-PtjTBWkih3WIUBigrKOh8MWEj8-g3jjSEGa4baLXRcFSf6jSz9C01VR9vdQxQirvEiZHdcT2g8J2iN6CEN8pYYgvSdgsNLO4NBYrSC3YCA3Ym6YYmdKs3wHwrkWE-9b3gnZM_TT00GrYCySEqMF1JrbNi1eybSL8c28hpB7lN99owu3_b6ON5tW6TR1j58IXGi7cUrU_rf8Ek5n6LYtHps59H4FVYknzGr-KSCQg",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "restaurantName",
+									"value": "test_restaurant_postman1",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "service:api"
+					},
+					"response": []
+				},
+				{
+					"name": "read_all_restaurants-ALL copy",
+					"request": {
+						"url": "http://localhost:1110/api/restaurants",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0ODk3Njk4NjksInVzZXJfbmFtZSI6ImFkbWluIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiOTc5NzRmMGYtYzVkNi00OWY2LTg0ZjUtOGQ2NTBmN2M1NzVkIiwiY2xpZW50X2lkIjoid2ViX2FwcCIsInNjb3BlIjpbIldFQiJdfQ.NYPgem_8sbhAAGSVUnbQSvP26fNysH6RnqGSJWovQD4_HCuhdBQ0KGiyUEZ067HLQMOgKxicS9PJnalJy0NSUXn-IDt9DHUZwk8LezC0dloG0-PtjTBWkih3WIUBigrKOh8MWEj8-g3jjSEGa4baLXRcFSf6jSz9C01VR9vdQxQirvEiZHdcT2g8J2iN6CEN8pYYgvSdgsNLO4NBYrSC3YCA3Ym6YYmdKs3wHwrkWE-9b3gnZM_TT00GrYCySEqMF1JrbNi1eybSL8c28hpB7lN99owu3_b6ON5tW6TR1j58IXGi7cUrU_rf8Ek5n6LYtHps59H4FVYknzGr-KSCQg",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"description": "service-api"
+					},
+					"response": []
+				},
+				{
+					"name": "create_booking_USER",
+					"request": {
+						"url": "http://localhost:1110/booking/booking",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0ODk5NDE3ODksInVzZXJfbmFtZSI6InVzZXIiLCJhdXRob3JpdGllcyI6WyJVU0VSIl0sImp0aSI6ImQwMzk1YWZlLWMxNDMtNDJiZS04MjJmLWI5OTk3NTBlYzI0NyIsImNsaWVudF9pZCI6IndlYl9hcHAiLCJzY29wZSI6WyJXRUIiXX0.su8B0kYCK30uz7VIpTY0o-go9GyI3Q7tLXPWQbOdW1P6eUNVzKUQZ1-9QfqSiqr8-XOV6RfGHreoij8I8TLbwu6AJZ6pbreatKlx6uwA06RGclgcKzs2DoL0dUP0p-2GYnXsIXf9efO4ibOwMpkRiz3qrk__5OMYotd4CMyGVMkYjV9W6TJarh8i2KPIRBDS8nc0sQYMhXCC03gITko18dYTEUmwUtc1qg0C9npAFLXmBOUPx_OrB4lKd9OhZXVRAhXIk35axvw9ifXLnuEdO-wWTF9yoQPBM1nCaOPCV74abPDWoBHdiIVgT1VIMhQ9_iZ_jIVI9CCW8pzl5wkGxw",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n \t\"userId\":65,\r\n \t\"restaurantId\":1,\r\n \t\"restaurantName\":\"Test_RESTAURANT_1\",\r\n  \t\r\n  \"products\" : [\r\n    {\r\n        \"productName\":\"Test_Product_1\",\r\n        \"productId\":1,\r\n        \"amount\":15\r\n    },\r\n    {\r\n        \"productName\":\"Test_Product_2\",\r\n        \"productId\":2,\r\n        \"amount\":3\r\n    },\r\n    {\r\n        \"productName\":\"Test_Product_3\",\r\n        \"productId\":3,\r\n        \"amount\":7\r\n    },\r\n    {\r\n        \"productName\":\"Test_Product_4\",\r\n        \"productId\":4,\r\n        \"amount\":15\r\n    },\r\n    {\r\n        \"productName\":\"Test_Product_5\",\r\n        \"productId\":5,\r\n        \"amount\":8\r\n    },\r\n    {\r\n        \"productName\":\"Test_Product_6\",\r\n        \"productId\":6,\r\n        \"amount\":2\r\n    }\r\n    \r\n]\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "read_bookings_by_user_USER_RESTAURANT",
+					"request": {
+						"url": "http://localhost:1110/booking/bookings/user/10",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0ODk5NDkzMzEsInVzZXJfbmFtZSI6InJlc3RhdXJhbnQiLCJhdXRob3JpdGllcyI6WyJSRVNUQVVSQU5UIl0sImp0aSI6ImJmOThkYjViLTZlMjYtNGE4Yy04MjIyLTI4NzdiNjJjOTczOSIsImNsaWVudF9pZCI6IndlYl9hcHAiLCJzY29wZSI6WyJXRUIiXX0.SB7Cu4NB30PFoOIFi6AB1mWTTmwcIoZfwYh440HO3e0QVGWBr94UNvrDjs99a3kMvi8uOGpG_UKTDXmvpif04sMdZP86-z9Xt9G3CbyiXHemRmJDpxy3sK6SgQQ4RSe1rBBi340TBLx4d18rutGEmtKaVRa5GCWvwbphgxxuGfUAK7me8QIlDaaNlesGZcbNcnBtGCU4HhgWjG0vz9y2AljK3MGgBl-d0ZCuCmbdUSK2_6xpqYFZRNzl-yGQJPyh87if7oFDT65gavBACEwVzqWt_nF83eFVB30UvAibbVwjSurRFTdXyuRChSDi5bozjDKjcLSC6uLN6arSDo7FFg",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"description": "service-booking"
+					},
+					"response": []
+				},
+				{
+					"name": "create_reservation_USER",
+					"request": {
+						"url": "http://localhost:1110/restaurant/reservation",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0ODk5ODg5NjEsInVzZXJfbmFtZSI6InVzZXIiLCJhdXRob3JpdGllcyI6WyJVU0VSIl0sImp0aSI6ImJhZmJkY2UwLWRmYzYtNGI5YS1hMDRjLTY3MmY0MTBlOGMyYyIsImNsaWVudF9pZCI6IndlYl9hcHAiLCJzY29wZSI6WyJXRUIiXX0.i2gbXAR2WQ4UUraa0PO7mVFh-FDGSCmfFyC3ET1Wh2TWQs2ugDi9zeJPoZqWffvMsq9XpQ88T4tHFbUuB9NNyqpoXBb4d6RMdQAghFRd8WDvmhcd2CRlOYO4p_fIoxEMr0pRppT0l2OWvK56_une7QrgEyz4s05f6ifdjvSaaq63h_ApPzVZzrLneN-JOAIpVYp4bHsbleoXXbXUCBteyQIA3o_jcY8S0RFaxdrFYOc3SMX-q0Ll-x3xla14RgTBk3HGdqOY4Z8lOhtgjD78mJ_FK44MM5Dz6_FM2di1GJQG5bx9nl-3RxhZqCUiXVwkg9O4-uZpCGzrMjeZFjRX5w",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n  \t\"productId\": 3,\n    \"productName\": \"Test_Product_3\",\n    \"amount\": 1\n  },\n  {\n  \t\"productId\": 2,\n    \"productName\": \"Test_Product_2\",\n    \"amount\": 10\n  },\n  {\n  \t\"productId\": 1,\n    \"productName\": \"Test_Product_1\",\n    \"amount\": 2\n  }\n]"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

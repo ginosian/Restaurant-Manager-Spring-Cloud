@@ -10,7 +10,7 @@ import java.util.List;
  */
 public interface UserService {
 
-    User createUser(String username, String password, Role... roles);
+    User createUser(String username, String password, String... roles);
 
     User findUser(int userId);
 

@@ -2,6 +2,8 @@ package com.booking.service;
 
 
 import com.booking.dto.Booking;
+import model.BookingModel;
+import model.Reservations;
 
 import java.util.List;
 
@@ -10,7 +12,9 @@ import java.util.List;
  */
 public interface BookingService {
 
-    Booking createBooking(String userId, String restaurantId, String reservationId);
+    Booking createBooking(BookingModel booking,  String token);
+
+    Booking createBooking(Integer userId, Integer restaurantId, Integer reservationId);
 
     Booking findBookingById(int bookingId);
 
@@ -20,8 +24,8 @@ public interface BookingService {
 
     List<Booking> findAllBookings();
 
-    List<Booking> findAllBookingsByUserId();
+    Reservations findAllBookingsByUserId(Integer userId, String token);
 
-    List<Booking> findAllBookingsByRestaurantId();
+    Reservations findAllBookingsByRestaurantId(Integer restaurantId, String token);
 
 }

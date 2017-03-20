@@ -24,14 +24,14 @@ public class UserServiceImpl implements UserService{
     UserDAO userDAO;
 
     @Override
-    public User createUser(String username, String password, Role ... roles) {
+    public User createUser(String username, String password, String ... roles) {
         //Validate  (later to be separated in validations service)
         if(!Validate.valid(username, password))return null;
         if(userDAO.containsUserByUsername(username)) return null;
         int index = roles.length - 1;
         Set<Role> actualRoles = new HashSet<>();
         while(index >= 0){
-            Role temp = userDAO.readRole(roles[index].getId());
+            Role temp = userDAO.readRole(roles[index]);
             if( temp != null) actualRoles.add(temp);
             index--;
         }

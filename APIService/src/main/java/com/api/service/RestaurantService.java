@@ -9,11 +9,13 @@ import java.util.List;
  */
 public interface RestaurantService {
 
-    Restaurant createRestaurant(String restaurantName);
+    Restaurant createRestaurant(String restaurantName, Integer adminId);
 
     Restaurant findRestaurant(int restaurantId);
 
     Restaurant findRestaurant(String restaurantName);
+
+    Restaurant findRestaurantByAdmin(String adminId);
 
     Restaurant updateRestaurantName(int restaurantId, String restaurantName);
 

@@ -9,12 +9,12 @@ public class MockedData {
     public static int userCounter;
     public static int reservationCounter;
 
-    public static String userId(){
-        return Integer.toString(++userCounter);
+    public static Integer userId(){
+        return ++userCounter;
     }
 
-    public static String reservationId(){
-        return Integer.toString(++reservationCounter);
+    public static Integer reservationId(){
+        return ++reservationCounter;
     }
 
     public static String uuid(){

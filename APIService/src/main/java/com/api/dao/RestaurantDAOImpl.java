@@ -126,7 +126,6 @@ public class RestaurantDAOImpl implements RestaurantDAO {
         Session session = null;
         try{
             session = getSession();
-            System.out.println("*****Transaction is active ********" + TransactionSynchronizationManager.isActualTransactionActive() + "**getAllRestaurants**");
             Query query = session.createNamedQuery("Restaurant.getAll");
             return query.getResultList();
         }catch (HibernateException e) {
@@ -135,4 +134,17 @@ public class RestaurantDAOImpl implements RestaurantDAO {
         return null;
     }
 
+    @Override
+    public Restaurant readRestaurantByAdmin(Integer adminId) {
+        Session session = null;
+        try{
+            session = getSession();
+            Query query = session.createNamedQuery("Restaurant.getByAdmin");
+            query.setParameter("restaurantAdminId", adminId);
+            return (Restaurant) query.getSingleResult();
+        }catch (HibernateException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

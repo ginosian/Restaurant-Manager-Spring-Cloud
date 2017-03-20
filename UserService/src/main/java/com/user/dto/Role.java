@@ -1,5 +1,6 @@
 package com.user.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.annotations.Immutable;
@@ -11,6 +12,7 @@ import java.io.Serializable;
  * Created by Martha on 2/24/2017.
  */
 @Immutable
+@JsonIgnoreProperties(ignoreUnknown = true)
 @Entity
 @NamedQueries({
         @NamedQuery(

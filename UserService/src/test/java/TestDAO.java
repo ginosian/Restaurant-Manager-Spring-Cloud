@@ -42,7 +42,7 @@ public class TestDAO {
         role1 = userService.createRole(MockedData.roleName());
         role2 = userService.createRole(MockedData.roleName());
 
-        user1 = userService.createUser(MockedData.userName(), MockedData.password(), role1, role2);
+        user1 = userService.createUser(MockedData.userName(), MockedData.password(), role1.getRole(), role2.getRole());
     }
 
     @Test
@@ -67,7 +67,7 @@ public class TestDAO {
         Assert.assertEquals(user1, userService.findUser(user1.getId()));
 
         // A null is returned if duplicate user is attempt to record
-        Assert.assertNull(userService.createUser(user1.getUsername(), user1.getPassword(), role1, role2));
+        Assert.assertNull(userService.createUser(user1.getUsername(), user1.getPassword(), role1.getRole(), role2.getRole()));
 
         // User deleted
         Assert.assertTrue(userService.deleteUser(user1.getId()));

@@ -4,7 +4,7 @@ import com.restaurant.dto.ProductInReservation;
 import com.restaurant.dto.Reservation;
 import com.restaurant.service.ProductService;
 import com.restaurant.service.ReservationService;
-import com.restaurant.service.helperModels.ChooserProduct;
+import model.BookingProduct;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Rule;
@@ -49,8 +49,8 @@ public class TestDAO {
     private Product product4;
     private Product product5;
 
-    private List<ChooserProduct> products1;
-    private List<ChooserProduct> products2;
+    private List<BookingProduct> products1;
+    private List<BookingProduct> products2;
 
     @Before
     public void initRawEntities(){
@@ -61,12 +61,12 @@ public class TestDAO {
         product5 = productService.createProduct(MockedData.productName());
 
         products1 = new LinkedList<>();
-        products1.add(new ChooserProduct(product1.getId(), 2));
-        products1.add(new ChooserProduct(product2.getId(), 8));
-        products1.add(new ChooserProduct(product3.getId(), 5));
+        products1.add(new BookingProduct(product1.getId(), 2));
+        products1.add(new BookingProduct(product2.getId(), 8));
+        products1.add(new BookingProduct(product3.getId(), 5));
         products2 = new LinkedList<>();
-        products2.add(new ChooserProduct(product4.getId(), 20));
-        products2.add(new ChooserProduct(product5.getId(), 0));
+        products2.add(new BookingProduct(product4.getId(), 20));
+        products2.add(new BookingProduct(product5.getId(), 0));
     }
 
     @Test

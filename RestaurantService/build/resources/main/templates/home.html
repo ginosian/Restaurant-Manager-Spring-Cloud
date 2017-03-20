@@ -7,39 +7,39 @@
 </head>
 <body>
 
-<div th:unless="${#lists.isEmpty(allProducts)}">
-    <h2>List of Products</h2>
+<!--<div th:unless="${#lists.isEmpty(allProducts)}">-->
+    <!--<h2>List of Products</h2>-->
 
-    <table>
-        <thead>
-        <tr>
-            <th>Product name</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="product : ${allProducts}">
-            <td th:text="${product.productName}"/>
-        </tr>
-        </tbody>
-    </table>
-    </div>
+    <!--<table>-->
+        <!--<thead>-->
+        <!--<tr>-->
+            <!--<th>Product name</th>-->
+        <!--</tr>-->
+        <!--</thead>-->
+        <!--<tbody>-->
+        <!--<tr th:each="product : ${allProducts}">-->
+            <!--<td th:text="${product.productName}"/>-->
+        <!--</tr>-->
+        <!--</tbody>-->
+    <!--</table>-->
+    <!--</div>-->
 
-<div th:unless="${#lists.isEmpty(allReservations)}">
-    <h2>List of Reservations</h2>
+<!--<div th:unless="${#lists.isEmpty(allReservations)}">-->
+    <!--<h2>List of Reservations</h2>-->
 
-    <table>
-        <thead>
-        <tr>
-            <th >ID</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="reservation : ${allReservations}">
-            <td th:text="${reservation.id}"/>
-        </tr>
-        </tbody>
-    </table>
-</div>
+    <!--<table>-->
+        <!--<thead>-->
+        <!--<tr>-->
+            <!--<th >ID</th>-->
+        <!--</tr>-->
+        <!--</thead>-->
+        <!--<tbody>-->
+        <!--<tr th:each="reservation : ${allReservations}">-->
+            <!--<td th:text="${reservation.id}"/>-->
+        <!--</tr>-->
+        <!--</tbody>-->
+    <!--</table>-->
+<!--</div>-->
 </body>
 </html>
         <!--<td><a href="/templates/user-form.html" th:text="${user.username}">Username ...</a></td>-->

@@ -43,9 +43,9 @@ public class Booking implements Serializable {
     // region Fields
     private Integer id;
     private String number;
-    private String restaurantId;
-    private String userId;
-    private String reservationId;
+    private Integer restaurantId;
+    private Integer userId;
+    private Integer reservationId;
 
     // endregion
 
@@ -53,7 +53,7 @@ public class Booking implements Serializable {
     protected Booking() {
     }
 
-    public Booking(String number, String restaurantId, String userId, String reservationId) {
+    public Booking(String number, Integer restaurantId, Integer userId, Integer reservationId) {
         this.number = number;
         this.restaurantId = restaurantId;
         this.userId = userId;
@@ -81,21 +81,21 @@ public class Booking implements Serializable {
     @Column(name = "restaurant_id",
             nullable = false,
             updatable = false)
-    public String getRestaurantId() {
+    public Integer getRestaurantId() {
         return restaurantId;
     }
 
     @Column(name = "user_id",
             nullable = false,
             updatable = false)
-    public String getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
     @Column(name = "reservation_id",
             nullable = false,
             updatable = false)
-    public String getReservationId() {
+    public Integer getReservationId() {
         return reservationId;
     }
 
@@ -111,15 +111,15 @@ public class Booking implements Serializable {
         this.number = number;
     }
 
-    public void setRestaurantId(String restaurantId) {
+    public void setRestaurantId(Integer restaurantId) {
         this.restaurantId = restaurantId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
-    public void setReservationId(String reservationId) {
+    public void setReservationId(Integer reservationId) {
         this.reservationId = reservationId;
     }
 

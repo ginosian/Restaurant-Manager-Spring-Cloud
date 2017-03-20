@@ -23,45 +23,45 @@ public class DataLoader implements ApplicationListener<ContextRefreshedEvent> {
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
-        bookingService.createBooking(MockedData.userId(), Integer.toString(1), MockedData.reservationId());
-        bookingService.createBooking(MockedData.userId(), Integer.toString(1), MockedData.reservationId());
-        bookingService.createBooking(MockedData.userId(), Integer.toString(1), MockedData.reservationId());
-        bookingService.createBooking(MockedData.userId(), Integer.toString(1), MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 1, MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 1, MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 1, MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 1, MockedData.reservationId());
 
-        bookingService.createBooking(MockedData.userId(), Integer.toString(2), MockedData.reservationId());
-        bookingService.createBooking(MockedData.userId(), Integer.toString(2), MockedData.reservationId());
-        bookingService.createBooking(MockedData.userId(), Integer.toString(2), MockedData.reservationId());
-        bookingService.createBooking(MockedData.userId(), Integer.toString(2), MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 2, MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 2, MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 2, MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 2, MockedData.reservationId());
 
-        bookingService.createBooking(MockedData.userId(), Integer.toString(3), MockedData.reservationId());
-        bookingService.createBooking(MockedData.userId(), Integer.toString(3), MockedData.reservationId());
-        bookingService.createBooking(MockedData.userId(), Integer.toString(3), MockedData.reservationId());
-        bookingService.createBooking(MockedData.userId(), Integer.toString(3), MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 3, MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 3, MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 3, MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 3, MockedData.reservationId());
 
-        bookingService.createBooking(MockedData.userId(), Integer.toString(4), MockedData.reservationId());
-        bookingService.createBooking(MockedData.userId(), Integer.toString(4), MockedData.reservationId());
-        bookingService.createBooking(MockedData.userId(), Integer.toString(4), MockedData.reservationId());
-        bookingService.createBooking(MockedData.userId(), Integer.toString(4), MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 4, MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 4, MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 4, MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 4, MockedData.reservationId());
 
-        bookingService.createBooking(MockedData.userId(), Integer.toString(5), MockedData.reservationId());
-        bookingService.createBooking(MockedData.userId(), Integer.toString(5), MockedData.reservationId());
-        bookingService.createBooking(MockedData.userId(), Integer.toString(5), MockedData.reservationId());
-        bookingService.createBooking(MockedData.userId(), Integer.toString(5), MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 5, MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 5, MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 5, MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 5, MockedData.reservationId());
 
-        bookingService.createBooking(MockedData.userId(), Integer.toString(6), MockedData.reservationId());
-        bookingService.createBooking(MockedData.userId(), Integer.toString(6), MockedData.reservationId());
-        bookingService.createBooking(MockedData.userId(), Integer.toString(6), MockedData.reservationId());
-        bookingService.createBooking(MockedData.userId(), Integer.toString(6), MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 6, MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 6, MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 6, MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 6, MockedData.reservationId());
 
-        bookingService.createBooking(MockedData.userId(), Integer.toString(7), MockedData.reservationId());
-        bookingService.createBooking(MockedData.userId(), Integer.toString(7), MockedData.reservationId());
-        bookingService.createBooking(MockedData.userId(), Integer.toString(7), MockedData.reservationId());
-        bookingService.createBooking(MockedData.userId(), Integer.toString(7), MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 7, MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 7, MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 7, MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 7, MockedData.reservationId());
 
-        bookingService.createBooking(MockedData.userId(), Integer.toString(8), MockedData.reservationId());
-        bookingService.createBooking(MockedData.userId(), Integer.toString(8), MockedData.reservationId());
-        bookingService.createBooking(MockedData.userId(), Integer.toString(8), MockedData.reservationId());
-        bookingService.createBooking(MockedData.userId(), Integer.toString(8), MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 8, MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 8, MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 8, MockedData.reservationId());
+        bookingService.createBooking(MockedData.userId(), 8, MockedData.reservationId());
 
     }
 }

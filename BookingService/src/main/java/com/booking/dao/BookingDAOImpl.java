@@ -121,4 +121,31 @@ public class BookingDAOImpl implements BookingDAO {
         return null;
     }
 
+    @Override
+    public List<Booking> getAllBookingsByUserId(Integer userId) {
+        Session session = null;
+        try{
+            session = getSession();
+            Query query = session.createNamedQuery("Booking.getByUser");
+            query.setParameter("userId", userId);
+            return query.getResultList();
+        }catch (HibernateException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
+    public List<Booking> getAllBookingsByRestaurantId(Integer restaurantId) {
+        Session session = null;
+        try{
+            session = getSession();
+            Query query = session.createNamedQuery("Booking.getByRestaurant");
+            query.setParameter("restaurantId", restaurantId);
+            return query.getResultList();
+        }catch (HibernateException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

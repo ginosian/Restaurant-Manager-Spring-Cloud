@@ -2,44 +2,40 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:data-th-text="http://www.w3.org/1999/xhtml"
       xmlns:data-th-each="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8"/>
+    <meta content="application/json" charset="UTF-8"/>
     <title>Title</title>
 </head>
 <body>
 
-<div th:unless="${#lists.isEmpty(allProducts)}">
-    <h2>List of Products</h2>
+<div th:unless="${#lists.isEmpty(allRestaurants)}">
+    <h2>List of Restaurants</h2>
 
     <table>
         <thead>
         <tr>
-            <th>Product name</th>
+            <th>Restaurant name</th>
+            <th>Restaurant admin</th>
         </tr>
         </thead>
         <tbody>
-        <tr th:each="product : ${allProducts}">
-            <td th:text="${product.productName}"/>
-        </tr>
-        </tbody>
-    </table>
-    </div>
-
-<div th:unless="${#lists.isEmpty(allReservations)}">
-    <h2>List of Reservations</h2>
-
-    <table>
-        <thead>
-        <tr>
-            <th >ID</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="reservation : ${allReservations}">
-            <td th:text="${reservation.id}"/>
+        <tr th:each="restaurant : ${allRestaurants}">
+            <td th:text="${restaurant.name}"/>
         </tr>
         </tbody>
     </table>
 </div>
+
+<!--<form th:action="@{/restaurant}" th:Object="${RestaurantCreation}" method="post">-->
+    <!--<label>Restaurant name</label>-->
+    <!--<input type="text" th:field="*{restaurantName}"/><br/>-->
+    <!--<label>Restaurant admin username</label>-->
+    <!--<input type="text" th:field="*{username}"/><br/>-->
+    <!--<label>Password</label>-->
+    <!--<input type="password"  th:field="*{password}"/><br/>-->
+    <!--<input type="submit" value="Add" />-->
+<!--</form>-->
+
+
 </body>
 </html>
-        <!--<td><a href="/templates/user-form.html" th:text="${user.username}">Username ...</a></td>-->
+<!--<td><a href="/templates/user-form.html" th:text="${user.username}">Username ...</a></td>-->

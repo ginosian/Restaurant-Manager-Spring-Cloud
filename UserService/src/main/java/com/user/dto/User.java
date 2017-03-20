@@ -1,18 +1,18 @@
 package com.user.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Set;
 
 /**
  * Created by Martha on 2/24/2017.
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 @Entity
 @NamedQueries({
         @NamedQuery(

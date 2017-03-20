@@ -5,9 +5,9 @@ import com.restaurant.dao.ReservationDAO;
 import com.restaurant.dto.Product;
 import com.restaurant.dto.ProductInReservation;
 import com.restaurant.dto.Reservation;
-import com.restaurant.service.helperModels.ChooserProduct;
 import com.restaurant.util.BusKeyGen;
 import com.restaurant.util.Validate;
+import model.BookingProduct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -34,16 +34,16 @@ public class ReservationServiceImpl implements ReservationService {
     ReentrantLock lock = new ReentrantLock();
 
     @Override
-    public Reservation createReservationAndAddProducts(List<ChooserProduct> products) {
+    public Reservation createReservationAndAddProducts(List<BookingProduct> products) {
         //Validations (later to be separated in validations service)
         if (!Validate.valid(products) || products.size() == 0) return null;
-        for (ChooserProduct product : products) {
+        for (BookingProduct product : products) {
             int productId = product.getProductId();
             if (!productDAO.containsProductById(productId)) return null;
         }
         //Form entity
         Set<ProductInReservation> productInReservations = new HashSet<>();
-        for (ChooserProduct product : products) {
+        for (BookingProduct product : products) {
             if (product.getAmount() <= 0) continue;
             Product chooserProduct = productDAO.readProduct(product.getProductId());
             productInReservations.add(new ProductInReservation(chooserProduct, product.getAmount(), BusKeyGen.nextKey()));

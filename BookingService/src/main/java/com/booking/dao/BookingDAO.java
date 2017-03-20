@@ -44,6 +44,10 @@ public interface BookingDAO {
      * @return list of {@link Booking} objects from db or if non exist return a list with size of 0.*/
     List<Booking> getAllBookings();
 
+    List<Booking> getAllBookingsByUserId(Integer userId);
+
+    List<Booking> getAllBookingsByRestaurantId(Integer restaurantId);
+
 
 
 }

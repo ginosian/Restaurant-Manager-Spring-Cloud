@@ -1,12 +1,15 @@
 package com.restaurant.controller;
 
+import com.restaurant.dto.ProductInReservation;
 import com.restaurant.dto.Reservation;
 import com.restaurant.service.ReservationService;
-import com.restaurant.service.helperModels.ChooserProduct;
+import model.BookingProduct;
+import model.Reservations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,9 +22,10 @@ public class ReservationController {
     ReservationService reservationService;
 
     @PreAuthorize("hasAnyAuthority('USER')")
-    @PostMapping(path = "/reservation")
-    public void createResrvation(List<ChooserProduct> products){
-        reservationService.createReservationAndAddProducts(products);
+    @PostMapping(path = "/reservation", produces = "application/json", consumes = "application/json")
+    public Integer createResrvation(@RequestBody List<BookingProduct> products){
+        Reservation reservation = reservationService.createReservationAndAddProducts(products);
+        return reservation.getId();
     }
 
     @PreAuthorize("hasAnyAuthority('USER', 'RESTAURANT')")
@@ -50,17 +54,33 @@ public class ReservationController {
     }
 
     @PreAuthorize("hasAnyAuthority('ADMIN', 'USER', 'RESTAURANT')")
-    @PostMapping(path = "/reservations", produces = "application/json")
-    public List<Reservation> getReservations(List<Integer> ids){
+    @PostMapping(path = "/reservations", produces = "application/json", consumes = "application/json")
+    public Reservations getReservations(@RequestBody List<Integer> ids){
         List<Reservation> reservations =  reservationService.findAllReservations(ids);
-        return reservations;
+        List<BookingProduct> bookingProducts = new ArrayList<>();
+        for(Reservation reservation : reservations){
+            for(ProductInReservation productInReservation : reservation.getProducts()){
+                bookingProducts.add(new BookingProduct(productInReservation.getProduct().getProductName(), productInReservation.getAmount()));
+            }
+        }
+        Reservations result = new Reservations();
+        result.setReservationsList(bookingProducts);
+        return result;
     }
 
     @PreAuthorize("hasAnyAuthority('RESTAURANT')")
-    @PostMapping(path = "/reservations/closed", produces = "application/json")
-    public List<Reservation> getClosedReservations(List<Integer> ids){
+    @GetMapping(path = "/reservations/closed", produces = "application/json")
+    public Reservations getClosedReservations(){
         List<Reservation> reservations =  reservationService.getAllClosedReservations();
-        return reservations;
+        List<BookingProduct> bookingProducts = new ArrayList<>();
+        for(Reservation reservation : reservations){
+            for(ProductInReservation productInReservation : reservation.getProducts()){
+                bookingProducts.add(new BookingProduct(productInReservation.getProduct().getProductName(), productInReservation.getAmount()));
+            }
+        }
+        Reservations result = new Reservations();
+        result.setReservationsList(bookingProducts);
+        return result;
     }
 
 }
